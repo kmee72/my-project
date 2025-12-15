@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ex28..html -->
+    <title>시멘틱태그 - inline-block사용</title>
+    <style>
+      /* 마진 : html요소간의 간격 */
+      /* 패딩 : 테두리선과 내용(content)간의 간격 */
+      /* 테두리선 두께, 실선, 색상 */
+
+      header {
+        border: 1px solid red;
+      }
+      nav {
+        border: 1px solid blue;
+      }
+      main {
+        border: 1px solid orange;
+      }
+      aside {
+        /* display : 3가지 속성이 있다
+                    block / 한 줄 차지
+                    inline / 한 칸(내용물) 차지(줄바꿈 안됨), 간단한 텍스트만 입려가능, 공간확보가 안되 자주 사용되지 않음
+                    inline-block / inline속성과 동일하지만 width, height적용 가능
+                    */
+        display: inline-block;
+        /* width : 부모태그 (여기서는 main)가 div 속성이 있기에 main공간이 100%라면  aside main 태그의 30%, section main 태그의 70
+        % 차지 가능, 28% 준 이유는 자신이 확보할 수 있는 공간, 테두리선 때문에(테두리선도 공간 차지함) 30%까지는 안됨  */
+        width: 28%;
+        border: 1px solid pink;
+      }
+      section {
+        display: inline-block;
+        width: 70%;
+        border: 1px solid skyblue;
+      }
+      footer {
+        border: 1px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>헤덕영역</h1></header>
+    <nav>
+      <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+      </ul>
+    </nav>
+    <main>
+      <aside>
+        <ul>
+          <li><a href="#">사이드메뉴1</a></li>
+          <li><a href="#">사이드메뉴2</a></li>
+          <li><a href="#">사이드메뉴3</a></li>
+        </ul>
+      </aside>
+      <section>
+        <article>
+          <h3>내용1</h3>
+        </article>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
+          eligendi nemo harum ipsam veritatis! Magnam beatae perferendis ipsa
+          hic et veritatis ea sit facere aspernatur assumenda debitis, harum
+          soluta! Iusto.
+        </p>
+        <article>
+          <h3>내용2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vel
+            facere accusamus officiis, accusantium quisquam? Eos et reiciendis
+            officia ad deserunt eligendi illo animi tempore quasi voluptatum
+            rerum, eveniet nobis!
+          </p>
+        </article>
+        <h3>내용3</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          facilis quod cupiditate expedita fuga repellat voluptates laboriosam
+          vitae non? Aliquam minus reiciendis quisquam hic accusamus facilis
+          maiores quibusdam corrupti repellendus!
+        </p>
+        <article></article>
+      </section>
+    </main>
+    <footer>
+      <!-- address태그 : 주소정보를 담는 시멘틱 태그 -->
+      <address>회사소개 및 주소</address>
+    </footer>
+  </body>
+</html>

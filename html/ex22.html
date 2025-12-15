@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>입력태그 - 색상, 날짜, 시간 입력</title>
+  </head>
+  <body>
+    <!-- 색상 선택자(Color Picker) -->
+    <!-- 색상값 : red 0~255(십진수표현), 0x 0x00~0xFF(16진수표현,크기가 고정적,포토샵에서 사용) -->
+    <!-- value속성: 선택(입력)된 값 -->
+    <input type="color" value="#FF0000" /> <br />
+
+    <!-- 날짜 선택자(Date Picker) -->
+    <input type="date" value="2025-01-01" /><br />
+
+    <!-- 날짜-시간 선택자 -->
+    <input type="datetime-local" value="2025-12-25T00:00" /><br />
+
+    <!-- 이메일 입력(text=text와 동일하나 문법체크 됨.) -->
+    <!-- hong@gmail.com  hong.gmail@com hong@.com 이메일 오류체크는 제출할때 체크됨-->
+    <input type="email" value="hong@gmail.com" /><br />
+
+    <!-- 달(month) -->
+    <input type="month" value="2025-12" /><br />
+
+    <!-- 숫자(number) 입력 -->
+    <input type="number" value="1" step="1" min="1" max="9" /><br />
+
+    <!-- 바형식 범위(숫자) 입력-->
+    <input type="range" value="50" step="10" min="0" max="100" /> <br />
+
+    <!-- 많은 양의 텍스트 입력(적은양 텍스트일경우 input type=text) -->
+    <!-- textarea name="" id=""이 부분은 없어도 됨  -->
+    <textarea name="" id=""></textarea><br />
+
+    <!-- cols : columns 가로칸수, rows : 세로줄수-->
+    <!--textareas는 value 속성이 없고 태그( < > )안에 값을 넣으면 됨, 특이한 경우  -->
+    <textarea cols="30" rows="10">상품후기</textarea>
+  </body>
+</html>

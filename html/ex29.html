@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ex29.html -->
+    <title>메타(meta)태그 : html문서의 정보를 담는 태그</title>
+    <!-- charset : 문자인코딩 타입 - UTF-8(유니코드), EUC-KR(완성형 한글) -->
+    <!-- 유니코드 :  전세계 표준, 완성형 한글 : 우리나라 표준(2350자) -->
+    <meta charset="UTF-8" />
+    <!-- viewport 속성 : 모바일 해상도 대응 -->
+    <!-- divice-width : 웹페이지의 너비가 모바일기기 너비와 동일하게 -->
+    <!-- initial-scale : 확대비율 1.0, 2.0이면 2배 확대(200%), 1.5이면 50% 축소, PC에서는 이 속성이 안보이고 모바일에서 보임(모바일과 관련된 속성임)-->
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0" />
+    <!-- (웹브라우저가) 5초마다 한번씩 자동 새로고침 -->
+    <!--<meta http-equiv="refresh" content="5 /> : CTRL+ /를 누르면 동작 코드가 주석으로 바뀜 -->
+    <!--<meta http-equiv="refresh" content="5; url=http://www.naver.com" /> : 5초 후에 네이버로 이동 -->
+    <!-- 부가적인 기능 : 별로 중요하지 않음. -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> : 대소문자 구별 -->
+    <!-- X-UA_Compatible : 익스플로러 브라우저의 최신버전에 대응해 줄것(X는 호환성 의미, UA는  user agent 약자임) -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> : ie=edge 는 IE가 없으면 엣지부라우저로 대치, IE는 internet explorer 약자(사라짐,엣지edge가 대신사용, 크롬 부라우저 깔아서 사용하고 있음) -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- content-type : 콘테츠의 형식을 웹브라우저에게 알려줌,content-type이 굉장히 많음 -->
+    <!-- text/html : text기반의 html콘텐츠라고 웹브라우저에게 알려줌 -->
+    <!-- text/xml : text기반의 xml 콘텐츠이다, xml은 태그기반으로 된 정보 문서, xml 안에 html이 포함됨 -->
+    <!-- appllication/json : 중요하고 많이 사용됨, Key-Value형식의 문자영 콘텐츠이다. -->
+    <!-- text/html, text/xml, appllication/json 이 3가지가 제일 중요함 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!-- keyword : 검색로봇에 의해 검색되는 단어(키워드) 설정 -->
+    <meta name="keyword" content="쇼핑물, 패션, 의류, 음료수" />
+    <!-- description : 검색로로봇에 의해 검색되는 설명문구입니다.-->
+    <meta name="description" content="저희는 종합쇼핑몰 다사와입니다." />
+    <!-- noindex : 검색로봇에 안걸리게 해달라. -->
+    <!-- nofollow : 검색로봇에 하위페이지를 검색하지 않게 해달라. -->
+    <!-- noindex, nofollow 같이 사용해도 됨 -->
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- author :  웹페이지 개발자 -->
+    <meta name="author" content="홍길동 개발자" />
+  </head>
+  <body></body>
+</html>

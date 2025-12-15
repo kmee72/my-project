@@ -1,0 +1,1661 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>수도권기상청</title>
+
+	<!-- default -->
+	<link rel="stylesheet" type="text/css" href="../../_css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../_css/default.css">
+	<script type="text/javascript" src="../../_js/jquery.js"></script>
+	<script type="text/javascript" src="../../_js/common.js"></script>
+</head>
+
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1><a href="../main/index.jsp" title="수도권기상청"><img src="../../images/logo.png" alt="수도권기상청"></a></h1>
+			<div id="lnb">
+				<ul>
+					<li>
+						<p class="main_menu">기관 소개</p>
+						<ul class="sub_menu">
+							<li>
+								<a href="../info/greeting.jsp" title="기관장 소개">기관장 소개</a>
+								<ul class="sub_menu_3dep">
+									<li><a href="../info/greeting.jsp" title="기관장 인사말">기관장 인사말</a></li>
+									<li><a href="../info/generation.jsp" title="역대기관장">역대기관장</a></li>
+									<li><a href="../info/epeople.jsp" title="기관장과의 대화">기관장과의 대화</a></li>
+								</ul><!-- sub_menu_3dep -->
+							</li>
+							<li><a href="../info/history.jsp" title="기관 연혁">기관 연혁</a></li>
+							<li><a href="../info/organization.jsp" title="조직·직원">조직·직원</a></li>
+							<li><a href="../info/location.jsp" title="찾아오시는 길">찾아오시는 길</a></li>
+						</ul><!-- sub_menu -->
+					</li>
+					<li>
+						<p class="main_menu">주요 업무</p>
+						<ul class="sub_menu">
+							<li><a href="../info/business01.jsp" title="관측업무">관측업무</a></li>
+							<li><a href="../info/business02.jsp" title="예보업무">예보업무</a></li>
+							<li><a href="../info/business03.jsp" title="기후서비스업무">기후서비스업무</a></li>
+						</ul><!-- sub_menu -->
+					</li>
+					<li>
+						<p class="main_menu">정보 공개</p>
+						<ul class="sub_menu">
+							<li><a href="../openinfo/system_intro.jsp" title="정보공개제도 안내">정보공개제도 안내</a></li>
+							<li><a href="https://www.open.go.kr/com/main/mainView.do" target="_blank" title="정보공개 청구">정보공개 청구</a></li>
+							<li>
+								<a href="../openinfo/expense_list.jsp?boardId=expense_metropol" title="사전정보 공개">사전정보 공개</a>
+								<ul class="sub_menu_3dep">
+									<li><a href="../openinfo/expense_list.jsp?boardId=expense_metropol" title="업무추진비">업무추진비</a></li>
+									<li><a href="../openinfo/expense_list.jsp?boardId=region_hcontract" title="수의 계약 정보">수의 계약 정보</a></li>
+									<li><a href="../openinfo/expense_list.jsp?boardId=region_event" title="주요행사">주요행사</a></li>
+									<li><a href="../openinfo/expense_list.jsp?boardId=region_etc" title="기타 공개 정보">기타 공개 정보</a></li>
+								</ul><!-- sub_menu_3dep -->
+							</li>
+						</ul><!-- sub_menu -->
+					</li>
+					<li>
+						<p class="main_menu">알림·소식</p>
+						<ul class="sub_menu">
+							<li><a href="../news/notice_list.jsp?boardId=gongzi" title="공지사항">공지사항</a></li>
+							<li><a href="../news/notice_list.jsp?boardId=press2" title="보도자료">보도자료</a></li>
+							<li><a href="../news/notice_list.jsp?boardId=recruit" title="채용">채용</a></li>
+							
+						</ul><!-- sub_menu -->
+					</li>
+					<li>
+						<p class="main_menu">소속기관안내</p>
+						<ul class="sub_menu">
+							<li><a href="../info/affiliated1.jsp" title="인천기상대">인천기상대</a></li>
+						</ul><!-- sub_menu -->
+					</li>
+				</ul>
+			</div><!-- lnb -->
+			<div id="header_banner">
+				<ul>
+				        <li><a href="https://www.weather.go.kr/w/index.do" target="_blank">
+				            <div class="panel-button2">
+				                날씨누리 바로가기
+				            </div>
+				        </a></li>
+				        <li><a href="https://www.kma.go.kr/kma/" target="_blank">
+				            <div class="panel-button2">
+				                기상청 행정 바로가기
+				            </div>
+				        </a></li>
+	
+
+				<!--  <li><a href="https://www.kma.go.kr/metropolitan/html/pop/ApparentTemperature/ApparentTemperature.html" onclick="window.open(this.href, '_blank', 'width=600 height=1080 left=600'); return false;">
+				            <div class="panel-button2">
+				                시간대 별 체감온도
+				            </div>
+				        </a></li>          -->
+
+
+				</ul>
+			</div><!-- header_banner -->
+		</div><!-- header -->
+
+		<div id="sitemap">
+			<h3>사이트맵</h3>
+			<div class="sitemap_width">
+				<p class="sitemap_close"><img src="../../images/sitemap_close.png" alt="사이트맵 닫기"></p>
+				<div class="sitemap_item">
+					<h4>기관 소개</h4>
+					<ul class="sub_menu">
+						<li>
+							<a href="../info/greeting.jsp" title="기관장 소개">기관장 소개</a>
+							<ul class="sub_menu_3dep">
+								<li><a href="../info/greeting.jsp" title="기관장 인사말">기관장 인사말</a></li>
+								<li><a href="../info/generation.jsp" title="역대기관장">역대기관장</a></li>
+								<li><a href="../info/epeople.jsp" title="기관장과의 대화">기관장과의 대화</a></li>
+							</ul><!-- sub_menu_3dep -->
+						</li>
+						<li><a href="../info/history.jsp" title="기관 연혁">기관 연혁</a></li>
+						<li><a href="../info/organization.jsp" title="조직·직원">조직·직원</a></li>
+						<li><a href="../info/location.jsp" title="찾아오시는 길">찾아오시는 길</a></li>
+					</ul><!-- sub_menu -->
+				</div><!-- sitemap_item -->
+				<div class="sitemap_item">
+					<h4>주요 업무</h4>
+					<ul class="sub_menu">
+						<li><a href="../info/business01.jsp" title="관측업무">관측업무</a></li>
+						<li><a href="../info/business02.jsp" title="예보업무">예보업무</a></li>
+						<li><a href="../info/business03.jsp" title="기후서비스업무">기후서비스업무</a></li>
+					</ul><!-- sub_menu -->
+				</div><!-- sitemap_item -->
+				<div class="sitemap_item">
+					<h4>정보 공개</h4>
+					<ul class="sub_menu">
+						<li><a href="../openinfo/system_intro.jsp" title="정보공개제도 안내">정보공개제도 안내</a></li>
+						<li><a href="https://www.open.go.kr/com/main/mainView.do" target="_blank" title="정보공개 청구">정보공개 청구</a></li>
+						<li>
+							<a href="../openinfo/expense_list.jsp?boardId=expense_metropol" title="사전정보 공개">사전정보 공개</a>
+							<ul class="sub_menu_3dep">
+								<li><a href="../openinfo/expense_list.jsp?boardId=expense_metropol" title="업무추진비">업무추진비</a></li>
+								<li><a href="../openinfo/expense_list.jsp?boardId=region_hcontract" title="수의 계약 정보">수의 계약 정보</a></li>
+								<li><a href="../openinfo/expense_list.jsp?boardId=region_event" title="주요행사">주요행사</a></li>
+								<li><a href="../openinfo/expense_list.jsp?boardId=region_etc" title="기타 공개 정보">기타 공개 정보</a></li>
+							</ul><!-- sub_menu_3dep -->
+						</li>
+					</ul><!-- sub_menu -->
+				</div><!-- sitemap_item -->
+				<div class="sitemap_item">
+					<h4>알림·소식</h4>
+					<ul class="sub_menu">
+						<li><a href="../news/notice_list.jsp?boardId=gongzi" title="공지사항">공지사항</a></li>
+						<li><a href="../news/notice_list.jsp?boardId=press2" title="보도자료">보도자료</a></li>
+						<!--<li><a href="../news/cardnews_list.jsp" title="카드뉴스">카드뉴스</a></li> -->
+					</ul><!-- sub_menu -->
+				</div><!-- sitemap_item -->
+				<div class="sitemap_item">
+					<h4>소속기관안내</h4>
+					<a href="../info/affiliated1.jsp" class="btn bt_full bg_sky" title="인천기상대">인천기상대</a>
+					<a href="https://www.weather.go.kr/w/index.do" target="_blank" class="btn bt_full bg_sky" title="날씨누리 바로가기">날씨누리</a>
+					<a href="https://www.kma.go.kr/kma/" target="_blank" class="btn bt_full bg_sky" title="기상청 행정 바로가기">기상청 행정</a>
+				</div><!-- sitemap_item -->
+			</div><!-- sitemap_width -->
+		</div><!-- sitemap -->
+
+		<div id="m_header">
+			<h1><a href="../main/index.jsp" title="수도권기상청"><img src="../../images/logo.png" alt="수도권기상청"></a></h1>
+			<div>
+				<p class="mmenu_open"><img src="../../images/m_menu_ham.png" alt="메뉴 펼침"></p>
+				<div id="lnb">
+					<p class="mmenu_close"><img src="../../images/m_menu_ham_x.png" alt="메뉴 닫기"></p>
+					<a class="mmenu_home" href="../main/index.jsp" title="홈으로"><img src="../../images/m_menu_home.png" alt=""></a>
+					<ul>
+						<li>
+							<p class="main_menu">기관 소개</p>
+							<ul class="sub_menu">
+								<li>
+									<a href="../info/greeting.jsp" title="기관장 소개">기관장 소개</a>
+									<ul class="sub_menu_3dep">
+										<li><a href="../info/greeting.jsp" title="기관장 인사말">기관장 인사말</a></li>
+										<li><a href="../info/generation.jsp" title="역대기관장">역대기관장</a></li>
+										<li><a href="../info/epeople.jsp" title="기관장과의 대화">기관장과의 대화</a></li>
+									</ul><!-- sub_menu_3dep -->
+								</li>
+								<li><a href="../info/history.jsp" title="기관 연혁">기관 연혁</a></li>
+								<li><a href="../info/organization.jsp" title="조직·직원">조직·직원</a></li>
+								<li><a href="../info/location.jsp" title="찾아오시는 길">찾아오시는 길</a></li>
+							</ul><!-- sub_menu -->
+						</li>
+						<li>
+							<p class="main_menu">주요 업무</p>
+							<ul class="sub_menu">
+								<li><a href="../info/business01.jsp" title="관측업무">관측업무</a></li>
+								<li><a href="../info/business02.jsp" title="예보업무">예보업무</a></li>
+								<li><a href="../info/business03.jsp" title="기후서비스업무">기후서비스업무</a></li>
+							</ul><!-- sub_menu -->
+						</li>
+						<li>
+							<p class="main_menu">정보 공개</p>
+							<ul class="sub_menu">
+								<li><a href="../openinfo/system_intro.jsp" title="정보공개제도 안내">정보공개제도 안내</a></li>
+								<li><a href="https://www.open.go.kr/com/main/mainView.do" target="_blank" title="정보공개 청구">정보공개 청구</a></li>
+								<li>
+									<a href="../openinfo/expense_list.jsp?boardId=expense_metropol" title="사전정보 공개">사전정보 공개</a>
+									<ul class="sub_menu_3dep">
+										<li><a href="../openinfo/expense_list.jsp?boardId=expense_metropol" title="업무추진비">업무추진비</a></li>
+										<li><a href="../openinfo/expense_list.jsp?boardId=region_hcontract" title="수의 계약 정보">수의 계약 정보</a></li>
+										<li><a href="../openinfo/expense_list.jsp?boardId=region_event" title="주요행사">주요행사</a></li>
+										<li><a href="../openinfo/expense_list.jsp?boardId=region_etc" title="기타 공개 정보">기타 공개 정보</a></li>
+									</ul><!-- sub_menu_3dep -->
+								</li>
+							</ul><!-- sub_menu -->
+						</li>
+						<li>
+							<p class="main_menu">알림·소식</p>
+							<ul class="sub_menu">
+								<li><a href="../news/notice_list.jsp?boardId=gongzi" title="공지사항">공지사항</a></li>
+								<li><a href="../news/notice_list.jsp?boardId=press2" title="보도자료">보도자료</a></li>
+								<!--<li><a href="../news/cardnews_list.jsp" title="카드뉴스">카드뉴스</a></li>-->
+							</ul><!-- sub_menu -->
+						</li>
+						<li>
+							<p class="main_menu">소속기관안내</p>
+							<ul class="sub_menu">
+								<li><a href="../info/affiliated1.jsp" title="인천기상대">인천기상대</a></li>
+							</ul><!-- sub_menu -->
+						</li>
+					</ul>
+					<div id="header_banner">
+						<ul>
+							<li><a href="https://www.weather.go.kr/w/index.do" target="_blank">
+						            <div class="panel-button2">
+						                날씨누리 바로가기
+						            </div>
+						        </a></li>
+						        <li><a href="https://www.kma.go.kr/kma/" target="_blank">
+						            <div class="panel-button2">
+						                기상청 행정 바로가기
+						            </div>
+						        </a></li>
+
+
+												
+						       <!-- <li><a href="https://www.kma.go.kr/metropolitan/html/pop/ApparentTemperature/ApparentTemperature.html" onclick="window.open(this.href, '_blank', 'width=600 height=1080 left=600'); return false;">
+				            		<div class="panel-button2">
+				               		    시간대 별 체감온도
+				           			</div>
+				        		        </a></li> -->
+
+
+
+						</ul>
+					</div><!-- header_banner -->
+				</div><!-- lnb -->
+			</div>
+		</div><!-- m_header -->
+
+		<div id="contants">
+		<div class="quick_total">
+			<div class="quick_absol"><p class="sitemap_open"><img src="../../images/sitemap_open.png" alt="사이트맵 펼침"></p></div>
+		</div><!-- quick_total -->
+
+<script>
+	var initialDong = null;
+	var islocationtrue = true;
+	if(islocationtrue == true){
+		initialDong = {
+			dongCode : "4111355000" ,
+			dongName : "평동" ,
+			cityCode : "수원시권선구" ,
+			cityName : "4111300000" ,
+			wideCode : "4100000000" ,
+			wideName : "경기도" ,
+			x : "" ,
+			y : "" ,
+			lat : "" ,
+			lon : "" ,
+		};
+	}
+</script>
+<style>
+	#sub_wrap{ padding-top:0; padding-bottom:0;}
+
+	.main_asp_wrap{ overflow:hidden; margin:40px 0 17px -2%;}
+	.main_asp_wrap > div{ float:left; width:31.333333333%; margin-left:2%;}
+
+	.maw_date{ text-align:right; font-size:12px; color:#000; font-family:'nsr_b'; margin-bottom:3px;}
+	.maw_tab{ margin-bottom:15px;}
+	.maw_tab ul{ text-align:right;}
+	.maw_tab ul li{ display:inline-block; text-align:center;}
+	.maw_tab ul li p{ width:95px; height:29px; line-height:29px; border:1px solid #1b7abd; background-color:#1b7abd; color:#fff; font-family:'nsr_b'; cursor:pointer;}
+	.maw_tab ul li.active p{ background-color:#fff; color:#005480; border-color:#1d97b5;}
+	.maw_conbox{ position:relative; display:none;}
+	.maw_conbox.active{ display:block;}
+	.maw_conbox ul{ position:absolute; top:20px; right:0px; z-index:10;}
+	.maw_conbox ul li{ margin-bottom:3px; }
+	.maw_conbox ul li p{ color:#7c9bb1; min-width:44px; line-height:24px; text-align:center; background-color:#fff; font-family:'nsr_b'; cursor:pointer; padding:0 2px; }
+	.maw_conbox ul li.active p{ background-color:#e2eaf0; color:#000;}
+	.maw_conbox .maw_img{ position:relative; display:none; margin-right:70px; text-align:center;}
+	.maw_conbox .maw_img.active{ display:block;}
+	.maw_conbox .maw_img > img{ }
+	.maw_conbox .maw_img > p{ position:absolute; font-size:14px; font-family:'nsr_b'; z-index:5; text-align:center; width:50px; height:55px;}
+	.maw_conbox .maw_img > p img{ display:block; margin:-4px auto 5px; max-width:38px;}
+	.maw_conbox .maw_img > p b{ display:block; margin:2px auto; color:#fff; height:22px; line-height:22px; font-size:14px; font-weight:normal;}
+	.maw_conbox .maw_img.mi_1 > p b{ background-color:#67bc34;}
+	.maw_conbox .maw_img.mi_2 > p b{ background-color:#67bc34;}
+	.maw_conbox .maw_img.mi_3 > p b{ background-color:#4d88b2;}
+	.maw_conbox .maw_img.mi_4 > p b{ background-color:#000000;}
+	.maw_conbox .maw_img.mi_5 > p b{ background-color:#f39d51;}
+	.maw_conbox .maw_img.mi_6 > p b{ background-color:#67bc34;}
+	.maw_conbox .maw_img.mi_7 > p b{ background-color:#4d88b2;}
+	.maw_conbox .maw_img > p[data-type*="fct-"] b{ background-color:#f39d51;}
+	.maw_conbox .maw_img > p.point_pj{ top:10%; left:33%;}
+	.maw_conbox .maw_img > p.point_djc{ top:-5%; left:46%;}
+	.maw_conbox .maw_img > p.point_brd{ top:20%; left:5%;}
+	.maw_conbox .maw_img > p.point_gh{ top:8%; left:15%;}
+	.maw_conbox .maw_img > p.point_inc{ top:49%; left:25%;}
+	.maw_conbox .maw_img > p.point_so{ top:30%; left:42%;}
+	.maw_conbox .maw_img > p.point_sw{ top:68%; left:40%;}
+	.maw_conbox .maw_img > p.point_yp{ top:33%; left:65%;}
+	.maw_conbox .maw_img > p.point_ic{ top:72%; left:59%;}				
+
+	.main_top_title{ height:225px; background-image:url('../..//upload/external/baner/metropolitan_main_top_img.jpg'); background-position:50% 50%; background-repeat:no-repeat; background-size:cover; box-sizing:border-box; position:relative;}
+	.main_top_title .mtt_textbox{ position:absolute; top:54px; right:94px; width:400px;}
+	.main_top_title h4{ color:#000; font-size:18px; font-family:'nsr_b'; line-height:1.2;}
+	.main_top_title h3{ color:#1b7abd; font-size:50px; font-family:'sc3'; line-height:1.1;}
+	.main_top_title h3 b{ color:#1b7abd; font-size:50px; font-family:'sc5'; line-height:1.1;}
+
+	.main_board_wrap{ overflow:hidden; margin-top:57px;}
+	.main_board_wrap .mb_left{ float:left; overflow:hidden; width:600px;}
+	.main_board_wrap .mb_left .mb_box{ width:183px; height:261px; background-color:#ccc; background-position:50% 50%; background-repeat:no-repeat; background-size:cover; padding:25px 15px 35px; float:left; margin-right:19px;}
+	.main_board_wrap .mb_left .mb_box:last-child{ margin-right:0;}
+	.main_board_wrap .mb_left .mb_box h4{ text-align:center; color:#fff; font-size:20px; font-family:'nsr_b'; height:52px; line-height:26px; margin-bottom:57px;}
+	.main_board_wrap .mb_left .mb_box a.mb_a{ display:block; border:1px solid #fff; line-height:37px; text-align:center; margin-top:11px; color:#fff; background:rgba(0,0,0,0.3); font-family:'nsr_r'; font-size:18px;}
+	.main_board_wrap .mb_left .mb_box a.mb_p{ display:block; text-align:center; margin-top:11px; color:#fff; background:rgba(0,0,0,0.3); font-family:'nsr_r'; padding:10px 12px; line-height:24px;}
+
+	.main_board_wrap .mb_right{ float:right; overflow:hidden; border:1px solid #e6e9ed; width:594px; height:261px;}
+	.main_board_wrap .mb_right .main_board_tab{ overflow:hidden; padding:0 32px; border-bottom:1px solid #e6e9ed; position:relative;}
+	.main_board_wrap .mb_right .main_board_tab ul li{ float:left; margin-right:25px;}
+	.main_board_wrap .mb_right .main_board_tab ul li p{ font-size:20px; color:#000; font-family:'nsr_b'; line-height:58px; border-bottom:2px solid transparent; cursor:pointer;}
+	.main_board_wrap .mb_right .main_board_tab ul li.active p{ border-color:#1f8cc5;}
+	.main_board_wrap .mb_right .main_board_tab ul li a{ position:absolute; right:26px; top:20px; display:none; color:#b6b6b6; font-size:14px; padding-right:15px; height:20px; line-height:20px; font-family:'nsr_b'; background:url('../../images/main/board_more.png') 100% 4px no-repeat;}
+	.main_board_wrap .mb_right .main_board_tab ul li.active a{ display:block;}
+	.main_board_wrap .mb_right .main_board_con{ padding:34px 26px; display:none;}
+	.main_board_wrap .mb_right .main_board_con.active{ display:block;}
+	.main_board_wrap .mb_right .main_board_con ul li{ }
+	.main_board_wrap .mb_right .main_board_con ul li a{ padding-left:12px; background:url('../../images/main/board_bot.png') 0 50% no-repeat; font-family:'nsr_b'; display:inline-block; width:430px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; line-height:25px; letter-spacing:-0.04em;}
+	.main_board_wrap .mb_right .main_board_con ul li span{ float:right; display:block; color:#1b7abd; font-family:'nsr_b'; line-height:28px;}
+
+	.main_banner_wrap{ overflow:hidden; margin-top:65px;}
+	.main_banner_wrap .mb_tit{ margin-bottom:10px; height:34px;}
+	.main_banner_wrap .mb_tit h4{ font-size:20px; color:#000; font-family:'nsr_b'}
+	.main_banner_wrap .main_banner1{ float:left; width:203px; margin-right:16px; position:relative;}
+	.main_banner_wrap .main_banner2{ float:left; width:203px; margin-right:16px; position:relative;}
+	.main_banner_wrap .main_banner3{ float:left; width:385px; border:8px solid #d9e0e7; height:128px; margin-right:16px;}
+	.main_banner_wrap .main_banner3 ul{ overflow:hidden;}
+	.main_banner_wrap .main_banner3 ul li{ float:left; width:50%; text-align:left;}
+	.main_banner_wrap .main_banner3 ul li a{ display:block; padding:11px 28px; margin:1px;}
+	.main_banner_wrap .main_banner3 ul li.mb3_bg a{ background-color:#eef4f9;}
+	.main_banner_wrap .main_banner3 ul li a img{ vertical-align:middle;}
+	.main_banner_wrap .main_banner3 ul li a p{ font-size:18px; color:#000; font-family:'nsr_b'; display:inline-block; vertical-align:middle;}
+	.main_banner_wrap .main_banner4{ float:left; width:361px;}
+	.main_banner_wrap .main_banner4 ul{ overflow:hidden; padding-top:22px;}
+	.main_banner_wrap .main_banner4 ul li{ float:left; width:50%; text-align:left; overflow:hidden;}
+	.main_banner_wrap .main_banner4 ul li a img{ float:left; margin-right:10px;}
+	.main_banner_wrap .main_banner4 ul li a p{ color:#000; font-family:'nsr_b'; padding-top:23px; line-height:20px;}
+	.main_banner_wrap .main_banner4 ul li a p.mb4_1line{ padding-top:30px;}
+
+	.main_b_sbanner{ }
+	.main_b_sbanner .controls{ position:absolute; top:0; right:0;}
+	.main_b_sbanner .controls a{ margin:0; margin-left:-1px; display:block; width:33px; height:33px; line-height:33px; border:1px solid #cbcbcb; background-color:#fff; float:left; overflow:Hidden; text-indent:-999px; background-repeat:no-repeat; background-position:50% 50%; background-size:33px 33px;}
+	.main_b_sbanner .controls a.play{ background-image:url('../../images/main/bt_play.png'); float:none; position:absolute; right:64px; top:0; margin:0; z-index:2;}
+	.main_b_sbanner .controls a.stop{ background-image:url('../../images/main/bt_stop.png'); float:none; position:absolute; right:64px; top:0; margin:0; z-index:1;}
+	.main_b_sbanner .controls a.b_previous{ background-image:url('../../images/main/bt_prev.png');}
+	.main_b_sbanner .controls a.b_next{ background-image:url('../../images/main/bt_next.png');}
+	.main_b_sbanner .slides{ clear:both; min-height:95px;}
+
+	.main_slider_banner{ margin-top:67px; overflow:Hidden; height:230px;}
+	.main_slider_banner ul{ }
+	.main_slider_banner ul li{ float:left; text-align:center; margin-right:19px;}
+	.main_slider_banner .ca-item a{ display:block; /*width:183px;*/ height:155px; margin:0 10px; background-color:#f9fafb; padding:14px 14px 0; text-align:center;}
+	.main_slider_banner .ca-item a .msb_img{ background-color:#fff; border-radius:50%; width:82px; height:82px; margin:0 auto;}
+	.main_slider_banner .ca-item a p{ font-size:18px; color:#000; font-family:'nsr_b'; line-height:17px; margin-top:18px;}
+	.main_slider_banner .ca-item a p.msb_tit_br{ font-size:18px; color:#000; font-family:'nsr_b'; line-height:20px; margin-top:8px;}
+
+	.main_imgbg_banner{ overflow:hidden; margin-top:50px; padding-bottom:44px;}
+	.main_imgbg_banner .mib_box{ float:left; margin-right:20px;}
+	.main_imgbg_banner .mib_box:last-child{ margin-right:0;}
+	.main_imgbg_banner .mib_box a{ display:block; width:386px; height:87px; text-align:center; font-size:18px; color:#000; font-family:'nsr_b'; color:#fff; padding-top:35px; background-position:50% 50%; background-repeat:no-repeat; background-size:cover;}
+	.main_imgbg_banner .mib_box a.mib_tit_br{ padding-top:25px;}
+	.main_imgbg_banner .mib_box a span{ display:inline-block; padding:5px 0;}
+
+    .main_asp_wrap > div.ma_ext_weather { width:calc(192% / 3); }
+    .ma_ext_weather { display:flex; flex-wrap:wrap; }
+    .ma_ext_weather .point-sch-wrap { width:100%; display:flex; flex-wrap:wrap; }
+    .ma_ext_weather .point-sch-wrap .cmp-local-search { width:50%; }
+    .ma_ext_weather .point-sch-wrap .cmp-bookmark { width:50%; align-self:center; }
+    .ma_ext_weather .cmp-cur-weather-wrap { width:100%; display:flex; flex-wrap:wrap; }
+    .ma_ext_weather .cmp-cur-weather-wrap > div { width:50%; position:relative; }
+	@media (max-width:1499px){
+	    .ma_ext_weather .cmp-cur-weather-wrap {margin-top:5px;}
+	    .ma_ext_weather .point-sch-wrap .cmp-local-search { width:100%; padding:5px 0; }
+        .ma_ext_weather .point-sch-wrap .cmp-bookmark { width:100%; padding:2px 5px; }
+        
+		.maw_tab{ margin-bottom:10px;}
+		.maw_tab ul li p{ width:80px; font-size:14px;}
+		.maw_conbox ul{ position:initial; text-align:right;}
+		.maw_conbox ul li{ display:inline-block;}
+		.maw_conbox ul li p{ font-size:14px;}
+		.maw_conbox .maw_img{ margin-right:0;}
+
+		.main_board_wrap .mb_left{ float:none; width:auto; margin-bottom:40px;}
+		.main_board_wrap .mb_left .mb_box{ width:287px; height:215px;}
+		.main_board_wrap .mb_left .mb_box h4{ margin-bottom:7px;}
+		.main_board_wrap .mb_right{ float:none; width:auto; height:auto;}
+
+		.main_banner_wrap .mb_tit h4{ display:none;}
+		.main_banner_wrap .main_banner1{ width:150px;}
+		.main_banner_wrap .main_banner2{ width:150px;}
+		.main_banner_wrap .main_banner3{ width:246px; height:106px;}
+		.main_banner_wrap .main_banner3 ul li a{ padding:8px 5px;}
+		.main_banner_wrap .main_banner3 ul li a img{ width:25px;}
+		.main_banner_wrap .main_banner3 ul li a p{ font-size:16px;}
+		.main_banner_wrap .main_banner4{ width:306px;}
+		.main_banner_wrap .main_banner4 ul{ padding-top:9px;}
+		.main_banner_wrap .main_banner4 ul li a p{ font-size:14px;}
+
+		.main_b_sbanner .slides{ min-height:69px;}
+
+		.main_slider_banner ul li a{ width:206px;}
+
+		.main_imgbg_banner .mib_box a{ width:286px;}
+	}
+
+	@media (max-width:1199px){
+	    .main_asp_wrap > div.ma_ext_weather { width:100%; padding-bottom:5px;}
+	    .ma_ext_weather .cmp-cur-weather-wrap > div { width:100%; }
+	    .ma_ext_weather .point-sch-wrap .cmp-local-search { width:100%; padding:5px 0; }
+	    .ma_ext_weather .point-sch-wrap .cmp-bookmark { width:100%; padding:2px 5px; }
+	    
+		.main_asp_wrap{ overflow:visible; margin:40px 0 17px 0; padding:0 20px;}
+		.main_asp_wrap > div{ float:none; width:100%; margin:0 0 40px; text-align:center;}
+
+		.maw_tab ul{ text-align:right;}
+		.maw_conbox .maw_img{ margin:0 auto; width:318px;}
+
+		.main_top_title .mtt_textbox{ right:-6px;}
+		.main_board_wrap .mb_left .mb_box{ width:220px;}
+
+		.main_banner_wrap .mb_tit h4{ display:block;}
+		.main_banner_wrap .main_banner1{ width:49%; margin:0 2% 20px 0;}
+		.main_banner_wrap .main_banner1 img{ width:100%;}
+		.main_banner_wrap .main_banner2{ width:49%; margin:0 0 20px;}
+		.main_banner_wrap .main_banner2 img{ width:100%;}
+		.main_banner_wrap .main_banner3{ width:49%; margin-right:2%;}
+		.main_banner_wrap .main_banner3 ul li a{ padding:9px 5px;}
+		.main_banner_wrap .main_banner4{ width:49%; margin:0;}
+
+		.main_b_sbanner .slides{ min-height:145px;}
+
+		.main_slider_banner .ca-item a p{ font-size:14px;}
+		.main_slider_banner .ca-item a p.msb_tit_br{ font-size:14px;}
+		.main_imgbg_banner .mib_box a{ width:203px;}
+	}
+
+	@media (max-width:959px){
+		.ma_temper_wrap{ padding:0 20px;}
+
+		.main_top_title h3{ font-size:34px; margin-top:5px;}
+		.main_top_title h3 b{ font-size:34px;}
+		.main_top_title h4{ font-size:14px;}
+
+		.main_board_wrap{ padding:0 20px;}
+		.main_board_wrap .mb_left .mb_box{ width:100%; margin:0 0 20px; height:auto;}
+		.main_board_wrap .mb_left .mb_box h4{ float:left; width:50%; margin:0; padding-top:40px; font-size:16px;}
+		.main_board_wrap .mb_left .mb_box h4 br{ display:none;}
+		.main_board_wrap .mb_left .mb_box div{ float:right; width:45%;}
+		.main_board_wrap .mb_left .mb_box a.mb_a{ font-size:14px;}
+		.main_board_wrap .mb_left .mb_box a.mb_p{ font-size:14px;}
+
+		.main_board_wrap .mb_right .main_board_tab{ padding:0 15px;}
+		.main_board_wrap .mb_right .main_board_tab ul li p{ font-size:16px;}
+		.main_board_wrap .mb_right .main_board_con{ padding:20px 15px;}
+		.main_board_wrap .mb_right .main_board_con ul li a{ width:200px; font-size:14px;}
+		.main_board_wrap .mb_right .main_board_con ul li span{ font-size:14px;}
+
+		.main_banner_wrap{ padding:0 20px;}
+		.main_banner_wrap .main_banner1{ width:100%; margin:0 0 20px;}
+		.main_banner_wrap .main_banner2{ width:100%; margin:0 0 20px;}
+		.main_banner_wrap .main_banner3{ width:100%; margin:0 0 20px;}
+		.main_banner_wrap .main_banner4{ width:100%; margin:0;}
+
+		.main_b_sbanner .slides{ min-height:278px;}
+
+		.main_slider_banner{ padding:0 20px;}
+
+		.main_imgbg_banner{ padding:0 20px;}
+		.main_imgbg_banner .mib_box{ float:none; margin:0 0 20px;}
+		.main_imgbg_banner .mib_box a{ width:100%; /*height:140px; padding-top:65px;*/}
+		.main_imgbg_banner .mib_box a.mib_tit_br{ /*padding-top:58px;*/}
+		
+		.layerPopup { left:1% !important; margin:0 !important; max-width:450px !important; width:98% !important;}
+		.layerPopup > div > a > div { max-width:450px !important; width:100% !important; }
+		.layerPopup > div > a > div img { width:100% !important; }
+		.layerPopup > div { max-width:450px !important; width:100% !important; }
+	}
+
+	@media (max-width:767px){
+		.main_asp_wrap{ margin-top:20px;}
+		.main_top_title{ height:240px; background-image:url('../..//upload/external/baner/metro.PNG');}
+		.main_top_title .mtt_textbox{ right:auto; left:40px;}
+
+		.maw_conbox ul{ position:absolute; top:20px; right:0; z-index:10;}
+		.maw_conbox ul li{ display:block;}
+		.maw_conbox .maw_img{ margin:0; margin-right:80px; width:auto;}
+		.maw_conbox .maw_img > img{ width:100%;}
+
+		.main_b_sbanner .slides{ min-height:190px;}
+
+		.main_slider_banner .ca-item a{ /*width:150px;*/}
+	}
+
+	@media (max-width:597px){
+		.maw_tab ul{ text-align:right;}
+	}
+
+	@media (max-width:440px){
+		.maw_conbox .maw_img{ margin-right:50px;}
+
+		.main_board_wrap .mb_right .main_board_con ul li a{ width:140px; font-size:14px;}
+		.main_banner_wrap .main_banner4 ul li a img{ height:50px;}
+		.main_banner_wrap .main_banner4 ul li a p{ padding-top:8px;}
+	}
+
+	@media (max-width:410px){
+		.main_b_sbanner .slides{ min-height:150px;}
+	}
+
+	@media (max-width:359px){
+		.main_b_sbanner .slides{ min-height:125px;}
+	}
+
+	@media (max-width:280px){
+		.maw_tab ul li p{ width:70px;}
+		.maw_conbox ul{ position:initial; text-align:right;}
+		.maw_conbox ul li{ display:inline-block;}
+		.maw_conbox .maw_img{ margin-right:0;}
+	}
+</style>
+
+<!-- main slide iconbox -->
+<link rel="stylesheet" type="text/css" href="../../_css/slick.css"/>
+<link rel="stylesheet" type="text/css" href="../../_css/slick-theme.css"/>
+<script type="text/javascript" src="../../_js/slick.js"></script>
+
+<!-- main slide iconbox -->
+<!-- link rel="stylesheet" type="text/css" href="../../_css/jquery.style.css" -->
+<!-- script type="text/javascript" src="../../_js/jquery.easing.1.3.js"></script -->
+<!-- script type="text/javascript" src="../../_js/jquery.mousewheel.js"></script -->
+<!-- script type="text/javascript" src="../../_js/jquery.contentcarousel.js"></script -->
+
+<!-- main slide banner -->
+<script type="text/javascript" src="../../_js/jquery.caro.js"></script>
+<script type="text/javascript" src="../../_js/jsDecodeF.js"></script>
+<Script>
+	function getCookie( name ){
+		var nameOfCookie = name + "=";
+		var x = 0;
+		while ( x <= document.cookie.length )
+		{
+			var y = (x+nameOfCookie.length);
+			if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+				if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+					endOfCookie = document.cookie.length;
+				return unescape( document.cookie.substring( y, endOfCookie ) );
+			}
+
+			x = document.cookie.indexOf( " ", x ) + 1;
+
+			if ( x == 0 ) break;
+		}
+		return "";
+	}
+
+	function setCookie(name, value, expiredays){
+		var todayDate = new Date();
+		todayDate.setDate(todayDate.getDate() + expiredays);
+		document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}
+
+	function closeWin(get_Key) {
+		get_Pop = eval("document.all.Popup"+get_Key);
+		get_Pop_id = "Popup"+get_Key;
+
+		if (get_Pop.checked){
+			setCookie(get_Pop_id,"done",1);
+		}
+
+		get_layerPopup = eval("document.all.layerPopup"+get_Key);
+		get_layerPopup.style.display = 'none';
+	}
+
+</Script>
+
+<script>
+	var x =0
+	var y=0
+	drag = 0
+	move = 0
+	window.document.onmousemove = mouseMove
+	window.document.onmousedown = mouseDown
+	window.document.onmouseup = mouseUp
+	window.document.ondragstart = mouseStop
+	function mouseUp() {
+		move = 0
+	}
+	function mouseDown() {
+		if (drag) {
+			//alert(parseInt(dragObj.style.left));
+			clickleft = window.event.clientX - parseInt(dragObj.style.left);
+			clicktop =window.event.clientY - parseInt(dragObj.style.top);
+			dragObj.style.zIndex += 1
+			move = 1
+		}
+
+	}
+	function mouseMove() {
+		if (move) {
+			dragObj.style.left = window.event.x - clickleft;
+			dragObj.style.top = window.event.y - clicktop;
+		}
+
+	}
+	function mouseStop() {
+		window.event.returnValue = false
+	}
+	function Show(divid)
+	{
+		divid.filters.blendTrans.apply();
+		divid.style.visibility = "visible";
+		divid.filters.blendTrans.play();
+	}
+	function Hide(divid) {
+		divid.filters.blendTrans.apply();
+		divid.style.visibility = "hidden";
+		divid.filters.blendTrans.play();
+	}
+</script>
+<!--//팝업-->
+<!-- 레이어팝업1 시작 -->
+
+
+<div id="layerPopup0" class="layerPopup" style="top:130px; left:80px;margin:0 0 0 -245px; position:absolute ; display:none; z-index:999;">
+	<div>
+		<a href="https://www.kma.go.kr/metropolitan/html/news/notice_view.jsp?pageNo=1&amp;articleno=1193776&amp;boardId=gongzi"   target="_blank"  >
+				
+			
+			<div style="width: 450px; height: 584px; margin: auto; position: relative; ">
+				<img src="../..//upload/external/popup/2025125_2ebad2ab-3f66-4cdc-8e91-2207501fc905.png" style="width: 450px; height: 584px; vertical-align: middle;" alt="2024기상기후사진전 -open envent- 이벤트기간:7월 26일까지 참여하기 수도권기상청" />
+			</div>
+			
+		</a>
+	</div>
+	<div class="link_w" style="background-color:#3a526b;height:25px;width:450px">
+		<input type="checkbox" name="Popup0" id="Popup0"  style="cursor:pointer">&nbsp;<span style="color:#fff;">하루동안 열지 않음</span>
+		<div class="link_w" style="position:absolute; bottom:2px; right:0"><span onClick="javascript:closeWin('0');" style="cursor:pointer; text-align:right; color:#fff;"><b>닫기&nbsp;</b></span></div>
+	</div>
+</div>
+
+<script>
+	
+	if ( getCookie( "Popup0" ) != "done" ) {
+		document.getElementById("layerPopup0").style.display = "block";
+	}
+	
+	var bannerpcurl = '';
+	var bannermobileurl = '';
+	var bannerpcopentype = '1';
+	var bannermobileopentype = '1';
+
+	var pccheckvalue = true;
+	var mobilecheckvalue = true;
+	$( window ).resize(function() {
+		var html = '';
+		if(window.innerWidth > 767 && pccheckvalue == true) {
+			console.log("pcpcpc"+pccheckvalue+"-"+mobilecheckvalue);
+			if(bannerpcurl != ""){
+				if( bannerpcopentype == 1 ){
+					html += '<a href="'+bannerpcurl+'" target="_blank" >';
+				} else if(bannerpcopentype == 2 ) {
+					html += '<a href="'+bannerpcurl+'" >';
+				}
+			}
+			html += '<div class="main_top_title">';
+			html += '<div class="mtt_textbox">';
+			html += '<h4>‘하늘을 친구처럼, 국민을 하늘처럼’</h4>';
+			html += '<h3><b>수도권</b> 기상청</h3>';
+			html += '</div><!-- mtt_textbox -->';
+			html += '</div><!-- main_top_title -->';
+			if(bannerpcurl != ""){
+				html += '</a>';
+			}
+			pccheckvalue = false;
+			mobilecheckvalue = true;
+			$(".main_title_area").empty();
+			$(".main_title_area").append(html);
+		} else if(window.innerWidth <= 767 && mobilecheckvalue == true) {
+			console.log("momomo"+pccheckvalue+"-"+mobilecheckvalue);
+			if(bannermobileurl != ""){
+				if( bannermobileopentype == 1 ){
+					html += '<a href="'+bannermobileurl+'" target="_blank" >';
+				} else if(bannermobileopentype == 2 ) {
+					html += '<a href="'+bannerpcurl+'" >';
+				}
+			}
+			html += '<div class="main_top_title">';
+			html += '<div class="mtt_textbox">';
+			html += '<h4>‘하늘을 친구처럼, 국민을 하늘처럼’</h4>';
+			html += '<h3><b>수도권</b> 기상청</h3>';
+			html += '</div><!-- mtt_textbox -->';
+			html += '</div><!-- main_top_title -->';
+			if(bannermobileurl != ""){
+				html += '</a>';
+			}
+			pccheckvalue = true;
+			mobilecheckvalue = false;
+			$(".main_title_area").empty();
+			$(".main_title_area").append(html);
+		}
+	});
+	$(document).ready(function() {
+		var html = '';
+		if(window.innerWidth > 767) {
+			console.log("pcpcpc"+pccheckvalue+"-"+mobilecheckvalue);
+			if(bannerpcurl != ""){
+				if( bannerpcopentype == 1 ){
+					html += '<a href="'+bannerpcurl+'" target="_blank" >';
+				} else if(bannerpcopentype == 2 ) {
+					html += '<a href="'+bannerpcurl+'" >';
+				}
+			}
+			html += '<div class="main_top_title">';
+			html += '<div class="mtt_textbox">';
+			html += '<h4>‘하늘을 친구처럼, 국민을 하늘처럼’</h4>';
+			html += '<h3><b>수도권</b> 기상청</h3>';
+			html += '</div><!-- mtt_textbox -->';
+			html += '</div><!-- main_top_title -->';
+			if(bannerpcurl != ""){
+				html += '</a>';
+			}
+			pccheckvalue == false;
+		} else {
+			console.log("momomo"+pccheckvalue+"-"+mobilecheckvalue);
+			if(bannermobileurl != ""){
+				if( bannermobileopentype == 1 ){
+					html += '<a href="'+bannermobileurl+'" target="_blank" >';
+				} else if(bannermobileopentype == 2 ) {
+					html += '<a href="'+bannerpcurl+'" >';
+				}
+			}
+			html += '<div class="main_top_title">';
+			html += '<div class="mtt_textbox">';
+			html += '<h4>‘하늘을 친구처럼, 국민을 하늘처럼’</h4>';
+			html += '<h3><b>수도권</b> 기상청</h3>';
+			html += '</div><!-- mtt_textbox -->';
+			html += '</div><!-- main_top_title -->';
+			if(bannermobileurl != ""){
+				html += '</a>';
+			}
+			mobilecheckvalue = false;
+		}
+		$(".main_title_area").append(html);
+	})
+</script>
+<!-- 레이어팝업1 끝 -->
+<div id="sub_wrap">
+	
+	<div class="main_title_area">
+	</div>
+	
+	<div class="ext-full-weather">
+	<div class="main_asp_wrap">
+		<div class="ma_weather">
+			<div class="maw_tab">
+				<ul>
+					<li class="active"><p>현재날씨</p></li>
+					<li><p>예보</p></li>
+				</ul>
+			</div><!-- maw_tab -->
+
+			<div class="maw_conbox mc_1 active">
+				    <div class="maw_date" data-type="now-tm" style="display:none;" >&nbsp;</div>
+					<div class="maw_date" data-type="obs-tm">&nbsp;</div>
+					<ul>
+						<li class="ma_obs active"><p>날씨</p></li>
+						<li class="ma_now"><p>기온</p></li>												
+						<li class="ma_now"><p>풍향</p></li>
+						<li class="ma_now"><p>풍속</p></li>	
+						<li class="ma_now"><p>강수유무</p></li>
+						<li class="ma_now"><p>1시간강수</p></li>
+						<li class="ma_obs"><p>일강수</p></li>
+					</ul>
+				<div class="maw_img mi_1 active">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="obs-wf" data-stn="99">파주</p>
+					<p class="point_djc" data-type="obs-wf" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="obs-wf" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="obs-wf" data-stn="201">강화</p>
+					<p class="point_inc" data-type="obs-wf" data-stn="112">인천</p>
+					<p class="point_so" data-type="obs-wf" data-stn="108">서울</p>
+					<p class="point_sw" data-type="obs-wf" data-stn="119">수원</p>
+					<p class="point_yp" data-type="obs-wf" data-stn="202">양평</p>
+					<p class="point_ic" data-type="obs-wf" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+				<div class="maw_img mi_2">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="now-tmp" data-stn="99">파주</p>
+					<p class="point_djc" data-type="now-tmp" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="now-tmp" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="now-tmp" data-stn="201">강화</p>
+					<p class="point_inc" data-type="now-tmp" data-stn="112">인천</p>
+					<p class="point_so" data-type="now-tmp" data-stn="108">서울</p>
+					<p class="point_sw" data-type="now-tmp" data-stn="119">수원</p>
+					<p class="point_yp" data-type="now-tmp" data-stn="202">양평</p>
+					<p class="point_ic" data-type="now-tmp" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+				<div class="maw_img mi_3">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="now-wd" data-stn="99">파주</p>
+					<p class="point_djc" data-type="now-wd" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="now-wd" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="now-wd" data-stn="201">강화</p>
+					<p class="point_inc" data-type="now-wd" data-stn="112">인천</p>
+					<p class="point_so" data-type="now-wd" data-stn="108">서울</p>
+					<p class="point_sw" data-type="now-wd" data-stn="119">수원</p>
+					<p class="point_yp" data-type="now-wd" data-stn="202">양평</p>
+					<p class="point_ic" data-type="now-wd" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+				<div class="maw_img mi_4">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="now-ws" data-stn="99">파주</p>
+					<p class="point_djc" data-type="now-ws" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="now-ws" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="now-ws" data-stn="201">강화</p>
+					<p class="point_inc" data-type="now-ws" data-stn="112">인천</p>
+					<p class="point_so" data-type="now-ws" data-stn="108">서울</p>
+					<p class="point_sw" data-type="now-ws" data-stn="119">수원</p>
+					<p class="point_yp" data-type="now-ws" data-stn="202">양평</p>
+					<p class="point_ic" data-type="now-ws" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+				<div class="maw_img mi_5">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="now-wf" data-stn="99">파주</p>
+					<p class="point_djc" data-type="now-wf" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="now-wf" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="now-wf" data-stn="201">강화</p>
+					<p class="point_inc" data-type="now-wf" data-stn="112">인천</p>
+					<p class="point_so" data-type="now-wf" data-stn="108">서울</p>
+					<p class="point_sw" data-type="now-wf" data-stn="119">수원</p>
+					<p class="point_yp" data-type="now-wf" data-stn="202">양평</p>
+					<p class="point_ic" data-type="now-wf" data-stn="203">이천</p>
+				</div><!-- maw_img -->				
+				<div class="maw_img mi_6">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="now-rn" data-stn="99">파주</p>
+					<p class="point_djc" data-type="now-rn" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="now-rn" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="now-rn" data-stn="201">강화</p>
+					<p class="point_inc" data-type="now-rn" data-stn="112">인천</p>
+					<p class="point_so" data-type="now-rn" data-stn="108">서울</p>
+					<p class="point_sw" data-type="now-rn" data-stn="119">수원</p>
+					<p class="point_yp" data-type="now-rn" data-stn="202">양평</p>
+					<p class="point_ic" data-type="now-rn" data-stn="203">이천</p>
+				</div><!-- maw_img -->				
+				<div class="maw_img mi_7">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="obs-rn" data-stn="99">파주</p>
+					<p class="point_djc" data-type="obs-rn" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="obs-rn" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="obs-rn" data-stn="201">강화</p>
+					<p class="point_inc" data-type="obs-rn" data-stn="112">인천</p>
+					<p class="point_so" data-type="obs-rn" data-stn="108">서울</p>
+					<p class="point_sw" data-type="obs-rn" data-stn="119">수원</p>
+					<p class="point_yp" data-type="obs-rn" data-stn="202">양평</p>
+					<p class="point_ic" data-type="obs-rn" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+			</div><!-- maw_conbox -->
+
+			<div class="maw_conbox mc_2">
+				    <div class="maw_date" data-type="fct-tm">&nbsp;</div>
+					<ul>
+						<li data-type="fct-date-0" class="active"><p>&nbsp;</p></li>
+						<li data-type="fct-date-1"><p>&nbsp;</p></li>
+						<li data-type="fct-date-2"><p>&nbsp;</p></li>
+						<li data-type="fct-date-3"><p>&nbsp;</p></li>
+						<li data-type="fct-date-4"><p>&nbsp;</p></li>
+			                    <li data-type="fct-date-5"><p>&nbsp;</p></li>
+			                    <li data-type="fct-date-6"><p>&nbsp;</p></li>
+					</ul>
+				<div class="maw_img mi_1 active">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="fct-0" data-stn="99">파주</p>
+					<p class="point_djc" data-type="fct-0" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="fct-0" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="fct-0" data-stn="201">강화</p>
+					<p class="point_inc" data-type="fct-0" data-stn="112">인천</p>
+					<p class="point_so" data-type="fct-0" data-stn="108">서울</p>
+					<p class="point_sw" data-type="fct-0" data-stn="119">수원</p>
+					<p class="point_yp" data-type="fct-0" data-stn="202">양평</p>
+					<p class="point_ic" data-type="fct-0" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+				<div class="maw_img mi_2">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="fct-1" data-stn="99">파주</p>
+					<p class="point_djc" data-type="fct-1" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="fct-1" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="fct-1" data-stn="201">강화</p>
+					<p class="point_inc" data-type="fct-1" data-stn="112">인천</p>
+					<p class="point_so" data-type="fct-1" data-stn="108">서울</p>
+					<p class="point_sw" data-type="fct-1" data-stn="119">수원</p>
+					<p class="point_yp" data-type="fct-1" data-stn="202">양평</p>
+					<p class="point_ic" data-type="fct-1" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+				<div class="maw_img mi_3">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="fct-2" data-stn="99">파주</p>
+					<p class="point_djc" data-type="fct-2" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="fct-2" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="fct-2" data-stn="201">강화</p>
+					<p class="point_inc" data-type="fct-2" data-stn="112">인천</p>
+					<p class="point_so" data-type="fct-2" data-stn="108">서울</p>
+					<p class="point_sw" data-type="fct-2" data-stn="119">수원</p>
+					<p class="point_yp" data-type="fct-2" data-stn="202">양평</p>
+					<p class="point_ic" data-type="fct-2" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+				<div class="maw_img mi_4">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="fct-3" data-stn="99">파주</p>
+					<p class="point_djc" data-type="fct-3" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="fct-3" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="fct-3" data-stn="201">강화</p>
+					<p class="point_inc" data-type="fct-3" data-stn="112">인천</p>
+					<p class="point_so" data-type="fct-3" data-stn="108">서울</p>
+					<p class="point_sw" data-type="fct-3" data-stn="119">수원</p>
+					<p class="point_yp" data-type="fct-3" data-stn="202">양평</p>
+					<p class="point_ic" data-type="fct-3" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+				<div class="maw_img mi_5">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="fct-4" data-stn="99">파주</p>
+					<p class="point_djc" data-type="fct-4" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="fct-4" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="fct-4" data-stn="201">강화</p>
+					<p class="point_inc" data-type="fct-4" data-stn="112">인천</p>
+					<p class="point_so" data-type="fct-4" data-stn="108">서울</p>
+					<p class="point_sw" data-type="fct-4" data-stn="119">수원</p>
+					<p class="point_yp" data-type="fct-4" data-stn="202">양평</p>
+					<p class="point_ic" data-type="fct-4" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+				<div class="maw_img mi_6">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="fct-5" data-stn="99">파주</p>
+					<p class="point_djc" data-type="fct-5" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="fct-5" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="fct-5" data-stn="201">강화</p>
+					<p class="point_inc" data-type="fct-5" data-stn="112">인천</p>
+					<p class="point_so" data-type="fct-5" data-stn="108">서울</p>
+					<p class="point_sw" data-type="fct-5" data-stn="119">수원</p>
+					<p class="point_yp" data-type="fct-5" data-stn="202">양평</p>
+					<p class="point_ic" data-type="fct-5" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+				<div class="maw_img mi_7">
+					<img src="../../images/main/map_img.png" alt="날씨 지도">
+					<p class="point_pj" data-type="fct-6" data-stn="99">파주</p>
+					<p class="point_djc" data-type="fct-6" data-stn="98">동주천</p>
+					<p class="point_brd" data-type="fct-6" data-stn="102">백령도</p>
+					<p class="point_gh" data-type="fct-6" data-stn="201">강화</p>
+					<p class="point_inc" data-type="fct-6" data-stn="112">인천</p>
+					<p class="point_so" data-type="fct-6" data-stn="108">서울</p>
+					<p class="point_sw" data-type="fct-6" data-stn="119">수원</p>
+					<p class="point_yp" data-type="fct-6" data-stn="202">양평</p>
+					<p class="point_ic" data-type="fct-6" data-stn="203">이천</p>
+				</div><!-- maw_img -->
+			</div><!-- maw_conbox -->
+
+			<br><br>
+			<div class="cmp-rpt-download">
+				<a href="#" data-type="short-term-rpt" class="cmp-rpt-download-btn">단기예보 통보문</a>&nbsp;
+				<a href="#" data-type="mid-term-rpt" class="cmp-rpt-download-btn">중기예보 통보문</a>
+			</div>
+		</div><!-- ma_weather -->
+			
+			<link rel="stylesheet" type="text/css" href="https://www.weather.go.kr/w/resources/ext/css/ext-component.css"/>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/js/object-assign.js"></script>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/js/moment-with-locales.js"></script>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/js/mustache.min.js"></script>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/js/store.modern.min.js"></script>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/js/lodash.min.js"></script>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/js/iscroll-probe.js"></script>
+	        <script type="text/javascript" src="https://www.weather.go.kr/w/resources/js/highcharts.js"></script>
+	        <script type="text/javascript" src="https://www.weather.go.kr/w/resources/js/fn.js"></script>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/ext/js/cur-obs.js"></script>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/ext/js/cur-now.js"></script>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/ext/js/daily-fct.js"></script>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/ext/js/short-term-rpt.js"></script>
+			<script type="text/javascript" src="https://www.weather.go.kr/w/resources/ext/js/mid-term-rpt.js"></script>
+			<script type="text/javascript">
+			  window.weatherDomain = "https://www.weather.go.kr";
+			  /* 99 파주, 98 동두천, 102 백령도, 201 강화, 112 인천, 108 서울, 119 수원, 202 양평, 203 이천 */
+			  var obsStations = [ '99', '98', '102', '201', '112', '108', '119', '202', '203' ];
+			  var curObs = new CurObs('.ma_weather', obsStations, { weatherDomain: window.weatherDomain } );
+			  var curNow = new CurNow('.ma_weather', obsStations, { weatherDomain: window.weatherDomain } );
+			  var dailyFct = new DailyFct('.ma_weather', obsStations, { weatherDomain: window.weatherDomain } );
+			  var shortTermRpt = new ShortTermRpt('.ma_weather', '109', { weatherDomain: window.weatherDomain } );
+			  var midTermRpt = new MidTermRpt('.ma_weather', '109', { weatherDomain: window.weatherDomain } );
+			</script>
+			<script defer type="text/javascript" src="https://www.weather.go.kr/w/resources/ext/js/ext-dong-searchbox.js"></script>
+            <script defer type="text/javascript" src="https://www.weather.go.kr/w/resources/ext/js/ext-bookmark-dropdown.js"></script>
+            <script defer type="text/javascript" src="https://www.weather.go.kr/w/resources/ext/js/create-dfs-slider.js"></script>
+            <script defer type="text/javascript" src="https://www.weather.go.kr/w/resources/ext/js/ext-my-point-slider.js"></script>
+            <script defer type="text/javascript" src="https://www.weather.go.kr/w/resources/ext/js/ext-weather.js"></script>
+            
+			<div class="ma_ext_weather">
+			    <div class="point-sch-wrap">
+				    <div class="cmp-my-point-slider" id="my-point-slider">
+	                    <div class="slide-wrap">
+	                        <div data-role="my-area-holder"><div class="no-area">로딩중...</div></div>
+	                        <div class="left-fade"></div>
+	                        <div class="right-fade"></div>
+	                    </div>
+	                </div>
+	                <a href="#" class="sym-btn sch-b" data-role="pop-local-search">행정동검색</a>
+				    <div class="cmp-local-search" id="index-local-search">
+				         <div class="cmp-local-search-input">
+	                         <div><input class="input" type="text" placeholder="읍면동, 주요지명으로 조회하세요"></div>
+	                         <a href="#" class="sym-btn sch">검색</a>
+	                     </div>
+	                     <div class="cmp-local-search-items">
+	                         <ul></ul>
+	                     </div>
+				    </div>
+					<div id="index-bookmarks" class="cmp-bookmark">
+					     <a href="#" class="sym-btn curr" data-role="search-current-location" title="내위치(PC에서 접속하시는 경우 실제 계신 곳의 위치와 차이가 발생할 수 있습니다.)">현재위찾기</a>
+	                     <div class="serch-area accordionsecond-wrap">
+	                         <a href="#" class="serch-area-btn accordionsecond-tit" data-role="bookmark-selected">로딩중...</a>
+	                         <div class="accordionsecond-con serch-con">
+	                             <div>
+	                                 <ul data-role="bookmark-holder"></ul>
+	                             </div>
+	                         </div>
+	                     </div>
+	                     <div class="right-wrap">
+	                         <a href="#" class="sym-btn star" data-role="toggle-bookmark">관심지역토글</a>
+	                         <a href="#" class="sym-btn quest" data-role="toggle-help">도움말</a>
+	                         <i class="tt-btn"><span class="tt">별표를 누르면 관심지역으로 등록 또는 삭제할 수 있습니다</span></i>
+	                         <a href="https://www.weather.go.kr/wgis-nuri/html/map.html" class="open-wgis" target="_blank" title="새창열림">날씨지도</a>
+	                         <div class="cmp-help-tooltip">
+	                             <div class="shadow-box">
+	                                 <div class="inner">
+	                                     <a href="#close" class="close-box">닫기</a>
+	                                     <h5>도움말</h5>
+	                                     <p>별표를 누르면 관심지역으로 등록 또는 삭제할 수 있습니다</p>
+	                                 </div>
+	                             </div>
+	                         </div>
+	                     </div>
+					</div>
+				</div>
+				<div id="current-weather" class="cmp-cur-weather-wrap"></div>
+	       </div>
+		</div><!-- main_asp_wrap -->
+	    <div id="digital-forecast"></div>
+	</div>
+
+	<div class="main_board_wrap">
+		<div class="mb_left">
+			<div class="mb_box" style="background-image:url('../../images/main/board_bg1.jpg');">
+				<h4>수도권기상청<br>소개</h4>
+				<div>
+					<a href="../info/business01.jsp" title="주요 업무" class="mb_a">주요 업무</a>
+					<a href="../info/organization.jsp" title="조직과 직원" class="mb_a">조직 · 직원</a>
+				</div>
+			</div><!-- mb_box -->
+			<div class="mb_box" style="background-image:url('../../images/main/board_bg2.jpg');">
+				<h4>전자민원</h4>
+				<div>
+					<a href="https://minwon.kma.go.kr/main/main.do" target="_blank" title="기상청 민원서류 전자문서로 무료발급 받으세요!" class="mb_p">기상청 민원서류<br>전자문서로<br>무료발급 받으세요!</a>
+				</div>
+			</div><!-- mb_box -->
+			<div class="mb_box" style="background-image:url('../../images/main/board_bg3.jpg');">
+				<h4>기상·기후 교육 콘텐츠</h4>
+				<div>
+				<!-- 	<a href="https://www.kma.go.kr/kma/exp/programs.jsp?schGroup=%ec%88%98%eb%8f%84%ea%b6%8c%ea%b8%b0%ec%83%81%ec%b2%ad&schStatus=" target="_blank" title="체험학습신청" class="mb_a">체험학습신청</a> -->
+					<a href="https://www.kma.go.kr/kids/index.jsp" target="_blank" title="어린이 기상교실" class="mb_a">어린이 기상교실</a>
+				</div>
+				<div>
+					<a href="https://www.climate.go.kr/edu/index.jsp" target="_blank" title="기후변화과학 콘텐츠 " class="mb_a">기후변화과학 콘텐츠</a>
+				</div>
+			</div><!-- mb_box -->
+		</div><!-- mb_left -->
+
+		<div class="mb_right">
+			<div class="main_board_tab">
+				<ul>
+					<li>
+						<p>공지사항</p>
+						<a href="../news/notice_list.jsp?boardId=gongzi" title="공지사항 더보기">더보기</a>
+					</li>
+					<li class="active">
+						<p>보도자료</p>
+						<a href="../news/notice_list.jsp?boardId=press2" title="보도자료 더보기">더보기</a>
+					</li>
+				</ul>
+			</div><!-- main_board_tab -->
+			<div class="main_board_con mb_con1">
+				<ul>
+					
+					
+						<li>
+							<a href='../news/notice_view.jsp?pageNo=1&articleno=1193776&boardId=gongzi'>「그린 아이디어 톡!톡!」 지구를 위한 약속 공모전 작품 전시회 안내</a>
+							<span>2025/12/05</span>
+						</li>
+					
+						<li>
+							<a href='../news/notice_view.jsp?pageNo=1&articleno=1193757&boardId=gongzi'>「그린 아이디어 톡!톡!」 지구를 위한 약속 공모전 수상작 발표</a>
+							<span>2025/10/31</span>
+						</li>
+					
+						<li>
+							<a href='../news/notice_view.jsp?pageNo=1&articleno=1193734&boardId=gongzi'>경기도 기상관측장비&#40;AWS&#41; 운영서버 교체에 따른 자료전송 중단 안내</a>
+							<span>2025/09/03</span>
+						</li>
+					
+						<li>
+							<a href='../news/notice_view.jsp?pageNo=1&articleno=1193733&boardId=gongzi'>[수도권기상청 폭염 공감 이벤트] 올해 폭염은 ㅇㅇㅇ이다!</a>
+							<span>2025/09/01</span>
+						</li>
+					
+						<li>
+							<a href='../news/notice_view.jsp?pageNo=1&articleno=1193713&boardId=gongzi'>「그린아이디어 톡!톡!」 지구를 위한 약속 공모전 개최</a>
+							<span>2025/07/29</span>
+						</li>
+					
+				</ul>
+			</div><!-- main_board_con -->
+
+			<div class="main_board_con mb_con2 active">
+				<ul>
+					
+					
+						<li>
+							<a href='../news/notice_view.jsp?pageNo=1&articleno=13132&boardId=press2'>[보도자료] 2025년 수도권 가을철 기후특성</a>
+							<span>2025/12/04</span>
+						</li>
+					
+						<li>
+							<a href='../news/notice_view.jsp?pageNo=1&articleno=13117&boardId=press2'>수도권기상청-서울시 하반기 기상·기후정책 대응협의회 개최 </a>
+							<span>2025/11/26</span>
+						</li>
+					
+						<li>
+							<a href='../news/notice_view.jsp?pageNo=1&articleno=13114&boardId=press2'>[보도자료] "수도권기상청, 기초지자체와 함께 수도권지역의 안전한 겨울나기" 방재협력 확대</a>
+							<span>2025/11/19</span>
+						</li>
+					
+						<li>
+							<a href='../news/notice_view.jsp?pageNo=1&articleno=13108&boardId=press2'>｢보도자료｣ 수도권기상청－인천환경공단 기상정보 기반 악취영향정보 서비스 정식운영 추진</a>
+							<span>2025/11/11</span>
+						</li>
+					
+						<li>
+							<a href='../news/notice_view.jsp?pageNo=1&articleno=13094&boardId=press2'> [설명자료] 수능일 큰 추위 없이 맑고 일교차 큰 날씨</a>
+							<span>2025/11/10</span>
+						</li>
+					
+				</ul>
+			</div><!-- main_board_con -->
+		</div><!-- mb_right -->
+	</div><!-- main_board_wrap -->
+
+	<div class="main_banner_wrap">
+		<div class="main_banner1">
+			<div class="mb_tit">
+				<h4>알림판</h4>
+			</div><!-- mb_tit -->
+
+			<div id="main_banner1" class="main_b_sbanner">
+				<div class="controls">
+					<a href="#" class="play">play</a>
+					<a href="#" class="stop">stop</a>
+					<a href="#" class="b_previous">previous</a>
+					<a href="#" class="b_next">next</a>
+				</div><!-- controls -->
+				<div class="slides">
+					
+						
+					
+				</div><!-- slides -->
+			</div><!-- main_b_sbanner -->
+
+			<script type="text/javascript">
+				var $e = $('#horizontalDemo').caro({cycle: true, initialSlide: 2});
+
+				$e.on('beforeSlide', function(e, slideIndex) {
+					console.log('horizontalDemo - beforeSlide triggered. Current slide:', slideIndex);
+
+					// in case this is set to false, it won't proceed
+					return true;
+				});
+				$e.on('updateSlide', function(e, slideIndex) {
+					console.log('horizontalDemo - updateSlide triggered. Current slide:', slideIndex);
+				});
+				$("#main_banner1").caro({
+					autoNavigation: true,
+					cycle: true
+				});
+				$('.innerDemo').caro();
+			</script>
+
+		</div><!-- main_banner1 -->
+
+		<div class="main_banner2">
+			<div class="mb_tit">
+				<h4>공익캠페인</h4>
+			</div><!-- mb_tit -->
+
+			<div id="main_banner2" class="main_b_sbanner">
+				<div class="controls">
+					<a href="#" class="play">play</a>
+					<a href="#" class="stop">stop</a>
+					<a href="#" class="b_previous">previous</a>
+					<a href="#" class="b_next">next</a>
+				</div><!-- controls -->
+				<div class="slides"> 
+
+
+					<div><a href="../../download/winter_campaign.zip" download title="기상재해 피해예방 공익캠페인"><img src="../../images/main/banner2_1.jpg" alt="기상재해 피해예방 공익캠페인"></a></div>     
+
+<!--					<div><a href="../../download/summer_campaign.zip" download title="기상재해 피해예방 공익캠페인"><img src="../../images/main/banner2_1.jpg" alt="기상재해 피해예방 공익캠페인"></a></div>    -->
+
+
+
+				</div><!-- slides -->
+			</div><!-- main_b_sbanner -->
+
+			<script type="text/javascript">
+				var $e = $('#horizontalDemo').caro({cycle: true, initialSlide: 2});
+
+				$e.on('beforeSlide', function(e, slideIndex) {
+					console.log('horizontalDemo - beforeSlide triggered. Current slide:', slideIndex);
+
+					// in case this is set to false, it won't proceed
+					return true;
+				});
+				$e.on('updateSlide', function(e, slideIndex) {
+					console.log('horizontalDemo - updateSlide triggered. Current slide:', slideIndex);
+				});
+				$("#main_banner2").caro({
+					autoNavigation: true,
+					cycle: true
+				});
+				$('.innerDemo').caro();
+			</script>
+
+		</div><!-- main_banner2 -->
+
+		<div class="main_banner3">
+			<ul>
+				<li class="mb3_bg">
+					<a href="https://www.kma.go.kr/metropolitan/html/pop/weather/summary.jsp" target="_blank" title="날씨요약">
+						<img src="../../images/main/banner3_icon1.png" alt="날씨요약">
+						<p>날씨요약</p>
+					</a>
+				</li>
+				<li class="mb3_bg">
+					<a href="https://www.kma.go.kr/metropolitan/html/pop/weather/report_inf.jsp" target="_blank" title="기상정보">
+						<img src="../../images/main/banner3_icon2.png" alt="기상정보">
+						<p>기상정보</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.kma.go.kr/metropolitan/html/pop/weather/report_met.jsp" target="_blank" title="기상특보">
+						<img src="../../images/main/banner3_icon3.png" alt="기상특보">
+						<p>기상특보</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.kma.go.kr/metropolitan/html/pop/weather/report_cmt.jsp" target="_blank" title="날씨해설">
+						<img src="../../images/main/banner3_icon4.png" alt="날씨해설">
+						<p>날씨해설</p>
+					</a>
+				</li>
+			</ul>
+		</div><!-- main_banner3 -->
+
+		<div class="main_banner4">
+			<ul>
+				<li>
+					<a href="https://www.facebook.com/smmaskylove/" target="_blank" title="수도권청 페이스북">
+						<img src="../../images/main/banner4_icon1.png" alt="수도권청 페이스북">
+						<p>수도권청<br>페이스북</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://band.us/@weather365" target="_blank" title="날씨알리미">
+						<img src="../../images/main/banner4_icon2.png" alt="날씨알리미">
+						<p class="mb4_1line">날씨알리미</p>
+					</a>
+				</li>
+			</ul>
+		</div><!-- main_banner4 -->
+	</div><!-- main_banner_wrap -->
+	
+	<div class="main_slider_banner">
+		<div id="ms_banner" class="ca-container">
+			<div class="ca-wrapper">
+				
+					<div class="ca-item">
+					
+						<a href="https://www.kma.go.kr/metropolitan/html/pop/longTerm.html"  target="_blank"  title="기상전망 1개월">
+					
+					
+							<div class="msb_img"><img src="../..//upload/external/rolling/2024122_5e2a2ea2-a159-466b-91a2-730c1bfe2092.png" alt="기상전망 1개월"></div>
+							<p>기상전망 1개월</p>
+					
+					
+						</a>
+					
+				</div><!-- ca-item -->
+				
+					<div class="ca-item">
+					
+						<a href="https://www.kma.go.kr/metropolitan/html/pop/longTerm3.html"  target="_blank"  title="기상전망 3개월">
+					
+					
+							<div class="msb_img"><img src="../..//upload/external/rolling/2024122_aad3f1e4-a41d-4fd8-9d25-2af30f509849.png" alt="기상전망 3개월"></div>
+							<p>기상전망 3개월</p>
+					
+					
+						</a>
+					
+				</div><!-- ca-item -->
+				
+					<div class="ca-item">
+					
+						<a href="https://www.kma.go.kr/metropolitan/html/pop/longTerm3Report.html"  target="_blank"  title="3개월전망 해설서">
+					
+					
+							<div class="msb_img"><img src="../..//upload/external/rolling/2024122_609d98cb-0c2d-46f1-a1b7-cb5b78a9de3e.png" alt="3개월전망 해설서"></div>
+							<p>3개월전망 해설서</p>
+					
+					
+						</a>
+					
+				</div><!-- ca-item -->
+				
+			</div><!-- ca-wrapper -->
+        			    <div class="paginator-center text-color text-center">
+           			         <button class="prev slick-prev"></button>
+          			          <button class="next slick-next"></button>
+       			     </div>
+		</div><!-- ca-container -->
+		<script src="/common/js/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript">
+
+			/*$('#ms_banner').contentcarousel({
+				// speed for the sliding animation
+				sliderSpeed     : 750,
+				// easing for the sliding animation
+				sliderEasing    : 'easeOutExpo',
+				// speed for the item animation (open / close)
+				itemSpeed       : 750,
+				// easing for the item animation (open / close)
+				itemEasing      : 'easeOutExpo',
+				// number of items to scroll at a time
+				scroll          : 1
+			});*/
+
+
+               $(document).ready(function() {
+                    $('#ms_banner .ca-wrapper').slick({
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        arrows: true,
+                        infinite: true,
+                        prevArrow: $('.ca-wrapper .prev'),
+		    	nextArrow: $('.ca-wrapper .next'),
+                        responsive: [
+							{
+                                breakpoint: 1499,
+                                settings: {
+                                    arrows: true,
+                                    centerMode: true,
+                                    centerPadding: '40px',
+                                    slidesToShow: 4
+                                }
+                            },
+                            {
+                                breakpoint: 1199,
+                                settings: {
+                                    arrows: true,
+                                    centerMode: true,
+                                    centerPadding: '40px',
+                                    slidesToShow: 3
+                                }
+                            },
+                            {
+                                breakpoint: 959,
+                                settings: {
+                                    arrows: true,
+                                    centerMode: true,
+                                    centerPadding: '40px',
+                                    slidesToShow: 2
+                                }
+                            }
+                        ]
+                });
+
+                });
+
+
+		</script>
+	</div><!-- main_slider_banner -->
+
+
+	<!--   배너 2개일때 style에 margin-left:110px추가   -->
+	<div class="main_imgbg_banner">
+		<div class="mib_box">
+			<a href="https://www.kma.go.kr/home/app.html" target="_blank" title="기상청 날씨제보" style="background-image:url('../../images/main/bgimg_1.png'); margin-left:110px;">기상청 날씨제보</a>
+		</div><!-- mib_box -->
+		<div class="mib_box">
+			<a href="https://www.kma.go.kr/metropolitan/html/pop/climateSourcebook.jsp" onclick="window.open(this.href, '_blank', 'width=600 height=680 left=550 top=250'); return false;" title="수도권 기후자료집" style="background-image:url('../../images/main/bgimg_2.png'); text-shadow:1px 1px 1px #000; margin-left:110px;">수도권 기후자료집</a>
+		</div><!-- mib_box -->
+		<div class="mib_box">
+			<!--<a href="https://vr.nolzatoday.com/2024weather/" target="_blank" title="2024기상기후사진 VR전시회" style="background-image:url('../../images/main/bgimg_8.png'); padding-top:25px;  text-shadow:1px 1px 1px #000;">2024기상기후사진<br/>VR전시회</a>-->
+			<!--<a href="https://vr.nolzatoday.com/2023weather/" target="_blank" title="2023기상기후사진 VR전시회" style="background-image:url('../../images/main/bgimg_7.png'); padding-top:25px;">2023기상기후사진<br/>VR전시회</a>-->
+			<!--<a href="https://vr.nolzatoday.com/2023weather/" target="_blank" title="2023기상기후사진 VR전시회" style="background-image:url('../../images/main/bgimg_7.png'); padding-top:25px;"><font size="3">2023기상기후사진 VR전시회 이벤트</font><br/><font size="5"></font><font size="2">2023.7.5~2023.8.20.</font></a> -->
+			<!--<a href="https://vr.nolzatoday.com/2022weather/" target="_blank" title="2022기상기후사진 VR전시회" style="background-image:url('../../images/main/bgimg_5.jpg');">2022기상기후사진 VR전시회</a>-->
+			<!--<a href="../pop/heatWave.jsp" target="_blank" title="폭염 영향 예보 대응요령" style="background-image:url('../../images/main/bgimg_4.jpg');" onclick="window.open(this.href, '_blank', 'width=1060, height=1300, left=200, top=50'); return false;">내일의 더위는 무슨 색일까?<br/>폭염 영향예보</a>-->
+		</div>
+		<!-- mib_box -->
+	</div><!-- main_imgbg_banner -->
+		
+</div><!-- sub_wrap -->
+
+
+
+
+		</div><!-- contant -->
+
+		<div class="clear"></div>
+
+		<div id="footer">
+			<div id="footer_util">
+				<div class="con_width">
+					<ul>
+						<li><a href="javascript:void(0);" title="열기">기상청소속기관</a>
+							<ul class="link_list">
+								<li><a href="http://www.kma.go.kr/metropolitan/html/main/index.jsp" target="_blank" title="새창열림">수도권기상청</a></li>
+								<li><a href="http://www.kma.go.kr/busan/html/main/index.jsp" target="_blank" title="새창열림">부산지방기상청</a></li>
+								<li><a href="http://www.kma.go.kr/gwangju/html/main/index.jsp" target="_blank" title="새창열림">광주지방기상청</a></li>
+								<li><a href="http://www.kma.go.kr/gangwon/html/main/index.jsp" target="_blank" title="새창열림">강원지방기상청</a></li>
+								<li><a href="http://www.kma.go.kr/daejeon/html/main/index.jsp" target="_blank" title="새창열림">대전지방기상청</a></li>
+								<li><a href="http://www.kma.go.kr/daegu/html/main/index.jsp" target="_blank" title="새창열림">대구지방기상청</a></li>
+								<li><a href="http://www.kma.go.kr/jeju/html/main/index.jsp" target="_blank" title="새창열림">제주지방기상청</a></li>
+								<li><a href="http://www.kma.go.kr/cheongju/html/main/index.jsp" target="_blank" title="새창열림">청주기상지청</a></li>
+								<li><a href="http://www.kma.go.kr/jeonju/html/main/index.jsp" target="_blank" title="새창열림">전주기상지청</a></li>
+								<li><a href="http://nmsc.kma.go.kr" target="_blank" title="새창열림">국가기상위성센터</a></li>
+								<li><a href="http://amo.kma.go.kr" target="_blank" title="새창열림">항공기상청</a></li>
+								<li><a href="http://www.nims.go.kr/" target="_blank" title="새창열림">국립기상과학원</a></li>
+								<li><a href="http://radar.kma.go.kr" target="_blank" title="새창열림">기상레이더센터</a></li>
+								<li><a href="http://www.weather.go.kr/w/index.do" target="_blank" title="새창열림">국가태풍센터</a></li>
+								<li><a href="http://www.kma.go.kr/super" target="_blank" title="새창열림">국가기상슈퍼컴퓨터센터</a></li>	
+			
+							</ul>
+							<span class="arr sprite"></span>
+						</li>
+						<li><a href="javascript:void(0);" title="열기">수도권 유관기관</a>
+							<ul class="link_list">
+								<li><a href="http://www.gg.go.kr" target="_blank" title="새창열림">경기도청</a></li>
+								<li><a href="http://www.incheon.go.kr" target="_blank" title="새창열림">인천광역시청</a></li>
+								<li><a href="http://119.gg.go.kr" target="_blank" title="새창열림">경기도소방재난본부</a></li>
+								<li><a href="http://www.ggpolice.go.kr" target="_blank" title="새창열림">경기남부경찰청</a></li>
+								<li><a href="http://www.ggbpolice.go.kr" target="_blank" title="새창열림">경기북부경찰청</a></li>
+								<li><a href="http://www.me.go.kr/hg" target="_blank" title="새창열림">한강유역환경청</a></li>
+								<li><a href="http://www.goe.go.kr" target="_blank" title="새창열림">경기도 교육청</a></li>
+							</ul>
+							<span class="arr sprite"></span>
+						</li>
+						<li><a href="javascript:void(0);" title="열기">주요행정기관</a>
+							<ul class="link_list">
+								<li><a href="http://www.president.go.kr/" target="_blank" title="새창열림">대한민국 대통령실</a></li>
+								<li><a href="http://www.opm.go.kr/" target="_blank" title="새창열림">국무총리실</a></li>
+								<li><a href="http://www.bai.go.kr/" target="_blank" title="새창열림">감사원</a></li>
+								<li><a href="http://www.nis.go.kr/" target="_blank" title="새창열림">국가정보원</a></li>
+								<li><a href="http://www.kcc.go.kr/" target="_blank" title="새창열림">방송통신위원회</a></li>
+								<li><a href="http://www.humanrights.go.kr/" target="_blank" title="새창열림">국가인권위원회</a></li>   
+								<li><a href="http://www.ftc.go.kr/" target="_blank" title="새창열림">공정거래위원회</a></li>
+								<li><a href="http://www.fsc.go.kr/" target="_blank" title="새창열림">금융위원회</a></li>
+								<li><a href="http://www.acrc.go.kr/" target="_blank" title="새창열림">국민권익위원회</a></li>
+								<li><a href="http://nas.na.go.kr/" target="_blank" title="새창열림">국회사무처</a></li>
+								<li class="devide"><p title="새창열림">[ 19부 ]</p></li>
+								<li><a href="http://www.moef.go.kr/" target="_blank" title="새창열림">기획재정부</a></li>
+								<li><a href="http://www.msit.go.kr/" target="_blank" title="새창열림">과학기술정보통신부</a></li>
+								<li><a href="http://www.moe.go.kr/" target="_blank" title="새창열림">교육부</a></li>
+								<li><a href="http://www.mofat.go.kr" target="_blank" title="새창열림">외교부</a></li>
+								<li><a href="http://www.unikorea.go.kr/" target="_blank" title="새창열림">통일부</a></li>
+								<li><a href="http://www.moj.go.kr/" target="_blank" title="새창열림">법무부</a></li>
+								<li><a href="http://www.mnd.go.kr/" target="_blank" title="새창열림">국방부</a></li>
+								<li><a href="http://www.mois.go.kr/" target="_blank" title="새창열림">행정안전부</a></li>
+								<li><a href="http://www.mpva.go.kr/" target="_blank" title="새창열림">국가보훈부</a></li>
+								<li><a href="http://www.mcst.go.kr/" target="_blank" title="새창열림">문화체육관광부</a></li>
+								<li><a href="http://www.mafra.go.kr/" target="_blank" title="새창열림">농림축산식품부</a></li>
+								<li><a href="http://www.motie.go.kr" target="_blank" title="새창열림">산업통상자원부</a></li>
+								<li><a href="http://www.mohw.go.kr/" target="_blank" title="새창열림">보건복지부</a></li>
+								<li><a href="http://www.me.go.kr/" target="_blank" title="새창열림">환경부</a></li>
+								<li><a href="http://www.moel.go.kr/" target="_blank" title="새창열림">고용노동부</a></li>
+								<li><a href="http://www.mogef.go.kr/" target="_blank" title="새창열림">여성가족부</a></li>
+								<li><a href="http://www.molit.go.kr/" target="_blank" title="새창열림">국토교통부</a></li>
+								<li><a href="http://www.mof.go.kr/" target="_blank" title="새창열림">해양수산부</a></li>
+								<li><a href="http://www.smba.go.kr/" target="_blank" title="새창열림">중소벤처기업부</a></li>
+								<li class="devide"><p title="새창열림" color="white">[ 3처 ]</p></li>
+								<li><a href="http://www.mpm.go.kr" target="_blank" title="새창열림">인사혁신처</a></li>
+								<li><a href="http://www.moleg.go.kr/" target="_blank" title="새창열림">법제처</a></li>
+								<li><a href="http://www.mfds.go.kr/" target="_blank" title="새창열림">식품의약품안전처</a></li>
+								<li class="devide"><p title="새창열림">[ 20청 ]</p></li>
+								<li><a href="http://www.nts.go.kr/" target="_blank" title="새창열림">국세청</a></li>
+								<li><a href="http://www.customs.go.kr/" target="_blank" title="새창열림">관세청</a></li>
+								<li><a href="http://www.pps.go.kr/" target="_blank" title="새창열림">조달청</a></li>
+								<li><a href="http://kostat.go.kr/" target="_blank" title="새창열림">통계청</a></li>
+								<li><a href="http://www.oka.go.kr/" target="_blank" title="새창열림">재외동포청</a></li>
+								<li><a href="http://www.spo.go.kr/" target="_blank" title="새창열림">검찰청</a></li>
+								<li><a href="http://www.mma.go.kr/" target="_blank" title="새창열림">병무청</a></li>
+								<li><a href="http://www.dapa.go.kr/" target="_blank" title="새창열림">방위사업청</a></li>
+								<li><a href="http://www.police.go.kr/" target="_blank" title="새창열림">경찰청</a></li>
+								<li><a href="http://www.nfa.go.kr/nfa/" target="_blank" title="새창열림">소방청</a></li>
+								<li><a href="http://www.cha.go.kr" target="_blank" title="새창열림">국가유산청</a></li>
+								<li><a href="http://www.rda.go.kr/" target="_blank" title="새창열림">농촌진흥청</a></li>
+								<li><a href="http://www.forest.go.kr/" target="_blank" title="새창열림">산림청</a></li>
+								<li><a href="http://www.kipo.go.kr/" target="_blank" title="새창열림">특허청</a></li>
+								<li><a href="http://www.kdca.go.kr/" target="_blank" title="새창열림">질병관리청</a></li>
+								<li><a href="http://www.kma.go.kr/" target="_blank" title="새창열림">기상청</a></li>
+								<li><a href="http://www.naacc.go.kr/" target="_blank" title="새창열림">행정중심복합도시건설청</a></li>
+								<li><a href="http://www.saemangeum.go.kr/" target="_blank" title="새창열림">새만금개발청</a></li>
+								<li><a href="http://www.kcg.go.kr" target="_blank" title="새창열림">해양경찰청</a></li>
+								<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>    
+
+
+
+							<!-- 	<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>     -->
+							<!-- 	<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>     -->
+							<!-- 	<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>     -->
+							<!-- 	<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>     -->
+							<!-- 	<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>     -->
+							<!-- 	<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>     -->
+							<!-- 	<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>     -->
+							<!-- 	<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>     -->
+							<!-- 	<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>     -->
+							<!-- 	<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">우주항공청</a></li>     -->
+
+
+	
+							</ul>
+							<span class="arr sprite"></span>
+						</li>
+						<li><a href="javascript:void(0);" title="열기">방재유관기관</a>
+							<ul class="link_list">
+								<li><a href="http://119.seoul.go.kr/" target="_blank" title="새창열림">서울종합방재센터</a></li>
+								<li><a href="http://www.ndmi.go.kr" target="_blank" title="새창열림">국립재난안전연구원</a></li>
+								<li><a href="http://www.hrfco.go.kr/" target="_blank" title="새창열림">한강홍수통제소</a></li>
+							<!-- 	<li><a href="http://www.mois.go.kr/frt/a01/frtMain.do" target="_blank" title="새창열림">행정안전부</a></li>     -->
+								<li><a href="http://www.airkorea.or.kr" target="_blank" title="새창열림">대기오염도실시간공개</a></li>
+								<li><a href="http://www.wamis.go.kr" target="_blank" title="새창열림">국가수자원관리종합정보시스템</a></li>	
+							</ul>
+							<span class="arr sprite"></span>
+						</li>
+						<li><a href="javascript:void(0);" title="열기">외국기상청</a>
+							<ul class="link_list">
+								<li><a href="http://www.weather.gov/" target="_blank" title="새창열림">미국</a></li>
+								<li><a href="http://www.jma.go.jp" target="_blank" title="새창열림">일본</a></li>
+								<li><a href="http://www.cma.gov.cn" target="_blank" title="새창열림">중국</a></li>
+								<li><a href="http://www.metoffice.gov.uk/" target="_blank" title="새창열림">영국</a></li>
+								<li><a href="http://www.meteo.fr/e_index.html" target="_blank" title="새창열림">프랑스</a></li>
+								<li><a href="http://www.wmo.int" target="_blank" title="새창열림">세계기상기구WMO</a></li>
+							</ul>
+							<span class="arr sprite"></span>
+						</li>
+						<li><a href="javascript:void(0);" title="열기">기상관련단체</a>
+							<ul class="link_list">
+								<li><a href="http://www.kmiti.or.kr" target="_blank" title="새창열림">한국기상산업기술원</a></li>
+								<li><a href="http://www.apcc21.org" target="_blank" title="새창열림">APEC기후센터</a></li>
+								<li><a href="http://www.kiaps.org" target="_blank" title="새창열림">한국형수치예보모델개발사업단</a></li>
+							</ul>
+							<span class="arr sprite"></span>
+						</li>
+					</ul>
+				</div><!-- con_width -->
+			</div><!-- footer_util -->
+
+			<div id="footer_copy">
+				<div class="con_width">
+					<div class="f_1st">
+						<p class="f_logo sprite">기상청</p>
+					</div>
+					<div class="f_2nd">
+						<div class="f_con_top">
+							<a href="https://www.kma.go.kr/kma/guide/privacy.jsp" title="개인정보처리방침" target="_blank">개인정보처리방침</a>
+							<a href="https://www.kma.go.kr/kma/guide/siteinfo.jsp" title="이용안내" target="_blank">이용안내</a>
+							<a href="https://www.kma.go.kr/kma/guide/copyright.jsp" title="저작권보호 및 정책" target="_blank" class="pc">저작권보호 및 정책</a>
+							<a href="https://www.kma.go.kr/kma/guide/accessibility.jsp" title="웹접근성정책" target="_blank" class="pc">웹접근성정책</a>
+							<a href="https://www.kma.go.kr/kma/guide/feedback.jsp" title="홈페이지오류·건의" target="_blank" class="pc">홈페이지오류·건의</a>
+							<a href="https://www.kma.go.kr/kma/org/system/chart.jsp " title="전화번호안내" target="_blank" class="pc">전화번호안내</a>
+							<a href="https://www.kma.go.kr/kma/org/system/staff.jsp" title="부서 직원찾기" target="_blank" class="pc">부서&amp;직원찾기</a>
+							<a href="https://www.kma.go.kr/kma/guide/viewer.jsp" title="뷰어다운로드" target="_blank" class="pc">뷰어다운로드</a>
+						</div>
+						<div class="f_con_bot">
+							<p>(16623) 경기도 수원시 권선구 권선로 276 수도권기상청 <br>
+							<span class="pc">T.</span> <span class="mobile_i">대표전화</span> 031-8025-5051 <span class="pc">(평일 9:00~18:00, 야간휴일은 당직실 연결)<br>
+							<span class="f_con_13"><span class="pc">본 홈페이지에 게시된 이메일 주소가 자동 수집되는 것을 거부하며, 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.<br></span>
+							Copyright © 2009 KMA. All Rights RESERVED</span></p>
+							<div class="mark">
+								<!--<img src="../../images/f_3rd_1.png" alt="웹접근성인증마크(과학기술정보통신부 WA WEB ACCESSIBILITY)">-->
+								<img src="../../images/f_3rd_2.png" alt="OPEN 출처표시, 공공누리 공공저작물 자유이용허락">
+								<img src="../../images/f_3rd_3.png" alt="기상콜센터 전국 국번없이 131">
+							</div>
+						</div>
+					</div>
+				</div><!-- con_width -->
+			</div><!-- footer_copy -->
+		</div><!-- footer -->
+	</div><!-- wrap -->
+<!-- LOGGER TRACKING SCRIPT V.31 FOR web.kma.go.kr / 1066 : FAIL-SAFE TYPE / DO NOT ALTER THIS SCRIPT. -->
+<!-- COPYRIGHT (C) 2002-2016 BIZSPRING INC. LOGGER(TM) ALL RIGHTS RESERVED. -->
+<script>/* LOGGER TRACKING SCRIPT V.31 : 1066 *//*X*//* COPYRIGHT 2002-2016 BIZSPRING INC. *//*X*//* DO NOT MODIFY THIS SCRIPT. *//*X*/var _TRK_LID="1066";var _L_TD="logger2.kma.go.kr"; var _TRK_DOMAIN="logger2.kma.go.kr";var _trk_bMSIE=(document.all)?true:false;var _trk_bJS12=(window.screen)?true:false;function _trk_escape(_str) { var str, ch; var bEncURI = "N"; eval("try{bEncURI=encodeURI('Y');}catch(_e){ }" ); if( bEncURI == "Y" ) str=encodeURI(_str); else str = escape(_str); str=str.split("+").join("%2B"); str=str.split("/").join("%2F"); str=str.split("&").join("%26"); str=str.split("?").join("%3F"); str=str.split(":").join("%3A"); str=str.split("#").join("%23"); return str;}function _trk_setCookie(name,value,expire) { var today=new Date(); today.setTime(today.getTime()+ expire ); document.cookie=name+"="+value+"; path=/; expires="+today.toGMTString()+";"; }function _trk_getCookie(name) { var cookieName=name+"="; var x=0; while(x<=document.cookie.length) { var y=(x+cookieName.length); if(document.cookie.substring(x,y)==cookieName) {  if((endOfCookie=document.cookie.indexOf(";",y))==-1) endOfCookie=document.cookie.length;  return unescape(document.cookie.substring(y,endOfCookie)); } x=document.cookie.indexOf(" ",x)+1; if(x == 0) break; } return "";}function _trk_getParameter(name) { var paraName=name+"="; var URL=""+self.document.location.search; var tURL=""; eval("try{ tURL=top.document.location.search; }catch(_e){}"); URL=URL+"&"+tURL; if(URL.indexOf(paraName)!=-1) { var x=URL.indexOf(paraName)+paraName.length; var y=URL.substr(x).indexOf("&"); if(y!=-1) return URL.substring(x,x+y); else return URL.substr(x); } return "";}function getNewSID(len) { var str="01234567890abcdef"; var ret=""; for(var i=0; i<len; i++) { ret=ret+(str.substr(Math.floor(Math.random()*str.length),1)); } return ret;}function _trk_make_code(_TRK_SERVER,_TRK_U) { var dt=document.title.toString(); dt=dt.substr(0,128); var dr=self.document.referrer; var tdr=""; eval("try{ tdr=top.document.referrer; }catch(_e){}"); var tdu=""; eval("try{ tdu=top.document.location.href; }catch(_e){}"); var bFrm=false; if(dr==tdu) { dr=tdr; bFrm=true; } if(dr=="undefined") dr=""; var du=self.document.location.href; if(du.substr(0,4)=="file") return ""; var adKeyVal = ""; if(bFrm) { adKeyVal=_trk_getParameter("OVKEY"); if(adKeyVal!="" && du.indexOf("OVKEY=")<0) {  if(du.indexOf("?")!=-1) du=du+"&OVKEY="+adKeyVal; else du=du+"?OVKEY="+adKeyVal;  adKeyVal=_trk_getParameter("OVRAW");  if(adKeyVal!="" && du.indexOf("OVRAW=")<0 )  if(du.indexOf("?")!=-1) du=du+"&OVRAW="+adKeyVal; else du=du+"?OVRAW="+adKeyVal; } else {  adKeyVal=_trk_getParameter("netpia");  if(adKeyVal!="" && du.indexOf("netpia=")<0 )  if(du.indexOf("?")!=-1) du=du+"&netpia="+adKeyVal; else du=du+"?netpia="+adKeyVal; } adKeyVal=_trk_getParameter("logger_kw"); if(adKeyVal!="" && du.indexOf("logger_kw=")<0 )  if(du.indexOf("?")!=-1) du=du+"&logger_kw="+adKeyVal; else du=du+"?logger_kw="+adKeyVal; adKeyVal=_trk_getParameter("source"); if(adKeyVal!="" && du.indexOf("source=")<0 )  if(du.indexOf("?")!=-1) du=du+"&source="+adKeyVal; else du=du+"?source="+adKeyVal; adKeyVal=_trk_getParameter("keywd"); if(adKeyVal!="" && du.indexOf("keywd=")<0 )  if(du.indexOf("?")!=-1) du=du+"&keywd="+adKeyVal; else du=du+"?keywd="+adKeyVal; adKeyVal=_trk_getParameter("NVADID"); if(adKeyVal!="" && du.indexOf("NVADID=")<0 )  if(du.indexOf("?")!=-1) du=du+"&NVADID="+adKeyVal; else du=du+"?NVADID="+adKeyVal; adKeyVal=_trk_getParameter("NVAR"); if(adKeyVal!="" && du.indexOf("NVAR=")<0 )  if(du.indexOf("?")!=-1) du=du+"&NVAR="+adKeyVal; else du=du+"?NVAR="+adKeyVal; adKeyVal=_trk_getParameter("NVADKWD"); if(adKeyVal!="" && du.indexOf("NVADKWD=")<0)  if(du.indexOf("?")!=-1) du=du+"&NVADKWD="+adKeyVal; else du=du+"?NVADKWD="+adKeyVal; adKeyVal=_trk_getParameter("NVKWD"); if(adKeyVal!="" && du.indexOf("NVKWD=")<0 )  if(du.indexOf("?")!=-1) du=du+"&NVKWD="+adKeyVal; else du=du+"?NVKWD="+adKeyVal; adKeyVal=_trk_getParameter("DMCOL"); if(adKeyVal!="" && du.indexOf("DMCOL=")<0 )  if(du.indexOf("?")!=-1) du=du+"&DMCOL="+adKeyVal; else du=du+"?DMCOL="+adKeyVal; adKeyVal=_trk_getParameter("DMKW"); if(adKeyVal!="" && du.indexOf("DMKW=")<0 )  if(du.indexOf("?")!=-1) du=du+"&DMKW="+adKeyVal; else du=du+"?DMKW="+adKeyVal; adKeyVal=_trk_getParameter("DMSKW"); if(adKeyVal!="" && du.indexOf("DMSKW=")<0 )  if(du.indexOf("?")!=-1) du=du+"&DMSKW="+adKeyVal; else du=du+"?DMSKW="+adKeyVal; adKeyVal=_trk_getParameter("DWIT"); if(adKeyVal!="" && du.indexOf("DWIT=")<0)  if(du.indexOf("?")!=-1) du=du+"&DWIT="+adKeyVal; else du=du+"?DWIT="+adKeyVal; adKeyVal=_trk_getParameter("DWIC"); if(adKeyVal!="" && du.indexOf("DWIC=")<0 )  if(du.indexOf("?")!=-1) du=du+"&DWIC="+adKeyVal; else du=du+"?DWIC="+adKeyVal; adKeyVal=_trk_getParameter("gad"); if(adKeyVal!="" && du.indexOf("gad=")<0 )  if(du.indexOf("?")!=-1) du=du+"&gad="+adKeyVal; else du=du+"?gad="+adKeyVal; adKeyVal=_trk_getParameter("gclid"); if(adKeyVal!="" && du.indexOf("gclid=")<0 )  if(du.indexOf("?")!=-1) du=du+"&gclid="+adKeyVal; else du=du+"?gclid="+adKeyVal; adKeyVal=_trk_getParameter("gkw"); if(adKeyVal!="" && du.indexOf("gkw=")<0 )  if(du.indexOf("?")!=-1) du=du+"&gkw="+adKeyVal; else du=du+"?gkw="+adKeyVal; adKeyVal=_trk_getParameter("rcsite"); if(adKeyVal!="" && du.indexOf("rcsite=")<0 )  if(du.indexOf("?")!=-1) du=du+"&rcsite="+adKeyVal; else du=du+"?rcsite="+adKeyVal; adKeyVal=_trk_getParameter("rctype"); if(adKeyVal!="" && du.indexOf("rctype=")<0 )  if(du.indexOf("?")!=-1) du=du+"&rctype="+adKeyVal; else du=du+"?rctype="+adKeyVal; adKeyVal=_trk_getParameter("rc_code"); if(adKeyVal!="" && du.indexOf("rc_code=")<0 )  if(du.indexOf("?")!=-1) du=du+"&rc_code="+adKeyVal; else du=du+"?rc_code="+adKeyVal; adKeyVal=_trk_getParameter("n_query"); if(adKeyVal!="" && du.indexOf("n_query=")<0 )  if(du.indexOf("?")!=-1) du=du+"&rc_code="+adKeyVal; else du=du+"?n_query="+adKeyVal; adKeyVal=_trk_getParameter("n_keyword"); if(adKeyVal!="" && du.indexOf("n_keyword=")<0 )  if(du.indexOf("?")!=-1) du=du+"&rc_code="+adKeyVal; else du=du+"?n_keyword="+adKeyVal; adKeyVal=_trk_getParameter("_C_"); if(adKeyVal!="" && du.indexOf("_C_=")<0 )  if(du.indexOf("?")!=-1) du=du+"&_C_="+adKeyVal; else du=du+"?_C_="+adKeyVal; } var ce=navigator.cookieEnabled?"Y":"N"; var je=navigator.javaEnabled()?"Y":"N"; var ss=""; var cd = ""; if(_trk_bJS12) { ss=screen.width+"x"+screen.height; cd=screen.colorDepth; } if(!dt) dt=""; if(!dr) dr=""; if(!du) du=""; if(!ce) ce=""; if(!je) je=""; var t = new Date; var tye=(_trk_bMSIE)?(t.getYear()):(t.getFullYear()); var tmo=t.getMonth()+1; var tda=t.getDate(); var tho=t.getHours(); var tmi=t.getMinutes(); var tse=t.getSeconds(); var tzo=t.getTimezoneOffset(); var tc = ""; var prtcl=document.location.protocol.indexOf("https")!=-1?"https://":"http://"; if(prtcl=="https://") _TRK_SERVER=_TRK_DOMAIN; tc=tc+prtcl+_TRK_SERVER; var bPNF=((typeof _TRK_PI)!="undefined" && _TRK_PI=="PNF")?true:false; if(bPNF) tc=tc+"/tracker_click.tsp"; else tc=tc+"/tracker.1.tsp"; tc=tc+"?u="+_TRK_U+"&XU=&TREX="+_TRK_EX; tc=tc+"&UID="+_TRK_UID+"&SID="+_TRK_SID; if(bPNF) { tc=tc+"&rnd="+Math.random()+"&CKFL="+_TRK_PI+"&CKDATA="+_trk_escape(du); } else { tc=tc+"&dr="+_trk_escape(dr)+"&XDR="+"&dt="+_trk_escape(dt)+"&du="+_trk_escape(du); if((typeof _TRK_CP)!="undefined" && _TRK_CP!="") tc=tc+"&CP="+_trk_escape(_TRK_CP)+"&XCP="; if((typeof _TRK_PI)!="undefined" && _TRK_PI!="") tc=tc+"&PI="+_TRK_PI; if((typeof _TRK_PN)!="undefined" && _TRK_PN!="") tc=tc+"&PN="+_trk_escape(_TRK_PN); if((typeof _TRK_MF)!="undefined" && _TRK_MF!="") tc=tc+"&MF="+_trk_escape(_TRK_MF); if((typeof _TRK_OA)!="undefined" && _TRK_OA!="") tc=tc+"&OA="+_TRK_OA; if((typeof _TRK_OP)!="undefined" && _TRK_OP!="") tc=tc+"&OP="+_trk_escape(_TRK_OP); if((typeof _TRK_OE)!="undefined" && _TRK_OE!="") tc=tc+"&OE="+_TRK_OE; if((typeof _TRK_CC)!="undefined" && _TRK_CC!="") tc=tc+"&CC="+_TRK_CC; if((typeof _TRK_RK)!="undefined" && _TRK_RK!="") tc=tc+"&RK="+_trk_escape(_TRK_RK); if((typeof _TRK_SX)!="undefined" && _TRK_SX!="") tc=tc+"&SX="+_TRK_SX; if((typeof _TRK_AG)!="undefined" && _TRK_AG!="") tc=tc+"&AG="+_TRK_AG; if((typeof _TRK_IK)!="undefined" && _TRK_IK!="") tc=tc+"&IK="+_trk_escape(_TRK_IK); if((typeof _TRK_CN)!="undefined" && _TRK_CN!="") tc=tc+"&CN="+_trk_escape(_TRK_CN); tc=tc+"&js=Y"+"&ss="+escape(ss)+"&cd="+cd+"&ce="+ce+"&je="+je+"&tzo="+tzo+"&tye="+tye+"&tmo="+tmo+"&tda="+tda+"&tho="+tho+"&tmi="+tmi+"&tse="+tse; if((typeof _TRK_VN)!="undefined" && _TRK_VN>=0) tc=tc+"&VN="+_TRK_VN; if((typeof _TRK_CR)!="undefined" && _TRK_CR!="") tc=tc+"&CR="+_trk_escape(_TRK_CR)+"&XCR=1"; if((typeof _TRK_CQ)!="undefined" && _TRK_CQ!="") tc=tc+"&CQ="+_trk_escape(_TRK_CQ)+"&XCQ=1"; } return tc;}var _TRK_LIFE=_trk_getParameter("_L_");if(_TRK_LIFE=="") _TRK_LIFE=14;_TRK_LIFE = parseInt(_TRK_LIFE)*24*60*60*1000;if ((typeof _TRK_U) != "undefined" && _TRK_U != "") { _TRK_U = _TRK_U; } else { var _TRK_U = ""; }var _TRK_U_P=_trk_getParameter("_U_");var _TRK_U_C= _trk_getCookie("_TRK_U");if(_TRK_U_C!="") _TRK_U=_TRK_U_C;if(_TRK_U_P!="") _TRK_U=_TRK_U_P;if(_TRK_U!="" && _TRK_U_P!="") _trk_setCookie("_TRK_U",_TRK_U,_TRK_LIFE);var _TRK_CC_C=_trk_getCookie("_TRK_CC");var _TRK_CC_P=_trk_getParameter("_C_");if((typeof _TRK_CC)!="undefined" && _TRK_CC!="") _TRK_CC_P=_TRK_CC;if(_TRK_CC_C!="") _TRK_CC=_TRK_CC_C;if(_TRK_CC_P!="") _TRK_CC=_TRK_CC_P;if((typeof _TRK_CC)!="undefined" && _TRK_CC!="" && _TRK_CC_P!="") _trk_setCookie("_TRK_CC",_TRK_CC,_TRK_LIFE);var _TRK_RK_C=_trk_getCookie("_TRK_RK");var _TRK_RK_P=_trk_getParameter("_R_");if((typeof _TRK_RK)!="undefined" && _TRK_RK!="") _TRK_RK_P=_TRK_RK;if(_TRK_RK_C!="") _TRK_RK=_TRK_RK_C;if(_TRK_RK_P!="") _TRK_RK=_TRK_RK_P;if((typeof _TRK_RK)!="undefined" && _TRK_RK!="" && _TRK_RK_P!="") _trk_setCookie("_TRK_RK",_TRK_RK,_TRK_LIFE);var _SS_LIFE = 30*60*1000;var _TRK_EX = _trk_getCookie("_TRK_EX");if( _TRK_EX == "" ) _TRK_EX = 0; _TRK_EX ++;_trk_setCookie("_TRK_EX",_TRK_EX,_SS_LIFE);var _TRK_UID=_trk_getCookie("_TRK_UID").split(":")[0];var _TRK_VN=_trk_getCookie("_TRK_UID").split(":")[1];var _TRK_SID=_trk_getCookie("_TRK_SID");if(_TRK_UID=="") _TRK_UID=getNewSID(32);if(_TRK_VN=="" || _TRK_VN=="NaN" || typeof(_TRK_VN)=="undefined") _TRK_VN=0; else _TRK_VN=parseInt(_TRK_VN);if(_TRK_SID=="") { _TRK_SID=getNewSID(32); _TRK_VN++;}_trk_setCookie("_TRK_UID",_TRK_UID+":"+_TRK_VN.toString(),30*365*24*60*60*1000);_trk_setCookie("_TRK_SID",_TRK_SID,_SS_LIFE);var _TRK_CR=_trk_getCookie("_TRK_CR");var _TRK_CQ=_trk_getCookie("_TRK_CQ");if(_TRK_EX==1) { var dr = self.document.referrer; var tdu = ""; eval("try{ tdu=top.document.location.href; }catch(_e){}"); var _TRK_CR_S = (dr==tdu ? top.document.referrer : self.document.referrer); if(_TRK_CR_S!="") _TRK_CR=_TRK_CR_S; if((typeof _TRK_CR)!="undefined" && _TRK_CR!="" && _TRK_CR_S!="") _trk_setCookie("_TRK_CR",_trk_escape(_TRK_CR),_TRK_LIFE); var _TRK_CQ_S = (dr==tdu ? top.document.location.search : self.document.location.search); if(_TRK_CQ_S!="") _TRK_CQ=_TRK_CQ_S; if((typeof _TRK_CQ)!="undefined" && _TRK_CQ!="" && _TRK_CQ_S!="") _trk_setCookie("_TRK_CQ",_trk_escape(_TRK_CQ),_TRK_LIFE);}var _trk_code_base=_trk_make_code(_L_TD,_TRK_LID);var _trk_code_chan="";if(_TRK_U!="") _trk_code_chan=_trk_code_base.replace(/\?u=[0-9A-z]+&XU=/g,"?u="+_TRK_U+"&XU=");var _trk_img_base=new Image();var _trk_img_chan=new Image();var _trk_img_base_click=new Image();var _trk_img_chan_click=new Image();if(_trk_bJS12==true) { if(_trk_bMSIE) { _trk_img_base.src=_trk_code_base; if(_TRK_U!="") _trk_img_chan.src=_trk_code_chan; } else { setTimeout("_trk_img_base.src=_trk_code_base;",1); if(_TRK_U!="") setTimeout("_trk_img_chan.src=_trk_code_chan;",1); }} else { if(_trk_bMSIE) document.write('<div style=\"display: none\">'); document.write('<img src=\"'+_trk_code_base+'\" height=\"0\" width=\"0\">'); if(_TRK_U!="") document.write('<img src=\"'+_trk_code_chan+'\" height=\"0\" width=\"0\">'); if(_trk_bMSIE) document.write('<\/div>');}function _trk_flashEnvView(env1,env2,env3,env4,env5,env6,env7,env8,env9,env10,env11,env12){ var _trk_code_flash=_trk_code_base; for (var envCnt=1; envCnt< 13; envCnt++){ if((eval("env"+envCnt) != "") && (typeof eval("env"+envCnt) != "undefined" )){  var trk_str  = eval("env"+envCnt) ;  if(trk_str.indexOf("_TRK_CP")>=0){   var trk_cp = trk_str.split('=');   var _TRK_CP = trk_cp[1];   _trk_code_flash=_trk_code_flash.replace(/&CP=.*&XCP=/g,"&XCP=");   _trk_code_flash=_trk_code_flash.replace(/&dr=.*&XDR=/g,"&XDR=");   _trk_code_flash=_trk_code_flash+"&dr=&CP="+_trk_escape(_TRK_CP)+"&rnd="+Math.random();   if(_TRK_U!="") {    _trk_code_flash=_trk_code_flash.replace(/\?u=[0-9A-z]+&XU=/g,"?u="+_TRK_U+"&XU=");   }  }  if((trk_str.indexOf("_TRK_PN")>=0) || (trk_str.indexOf("_TRK_MF")>=0) || (trk_str.indexOf("_TRK_RK")>=0) || (trk_str.indexOf("_TRK_OP")>=0) || (trk_str.indexOf("_TRK_IK")>=0) || (trk_str.indexOf("_TRK_CN")>=0)){   var trk_env = trk_str.split('=');   var _TRK_ENV = _trk_escape(trk_env[1]);   var tkr_env_name = trk_str.substring(trk_str.indexOf('_',1)+1,trk_str.lastIndexOf('='));   var _trk_envs = "&"+tkr_env_name+"="+ _TRK_ENV;   if( _trk_code_flash.indexOf("&"+tkr_env_name+"=") > 0) {    var regVal = "\&"+tkr_env_name+"\=(.*)(\&PN\=|\&MF\=|\&OA\=|\&OP\=|\&OE\=|\&CC\=|\&RK\=|\&SX\=|\&AG\=|\&IK\=|\&js\=|\&CN\=)";    var envReg = new RegExp(regVal, 'gi');    var envRst = _trk_code_flash.match(envReg);    var envRst = envRst.toString();    var envArr = envRst.split('&');    var envVar = envArr[1];    _trk_code_flash=_trk_code_flash.replace("&"+envVar+"&", _trk_envs);   }else{    _trk_code_flash = _trk_code_flash+"&"+tkr_env_name+"="+_TRK_ENV;   }  }  if((trk_str.indexOf("_TRK_PI")>=0) || (trk_str.indexOf("_TRK_OA")>=0) || (trk_str.indexOf("_TRK_OE")>=0) || (trk_str.indexOf("_TRK_CC")>=0) || (trk_str.indexOf("_TRK_SX")>=0) || (trk_str.indexOf("_TRK_AG")>=0)){   var trk_env = trk_str.split('=');   var _TRK_ENV = trk_env[1];   var tkr_env_name = trk_str.substring(trk_str.indexOf('_',1)+1,trk_str.lastIndexOf('='));   var _trk_envs = "&"+tkr_env_name+"="+_TRK_ENV+"&";   if( _trk_code_flash.indexOf("&"+tkr_env_name+"=") > 0) {    var regVal = "\&"+tkr_env_name+"\=(.*)(\&PN\=|\&MF\=|\&OA\=|\&OP\=|\&OE\=|\&CC\=|\&RK\=|\&SX\=|\&AG\=|\&IK\=|\&js\=|\&CN\=)";    var envReg = new RegExp(regVal, 'gi');    var envRst = _trk_code_flash.match(envReg);    var envRst = envRst.toString();    var envArr = envRst.split('&');    var envVar = envArr[1];    _trk_code_flash=_trk_code_flash.replace("&"+envVar+"&", _trk_envs);   }else{    _trk_code_flash = _trk_code_flash+"&"+tkr_env_name+"="+_TRK_ENV;   }  } } } _trk_img_base_click.src=_trk_code_flash ;}function _trk_flashContentsView(_TRK_PI, _TRK_CP) { var _trk_code_flash=_trk_code_base; var _trk_piv = "&PI="+_TRK_PI+"&"; _trk_code_flash=_trk_code_flash.replace(/&CP=.*&XCP=/g,"&XCP="); _trk_code_flash=_trk_code_flash.replace(/&dr=.*&XDR=/g,"&XDR="); if( _trk_code_flash.indexOf("&PI=") > 0) { var regVal = "\&PI\=(.*)(\&PN\=|\&MF\=|\&OA\=|\&OP\=|\&OE\=|\&CC\=|\&RK\=|\&SX\=|\&AG\=|\&IK\=|\&js\=)"; var envReg = new RegExp(regVal, 'gi'); var envRst = _trk_code_flash.match(envReg); var envRst = envRst.toString(); var envArr = envRst.split('&'); var envVar = envArr[1]; _trk_code_flash=_trk_code_flash.replace("&"+envVar+"&", _trk_piv ); }else{ _trk_code_flash = _trk_code_flash+"&PI="+_TRK_PI; } _trk_img_base_click.src=_trk_code_flash+"&dr=&CP="+_trk_escape(_TRK_CP)+"&rnd="+Math.random(); if(_TRK_U!="") { _trk_code_flash=_trk_code_flash.replace(/\?u=[0-9A-z]+&XU=/g,"?u="+_TRK_U+"&XU="); _trk_img_chan_click.src=_trk_code_flash+"&dr=&CP="+_trk_escape(_TRK_CP)+"&rnd="+Math.random(); }}function _trk_clickTrace(_TRK_CKFL,_TRK_CKDATA) { var _trk_code_click=_trk_code_base.substr(0,_trk_code_base.indexOf("tracker.1.tsp")); _trk_code_click=_trk_code_click+"tracker_click.tsp?rnd="+Math.random()+"&CKFL="+_TRK_CKFL+"&CKDATA="+_trk_escape(_TRK_CKDATA)+"&UID="+_trk_getCookie("_TRK_UID").split(":")[0]+"&SID="+_trk_getCookie("_TRK_SID"); _trk_img_base_click.src=_trk_code_click+"&u="+_TRK_LID; if(_TRK_U!="") _trk_img_chan_click.src=_trk_code_click+"&u="+_TRK_U;}function _trk_adClick( adSvr, svcCode, adCode ) { var ac = ""; var prtcl=document.location.protocol.indexOf("https")!=-1?"https://":"http://"; if(prtcl=="https://") adSvr="ssl."+_TRK_DOMAIN; ac=ac+prtcl+adSvr; _trk_img_base_click.src=ac+"/tracker_ad.tsp?u="+svcCode+"&mode=C&adCode="+adCode;}function _trk_adClickImpress( adSvr, svcCode, adCode ) { var ac = ""; var prtcl=document.location.protocol.indexOf("https")!=-1?"https://":"http://"; if(prtcl=="https://") adSvr=_TRK_DOMAIN; ac=ac+prtcl+adSvr; _trk_img_base_click.src=ac+"/tracker_ad.tsp?u="+svcCode+"&mode=I&adCode="+adCode;}</script>
+<!-- END OF LOGGER TRACKING SCRIPT -->
+<script type="text/javascript" src="/kma/resources/js/UserScriptConf.js"></script>
+</body>
+</html>
