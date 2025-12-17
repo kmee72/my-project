@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex16.html -->
+    <title>nth-child선택자에서 n변수</title>
+    <style>
+      /* n은 0~7까지 변경되어 입력됨. */
+      li:nth-child(n) {
+        color: red;
+      }
+      /* 2n은 짝수번째만 선택 (짝수번째 사용시에는 even을 사용해도 됨*/
+      /* n이 0 이면 2*0 = 0 */
+      /* n이 1 이면 2*1 = 2 */
+      /* n이 2 이면 2*2 = 4 */
+      /* n이 3 이면 2*3 = 6 */
+      /* n이 4 이면 2*4 = 8 */
+      li:nth-child(2n) {
+        color: blue;
+      }
+      li:nth-child(even) {
+        background-color: cyan;
+      }
+      /* 2n+1은 홀수번째 선택 */
+      /* n이 0 이면 2*0+1 = 1 */
+      /* n이 1 이면 2*1+1 = 3 */
+      /* n이 2 이면 2*2+1 = 5 */
+      /* n이 3 이면 2*3+1 = 7 */
+      /* n이 4 이면 2*4+1 = 9 */
+      li:nth-child(2n + 1) {
+        color: green;
+      }
+      li:nth-child(odd) {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <li>아이템1</li>
+    <li>아이템2</li>
+    <li>아이템3</li>
+    <li>아이템4</li>
+    <li>아이템5</li>
+    <li>아이템6</li>
+    <li>아이템7</li>
+  </body>
+</html>

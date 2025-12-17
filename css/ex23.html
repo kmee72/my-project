@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex23.html -->
+    <title>DIV에 이미지 입히기</title>
+    <style>
+      div {
+        border: 5px solid red;
+        width: 1665px;
+        height: 1768px;
+        background-image: url(cat.png);
+        /* background-image:url(mountin.png); */
+        background-repeat: no-repeat;
+        /* contain : 이미지의 Width, Height 중에 큰 값이 캔버스에 맞춰짐 */
+        /*            흰 공백이 생김 */
+        /* cover :                                  작은값이 캔버스에 맞춰짐*/
+        /*            이미지 잘림 */
+        /* 캔버스 해상도외 이미지 해상도를 맞추는게 좋다. */
+        /* background-size: cover; */
+        /* background-size: contain; */
+
+        /* 이미지의 위치 설치 */
+        /*                    X값  Y값 */
+        /* background-position: 10px 20px; */
+        /* background-size: 10px 20px contain; */
+        /* 가로 :  left center right */
+        /* 세로 :  top center bottom */
+        /*          0% left  100% right */
+        /*          0% top  100% bottom */
+        /*          center center */
+        /* background-position: center right; */
+        background-position: 0% 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

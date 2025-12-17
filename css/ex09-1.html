@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 1. input태그 타입text인 요소의 배경색을 blue로 하시오 -->
+    <!-- 2. input태그 타입password인 요소의 배경색을 green로 하시오 -->
+    <!-- 3. 헤더태그 1의 글자색을 red로 하시오. -->
+    <!-- 4. 문단태그 3의 글자색을 blue로 하시오. -->
+    <!-- 5. 헤더태그 2, 문단태그3,4의 배경색을 cyan으로 하시오. -->
+    <style>
+      input[type="text"] {
+        background-color: blue;
+      }
+      input[type="password"] {
+        background-color: green;
+      }
+      #header1 > h1 {
+        color: red;
+      }
+      #header2 > h1 {
+        color: blue;
+      }
+      #header2 #p3 {
+        color: rgb(199, 9, 151);
+      }
+      #header2 {
+        background-color: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" />
+      <input type="password" />
+      <div id="header1">
+        <h1>헤더태그1</h1>
+        <div>
+          <p>문단태그1</p>
+          <p>문단태그2</p>
+        </div>
+      </div>
+      <div id="header2">
+        <h1>헤더태그2</h1>
+        <div>
+          <p id="p3">문단태그3</p>
+          <p>문단태그4</p>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

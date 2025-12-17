@@ -1,0 +1,48 @@
+table {
+  background-color: lightcoral;
+}
+table tr td {
+  color: white;
+}
+table tr th:nth-child(1) {
+  color: red;
+}
+table tr th:nth-child(2) {
+  color: yellow;
+}
+table tr th:nth-child(3) {
+  color: blue;
+}
+table tr th:nth-child(4) {
+  color: green;
+}
+table tr th:nth-child(5) {
+  color: orange;
+}
+table tr th:nth-child(6) {
+  color: purple;
+}
+table tr th:nth-child(7) {
+  color: navy;
+}
+table tr td:nth-child(1) {
+  background-color: red;
+}
+table tr td:nth-child(2) {
+  background-color: yellow;
+}
+table tr td:nth-child(3) {
+  background-color: blue;
+}
+table tr td:nth-child(4) {
+  background-color: green;
+}
+table tr td:nth-child(5) {
+  background-color: orange;
+}
+table tr td:nth-child(6) {
+  background-color: purple;
+}
+table tr td:nth-child(7) {
+  background-color: navy;
+}

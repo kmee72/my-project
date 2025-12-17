@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex20.html -->
+    <title>CSS속성 - 크기 단위</title>
+    <!-- 크기 단위 : px 픽셀, em배수, % 백분율 -->
+    <!-- 0은 단위문자를 붙이지 않음. 예) 0px 라고 쓰지않음, 0이라고 씀 -->
+    <!-- 1px, 1em, 1% -->
+    <style>
+      /* 기본문자크기 : 16px(가로세로 점의 갯수) */
+      p:nth-of-type(1) {
+      }
+      /* font-size : 글자크기 css 속성 */
+      p:nth-of-type(2) {
+        font-size: 8px;
+      }
+      p:nth-of-type(3) {
+        font-size: 16px;
+      }
+      p:nth-of-type(4) {
+        font-size: 24px;
+      }
+      p:nth-of-type(5) {
+        font-size: 32px;
+      }
+      /* 16픽셀 기본값  */
+      p:nth-of-type(1) {
+      }
+      /* 16px * 1 =  1em  */
+      p:nth-of-type(2) {
+        font-size: 1em;
+      }
+      /* 16px * 2 =  2em(32px)  */
+      p:nth-of-type(3) {
+        font-size: 2em;
+      }
+      /* 16px * 1.5 =  24px  */
+      p:nth-of-type(4) {
+        font-size: 1.5em;
+      }
+      /* 16px * 3 =  48px  */
+      p:nth-of-type(5) {
+        font-size: 3em;
+      }
+      /* 16px * 1(100%)  */
+      p:nth-of-type(1) {
+      }
+      p:nth-of-type(1) {
+        font-size: 100%;
+      }
+      p:nth-of-type(2) {
+        font-size: 150%;
+      }
+      p:nth-of-type(3) {
+        font-size: 200%;
+      }
+      p:nth-of-type(4) {
+        font-size: 300%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>문단태그 P입니다.</p>
+    <p>문단태그 P입니다.</p>
+    <p>문단태그 P입니다.</p>
+    <p>문단태그 P입니다.</p>
+    <p>문단태그 P입니다.</p>
+    <h1>제목태그입니다.</h1>
+  </body>
+</html>
