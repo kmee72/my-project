@@ -6,14 +6,20 @@
     <title>Document</title>
     <style>
       h1:active {
-        color: red;
+        color: rgb(106, 20, 204);
       }
-      input[type=text]{background-color: aqua;}
+      input[type="text"] {
+        background-color: aqua;
+      }
+      input:focus {
+        background-color: blue;
+
+      }
     </style>
   </head>
   <body>
     <h1>활성화 상태</h1>
-    <input type="text" />
+    <input type="text" id="active"/>
     <h1>비활성화 상태</h1>
     <input type="password" />
     <h1>체크박스</h1>
