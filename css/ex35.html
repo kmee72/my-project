@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex35.html -->
+    <title>글꼴(font) : font-family 속성</title>
+    <!-- 
+serif(명조 계열) : Times New Roman, Bodoni, Garamond, Minion Web, …
+sans-serif(고딕 계열) : MS Trebuchet, MS Arial, MS Verdana, Univers, …
+cursive(필기체) : Caflisch Script, Adobe Poetica, Sanvito, Ex Ponto
+fantasy(장식체) : Alpha Geometrique, Critter, Cottonwood, FB Reactor, Studz
+monospace(고정폭) : D2Coding, Courier, MS Courier New, Prestige, Everson Mono …
+
+가변폭 글꼴 : 굴림(Gulim), 돋움(Dotum), 바탕(Batang), 궁서(Gungsuh)
+고정폭 글꼴 : 굴림체(GulimChe), 돋움체(DotumChe), 바탕체(BatangChe), 궁서체(GungsuhChe) 
+세로 글꼴 : @굴림 -->
+    <!-- 상업적으로 이용가능한 무료 폰트를 사용해야 됨 -->
+
+    <style>
+      span:nth-of-type(1) {
+        /* 고정폭 영문폰트 */
+        /* courier new같은 경우 courier와 new사이에 공백있기에 따옴표 들어갔음 */
+        /* 아래 3종류의 포트 중 앞에서 부터 차례로 가다가 있는것 부터 적용 */
+        font-family: "Courier New";
+      }
+      span:nth-of-type(2) {
+        font-family: courier;
+      }
+      span:nth-of-type(3) {
+        font-family: monospace;
+      }
+      /* span이던 nth-of-type, :nth-child이건 h이건 다 사용해도 비슷함 */
+      p:nth-of-type(1) {
+        font-family: "굴림", "Gulim";
+      }
+      p:nth-of-type(2) {
+        font-family: "바탕", "Batang";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 시스템폰트 : OS마다 기본 폰트 -->
+    <!-- win7,8,10,11  리눅스 MacOS -->
+    <!-- 브라우저마다 또 다름 즉 크롬, 엣지, 사파리 브라우저 등 -->
+    <span>This is Header ~! 1234!@#%^&*</span> <br />
+    <span>This is Header ~! 1234!@#%^&*</span> <br />
+    <span>This is Header ~! 1234!@#%^&*</span>
+    <p>동해물과 백두산이 1234!@#$</p>
+    <p>동해물과 백두산이 1234!@#$</p>
+  </body>
+</html>

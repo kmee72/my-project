@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- ex32 -->
+    <title>시멘틱태그 구조 만들기</title>
+    <!-- float속성 X inline-block속성 O -->
+    <!-- FlexBox 실무에서 -->
     <style>
+      /* 초기화코드 */
       * {
         margin: 0;
         padding: 0;
       }
       #wrapper {
+        /* 전체콘텐츠의 너비 고정(반응형아님) */
         width: 1000px;
-        height: auto;
-        border: 1px solid red;
+        background-color: skyblue;
+        /* 콘텐츠를 수평가운데로 정렬 */
+        /* 좌우여백 auto : 왼쪽과 오른쪽 공백을 균등배분 */
         margin: 0 auto;
       }
       header {
         height: 100px;
-        border: 1px solid black;
+        background-color: lightcoral;
       }
       nav {
-        height: 30px;
-        border: 1px solid blue;
+        height: 50px;
+        background-color: yellow;
       }
       main {
-        height: 800px;
+        height: 500px;
+        background-color: lightgreen;
       }
       aside {
         height: 100%;
-        width: 28%;
+        width: 29%;
         display: inline-block;
-        border: 1px solid black;
+        background-color: lightpink;
       }
       section {
         height: 100%;
         width: 70%;
         display: inline-block;
-        border: 1px solid rgb(252, 7, 239);
+        background-color: orange;
       }
       footer {
-        height: 70px;
-        border: 1px solid black;
+        height: 100px;
+        background-color: plum;
       }
     </style>
   </head>
   <body>
     <div id="wrapper">
       <header>header</header>
-      <img src="/css/snow sky.png" alt="snow sky.png" width="800px" />
       <nav>nav</nav>
       <main>
         <aside>aside</aside>

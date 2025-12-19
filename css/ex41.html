@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex41.html -->
+    <title>콘텐츠 초과 처리 - overflow 속성</title>
+
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #333;
+        margin: 20px;
+      }
+      /* 기본값, 초과된 콘텐츠가 노출된다(흘러내린다, 그대로 보인다) */
+      .visible {
+        overflow: visible;
+        background-color: lightblue;
+      }
+      .hidden {
+        /* 초과된 콘텐츠를 숨긴다(잘린다) */
+        overflow: hidden;
+        background-color: lightgreen;
+      }
+      /* 스크롤이 생김*/
+      .scroll {
+        /* x욱,y축 모두 스크롤바가 생김 */
+        /* overflow:scroll; */
+        /* y축민 스크롤바 생김 */
+        overflow: scroll;
+        background-color: lightcoral;
+      }
+      .auto {
+        /* 콘텐츠가 초과할 때만 스크롤바가 생기게 함 */
+        overflow: auto;
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- (div.box>lorem)*4 -->
+    <div class="box visible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum veniam
+      fugiat, inventore suscipit nesciunt rem eius quos ea minima provident
+      assumenda aliquam, dicta possimus adipisci soluta sunt. Similique, atque
+      expedita.
+    </div>
+    <div class="box hidden">
+      Facilis libero fugit consequatur aspernatur! Reiciendis, saepe. Optio
+      magnam similique dolore! Aliquam, dolorum blanditiis. Quod, nemo
+      temporibus facere similique veniam quam voluptates cum doloribus itaque
+      natus, ducimus quisquam ipsa accusantium.
+    </div>
+    <div class="box scroll">
+      Eligendi, blanditiis itaque? Obcaecati nostrum nihil harum eius vel
+      corrupti id omnis blanditiis perspiciatis nemo eum quam ullam accusantium,
+      maiores iure earum velit incidunt alias! Soluta quibusdam quisquam dolorem
+      qui.
+    </div>
+    <div class="box auto">
+      Exercitationem modi odio culpa optio! Veniam odit adipisci aspernatur
+      quasi numquam hic sint quo, fuga rem vitae asperiores dicta dolorum cumque
+      iusto? Consequuntur, at similique expedita tenetur ipsa id atque.
+    </div>
+  </body>
+</html>

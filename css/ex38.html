@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex38 -->
+    <title>CSS연습문제</title>
+    <!-- img태그위에 글자 배치하기 -->
+    <!-- position: absolute; -->
+    <!-- background-color: transparent; -->
+    <!-- 제출 해주세요~ -->
+    <style>
+      #container {
+        position: relative;
+        border: 1px solid red;
+        width: 800px;
+      }
+      #absolute-box {
+        position: absolute;
+        top: 200px;
+        left: 300px;
+        color: aqua;
+        background-color: transparent;
+      }
+      h3 {
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>img태그 위에 글자배치</h1>
+    <div id="container">
+      <img src="/css/cafe.jpg" alt="cafe.jpg" width="800px" />
+      <div id="absolute-box"><h3>향기로운 커피향기~</h3></div>
+    </div>
+  </body>
+</html>

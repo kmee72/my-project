@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex37.html -->
+    <title>position속성</title>
+    <!-- 웹페이지를 만드는 과정 -->
+    <!-- 화면 레이아웃(배치) - 박스모델(Box) -->
+    <!-- 1.  html 기본구조(html, head, body) -->
+    <!-- 2.  시멘틱태그(header,footer, nav, mail, section, aside) -->
+    <!-- 3.  div태그에 다 넣는다.header태그 대신에 <div id="header">라고 써도 됨-->
+    <!-- 4.  display속성 : block, inline, inline-block -->
+    <!-- 5.  flexbox 배치(정렬) -->
+    <!-- 6.  text-align, vertical-align, line-height -->
+    <!-- 7.  width, height -->
+    <!-- 8.  overflow : hidden 내용물 안보이게 (내용물 넘침 설정)-->
+    <!-- 9.  margine, padding  -->
+    <!-- 10. img object-fit : 이미지 배치 -->
+    <!-- 11. bacground-size : 이미지 배치  -->
+    <!-- 12. position : 어느 위치모들르 할 것인가  -->
+    <!--     1) static (고정): 기본값, 순차적으로 쌓이는 방식 -->
+    <!--     2) relative (상대적): 상대좌표(즉, 부모태그)에 위치 -->
+    <!--     3) absolute (절대): 절대좌표에 자신이 위치 -->
+    <!--                       : 기준 부모태그는 relative, absolute, fixed태그여야 됨, static은 기준점이 될수 없음, 실수많이 하는 포인트-->
+    <!--     4) fixed (고정): 뷰포트(웹브라우저 화면) 기준 -->
+    <!--     5) sticky (고정): 특정 스크롤 위치에 고정 -->
+    <!-- 13. top, bottom, left, right : 실제 XY위치값(static에서는 적용안됨)  -->
+
+    <style>
+      #static-box {
+        /* 기본값, 순차적인 배치 */
+        position: static;
+        background-color: aqua;
+      }
+      #relative-box {
+        /* 상대좌표로 자기위치를 선정 */
+        position: relative;
+        top: 10px;
+        left: 10px;
+        background-color: purple;
+        margin-bottom: 10px;
+      }
+      #container {
+        position: relative;
+        left: 20px;
+        height: 50px;
+        background-color: yellow;
+        border: 1px solid red;
+      }
+      #absolute-box {
+        /* 부모태그의 위치가 바뀌면 같이 변동 */
+        /* 지금 위치에서 특정위치로 보내고자 할때, 미세조정할때 많이 쓰임 */
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        color: white;
+        background-color: brown;
+      }
+      #fixed-box {
+        /* 웹브라우저 특정위치에 고정(Float Button에 주로 사용) */
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        background-color: green;
+      }
+      #sticky-box {
+        /* 스크롤시 웹브라우저 특정화면에 고정 */
+        position: sticky;
+        top: 0px;
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div style="background-size: contain"></div> -->
+    <!-- <img src="dog.jpg" alt="" /> -->
+
+    <div id="static-box">static</div>
+    <div id="relative-box">relative</div>
+    <div id="container">
+      <div id="absolute-box">absolute</div>
+    </div>
+    <div id="fixed-box">fixed</div>
+    <div id="sticky-box">sticky(스크롤하면 상단에 고정됨)</div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
+      doloribus blanditiis. Minus, repellat ea rem alias error unde architecto
+      deleniti, quo enim, quos doloribus vitae eveniet eaque voluptas sunt hic.
+      Totam omnis magni ad quia quod architecto earum sunt pariatur iste impedit
+      modi libero facilis quidem officia facere, alias molestiae aliquid
+      deleniti eum inventore. Molestiae officia impedit quasi ipsa in?
+      Perferendis quidem alias quibusdam nesciunt vero et omnis sapiente
+      repudiandae vel quam quasi dolor numquam odit sed ipsum, cumque pariatur.
+      Maiores fuga et reiciendis sequi minima quam similique consectetur culpa!
+      Adipisci fugit ea rem illum labore nobis, laboriosam sequi, veritatis,
+      pariatur ratione ad sit alias. Suscipit eaque in ratione natus quibusdam
+      dolor eos quae, nostrum obcaecati quam sapiente, ipsa culpa. Voluptatum
+      nobis eum corrupti dolore temporibus obcaecati dolores voluptate nemo vel
+      odio veniam qui earum molestias maxime aperiam cumque debitis
+      necessitatibus similique esse magni, voluptates nisi facere. Harum, qui
+      facilis!
+    </p>
+  </body>
+</html>
