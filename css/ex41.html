@@ -12,6 +12,17 @@
         height: 200px;
         border: 1px solid #333;
         margin: 20px;
+
+        /* Firefox */
+        scrollbar-width: none;
+
+        /* IE, Edge */
+        -ms-overflow-style: none;
+      }
+      /* 스크롤바를  UI적으로 없애기 */
+      .box::-webkit-scrollbar {
+        display: none;
+        /* chrome,safari */
       }
       /* 기본값, 초과된 콘텐츠가 노출된다(흘러내린다, 그대로 보인다) */
       .visible {
