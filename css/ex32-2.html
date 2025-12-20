@@ -8,52 +8,110 @@
       * {
         margin: 0;
         padding: 0;
+        list-style: none;
       }
       #wrapper {
         width: 1000px;
         height: auto;
-        border: 1px solid red;
         margin: 0 auto;
+        background-size: cover;
+        background-image: url(/css/ocean.png);
+        background-repeat: none;
       }
       header {
         height: 100px;
-        border: 1px solid black;
+        text-align: center;
+      }
+      h1 {
+        padding: 20px;
+        color: white;
+        font-size: 50px;
       }
       nav {
-        height: 30px;
-        border: 1px solid blue;
+        height: 5px;
+        background-color: rgb(32, 93, 185);
       }
       main {
         height: 800px;
       }
       aside {
-        height: 100%;
-        width: 28%;
+        width: 29%;
         display: inline-block;
-        border: 1px solid black;
+        backdrop-filter: blur;
+        color: white;
+        vertical-align: top;
       }
+      ul {
+        margin-top: 100px;
+        padding-left: 30px;
+      }
+
       section {
-        height: 100%;
+        margin: top 0;
         width: 70%;
         display: inline-block;
-        border: 1px solid rgb(252, 7, 239);
+      }
+      p {
+        color: rgb(122, 190, 12);
+        font-size: 23px;
+      }
+      h3 {
+        color: rgb(136, 8, 196);
+        font-family: serif;
+        text-align: center;
+        font-size: 60px;
+        margin-top: 30px;
       }
       footer {
         height: 70px;
-        border: 1px solid black;
       }
     </style>
   </head>
   <body>
     <div id="wrapper">
-      <header>header</header>
-      <img src="/css/snow sky.png" alt="snow sky.png" width="800px" />
-      <nav>nav</nav>
+      <header>
+        <h1>이 해 인</h1>
+      </header>
+      <nav></nav>
       <main>
-        <aside>aside</aside>
-        <section>section</section>
+        <aside>
+          <ul>
+            <li>저자에 관하여</li>
+            <li>주제</li>
+            <li>느낌</li>
+            <li></li>
+          </ul>
+        </aside>
+        <section>
+          <h3><b>꽃멀미 (이해인)</b></h3>
+          <br />
+          <p>사람들을 너무 많이 만나면</p>
+          <br />
+          <p>말에 취해서 멀미가 나고,</p>
+          <br /><br />
+
+          <p>꽃들을 너무 많이 대하면</p>
+          <br />
+          <p>향기에 취해서 멀미가 나지.</p>
+          <br />
+          <p>살아 있는 것은 아픈 것,</p>
+          <br />
+          <p>아름다운 것은 어지러운 것.</p>
+          <br />
+          <br /><br />
+          <p>너무 많아도 싫지 않은 꽃을보면서</p>
+          <br />
+          <p>나는 더욱</p>
+          <br />
+          <p>사람들을 사랑하기 시작하지.</p>
+          <br />
+          <br />
+          <p>사람들에게도 꽃처럼 향기가 있다는 걸</p>
+          <br />
+          <p>새롭게 배우기 시작하지.</p>
+        </section>
       </main>
-      <footer>footer</footer>
+      <footer></footer>
     </div>
   </body>
 </html>
