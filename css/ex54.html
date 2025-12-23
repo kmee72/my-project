@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-grow 속성</title>
+    <style>
+      .container {
+        width: 90%;
+        height: auto;
+        background: yellow;
+        border: 10px solid black;
+        padding: 10px;
+        display: flex;
+      }
+      .item {
+        /* auto : 콘텐츠의 너비만큼 */
+        width: auto;
+        height: 100%;
+        margin: 10px;
+        border: 10px solid black;
+        background-color: lightgreen;
+
+        /* 기본값 */
+        flex-basis: auto;
+        /* 0 : 기본값 -  자기콘텐츠 크기만큼 늘어남 */
+        flex-grow: 0;
+        /* 1 : 늘어날 수 있는 여백(공간)의 1/sum 확보 */
+        /* flex-grow: 1; */
+      }
+      /* 크기를 나눈다고 생가하기 보다는 공간을 균등한다고 생각해야함 */
+      .item:nth-child(1) {
+        /* flex-grow: 1; */
+      }
+      .item:nth-child(2) {
+        /* flex-grow: 2; */
+      }
+      .item:nth-child(3) {
+        /* flex-grow: 1; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div.container>(div.item>h3)*3 -->
+    <h1>flex-basis</h1>
+    <div class="container">
+      <div class="item">
+        <h3>AAA</h3>
+      </div>
+      <div class="item">
+        <h3>BBBㅠㅠㅠㅠㅠㅠ</h3>
+      </div>
+      <div class="item">
+        <h3>CCC</h3>
+      </div>
+    </div>
+  </body>
+</html>

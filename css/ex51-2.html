@@ -3,106 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ex51.html -->
-    <title>강아지 블로그 만들기 - flexbox를 이용하기</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yeon+Sung&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reset.css" />
     <style>
-     
-      #wrapper {
-        /* 웹브라우저 화면 중앙으로 */
-        margin: 0 auto;
-        /* 고정너비 */
-        width: 1000px;
-      }
-      body {
-        background-color: cyan;
-      }
-      #header {
-        width: 1000px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-        margin-bottom: 20px;
-        margin-top: 20px;
-      }
-      #nav {
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: gray;
-      }
-      #nav a {
-        color: white;
-      }
-      #main {
-        height: 470px;
-        display: flex;
-      }
-      #footer {
-        height: 50px;
-        background-color: rgb(7, 59, 230);
-      }
-      aside {
-        width: 26%;
-        border: 1px solid green;
-        margin-bottom: 24px;
-        margin-top: 10px;
-      }
-      aside ul a {
-        color: black;
-      }
-      h3 {
-        padding-left:32px;
-        margin-bottom: 6px;
-      }
-      img {
-        padding-left: 30px;
-      }
-      ul {
-        padding-left: 35px;
-        list-style: none;
-      }
       a {
         text-decoration: none;
       }
-      section {
-        width: 70%;
-        margin-left: 15px;
+      body {
+        background-color: lightcyan;
+        line-height: 1.6em;
       }
-      #footer {
+      body * {
+        /* border: 1px solid red; */
+      }
+      #wrapper {
+        margin: 0;
+        width: 1000px;
+      }
+      header {
+        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: gray;
       }
-      #footer a {
+      header h1 {
+        color: black;
+        font-size: 32px;
+        font-family: "Nanum Gothic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      nav {
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ddd;
+      }
+      nav a {
+        margin: 5px;
+        color: white;
+      }
+      aside h3 {
+        margin-bottom: 5px;
+      }
+      aside img {
+        width: 170px;
+      }
+      main {
+        display: flex;
+      }
+      aside {
+        width: 30%;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid green
+      }
+      aside a {
+        display: block;
+        color: black;
+        margin: 5px 0;
+      }
+      section {
+        width: 70%;
+        padding: 10px;
+      }
+      section h2 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      section p {
+        margin: 10px 0;
+      }
+      footer {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #aaa;
+      }
+      footer a {
+        margin: 5px;
         color: black;
       }
     </style>
   </head>
   <body>
     <div id="wrapper">
-      <div id="header">골든 리트리버 - Golden Retriever</div>
-      <div id="nav">
-        <a href="">About History Information SNS</a>
-      </div>
-      <div id="main">
+      <header><h1>골든 리트리버 - Golden Retriever</h1></header>
+      <nav>
+        <a href="">About</a><a href="">History</a><a href="">Information</a
+        ><a href="">SNS</a>
+      </nav>
+      <main>
         <aside>
           <h3>Golden Retriever</h3>
-          <img src="/dog.jpg" width="200px" />
-          <ul>
-            <a href="#">
-              <li>기본특성</li>
-              <li>단점</li>
-              <li>키울 시 주의점</li>
-              <li>파생 혼종견</li>
-            </a>
-          </ul>
+          <img src="/dog.jpg" />
+          <div>
+            <a href="">기본특성</a><a href="">단점</a
+            ><a href="">키울 시 주의점</a><a href="">파생 혼종견</a>
+          </div>
         </aside>
         <section>
-          <p><h3>Golden Retriever</h3></p>
+          <h2>Golden Retriever</h2>
           <p>
             개의 품종 중 하나로, 원산지는 영국의 스코틀랜드 지역이다. 비슷하게
             생긴 래브라도 리트리버가 원형이다. 이름대로 윤기가 흐르는 크림빛
@@ -115,7 +125,6 @@
             '천사견'이라는 별명도 있다. 온순한 성미와 똑똑한 것으로 인해 맹인
             안내견으로도 유명하다
           </p>
-          <br />
           <p>
             리트리버는 원래 사냥개 중에서도 총에 맞은 새를 물어오는
             것(Retriever)을 목적으로 교배된 견종이다. 당연히 주인이 총을 쏘기
@@ -127,13 +136,13 @@
             보낸다면 '골든 리트리버이니까 위협만 하겠지' 같은 안일한 마음으로
             대하지 말고 충분히 물러나야 한다.
           </p>
-          <br />
           참조: 나무위키 - 골든리트리버
         </section>
-      </div>
-      <div id="footer">
-        <a href="#"> <p>Subscribe About Author Send us Email</p></a>
-      </div>
+      </main>
+      <footer>
+        <a href="">Subscribe</a><a href="">About Author</a
+        ><a href="">Send us Email</a>
+      </footer>
     </div>
   </body>
 </html>
