@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex56.html -->
+    <title>걱자(테이블)모양 배치 - display:table</title>
+    <!-- display:table   -table태그처럼 배치함 -->
+    <!-- display:table-row   - tr태그처럼 동작함 -->
+    <!-- display:table-cell   - td태그처럼 동작함 -->
+    <!-- display:table-header-group   - thead처럼 동작함 -->
+    <!-- display:table-row-group   - tbody태그처럼 동작함 -->
+    <style>
+      .table-container {
+        display: table;
+        /* 테두리선을 단선으로 만들어 줌 */
+        /* seperate : 기본값.  셀마다 개별 테두리가 있음. */
+        /* collapse : 셀 경계를 무너뜨리다. 단선효과 */
+        border-collapse: collapse;
+        /* auto : 기본값. 콘텐츠 너비만큼 너비가 정해짐 */
+        /* fixed : 똑같은 너비로 셀너비를 맞춤 */
+        width: 300px;
+        table-layout: fixed;
+      }
+      .table-row {
+        display: table-row;
+      }
+      .table-cell {
+        display: table-cell;
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      .table-header {
+        display: table-cell;
+        font-weight: bold;
+      }
+      .table-header {
+        display: table-header-group;
+      }
+      .table-body {
+        display: table-row-group;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 이전에 배워 만든 테이블은 이쁘지 않음  -->
+    <!-- <table border="1px">
+    <tr>
+      <th>이름</th>
+        <th>나이</th>
+        <th>직업</th>
+      </tr>
+      <tr>
+        <th>홍길동</th>
+        <th>30</th>
+        <th>개발자</th>
+      </tr>
+      <tr>
+        <th>김철수</th>
+        <th>25</th>
+        <th>디자이너</th>
+      </tr>
+    </table> -->
+
+    <!-- table태그 : 격자모양 데이터 태그 -->
+    <!-- thead태그 : 제목 부분의 태그 -->
+    <!-- tbody태그 : 내용 부분의 태그 -->
+    <!-- tr태그 : table row - 한줄(row) 태그-->
+    <!-- td태그  : table thead - 제목 셀 태그 -->
+    <!-- td태그  : table data - 테이터 셀 하나() -->
+
+    <!-- <table border="1">
+      <thead>
+      <tr>
+        <th>이름</th>
+        <th>나이</th>
+        <th>직업</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>홍길동</td>
+        <td>30</td>
+        <td>개발자</td>
+      </tr>
+      <tr>
+        <td>김철수</td>
+        <td>25</td>
+        <td>디자이너</td>
+      </tr>
+      </tbody>
+    </table> -->
+
+    <!-- css:div, 부트스트랩, 네일윈드CSS -->
+    <div class="table-container">
+      <div class="table-header">
+        <div class="table-row">
+          <div class="table-cell">이름</div>
+          <div class="table-cell">나이</div>
+          <div class="table-cell">직업</div>
+        </div>
+      </div>
+      <div class="table-body">
+        <div class="table-row">
+          <div class="table-cell">홍길동</div>
+          <div class="table-cell">30</div>
+          <div class="table-cell">개발자</div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">김철수</div>
+          <div class="table-cell">25</div>
+          <div class="table-cell">
+            디자이너입니다.디자이너입니다.디자이너입니다.디자이너입니다.<
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

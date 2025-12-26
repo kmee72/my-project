@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 300px;
+        border: 1px solid #555;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      /* 버튼 선택시 : 타입선택자, nth-child, id 또는class추가  */
+      input[type="submit"] {
+        width: 100%;
+        height: 40px;
+        background-color: #fee500;
+        border: none;
+        border-radius: 5px;
+      }
+      input[type="button"] {
+        width: 100%;
+        height: 40px;
+        background-color: #eee;
+        border: none;
+        border-radius: 5px;
+      }
+      p {
+        font-size: 12px;
+        color: #888;
+      }
+      .p::before {
+        /* sapn 박스가 가상으로 생성된다. */
+        /* W,H 0으로 생성 */
+        content:"";
+        /* display: inline-block; */
+        /* basis grow shrink */
+        display: inline-block;
+
+        width: 120px;
+        height: 1px;
+        border-bottom: 1px solid #888;
+        margin: 4px;
+        margin-right: 10px;
+      }
+      .p ::after {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="submit" value="로그인" />
+      <p class="line">또는</p>
+      <input type="button" value="QR코드 로그인" />
+    </div>
+  </body>
+</html>

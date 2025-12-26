@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex64.html -->
+    <title>가상요소 사용예3</title>
+    <!-- 연습문제로 풀어보세요 -->
+    <!-- 다음 로그인화면의 세로 구분선 만들기 -->
+    <style>
+      input[value="로그인"] {
+        background-color: yellow;
+        border: none;
+        border-radius: 5px;
+        width: 800px;
+        height: 50px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      .line {
+        display: flex;
+        align-items: center;
+        width:100px ;
+      }
+      .line::before,
+      .line::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: gray;
+      }
+      .line p {
+        margin: 0 10px;
+        font-size: 12px;
+      }
+      input[value="QR코드 로그인"] {
+        background-color: #ddd;
+        border: none;
+        border-radius: 5px;
+        width: 800px;
+        height: 50px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="submit" value="로그인" />
+      <div class="line"><p>또는</p></div>
+      <a href=""><input type="button" value="QR코드 로그인" /> </a>
+    </div>
+  </body>
+</html>
