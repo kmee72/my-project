@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex69.html -->
+    <title>변형속성 - Transform</title>
+    <!-- HTML/CSS/JS로 구현된 게임 콘텐츠 : 설치가 필요없고 가볍고 범용성이 있음 (SNG  social network game)-->
+
+    <!-- 크기, 각도 등이 번형되는 것 -->
+    <!-- 2차원(XY평면), 3차원(XYZ평면) -->
+    <!--(Z축 관련해서는 각자 공부 :z축 개념잡기 어려움) -->
+
+    <!-- 함수명 -->
+    <!-- rotate(각도값) : 회전 -->
+    <!-- translate(X , Y) : x, y좌표로 이동 -->
+    <!-- tranlate(X) : x좌표만 이동-->
+    <!-- translate(Y) : y좌표만 이동 -->
+    <!-- scale(X,Y) : 크기 확대/축소, 1 원래값  2 2배 확대  0.5  절반으로 축소 -->
+    <!-- scale(X) : x축으로 확대/축소 -->
+    <!-- scale(Y) : y축으로 확대/축소 -->
+    <!-- skew(X,Y) : 기울이기-->
+    <!-- skew(X) skew(Y) -->
+    <!-- tranfor-origin : 애커값(기준값) -->
+
+    <style>
+      section {
+        width: 100px;
+        height: 100px;
+        border: 5px solid black;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+
+        /* 회전 */
+        transform: rotate(45deg);
+        /* transform-origin: center center; */
+        /* transform-origin: right bottom; */
+        /* transform-origin: 30% 60%; */
+
+        /* 이동 */
+        /* transform: translate(30px, 50px); */
+        transform: translate(-30px, 50px);
+
+        /* 회전 + 이동 */
+        /* transform: rotate(45deg) translateX(30px); */
+
+        /* 기울이기 */
+        /* transform: skew(10deg); */
+        transform: skew(-10deg);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div></div>
+    </section>
+  </body>
+</html>
