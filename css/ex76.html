@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex76.html -->
+    <title>연습문제 - 메가박스 영화웹페이지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 1500px;
+        height: auto;
+        margin: 0 auto;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul li {
+        list-style: none;
+      }
+      .nav1 {
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav1 .nav1-menu1 {
+        display: flex;
+        align-items: center;
+      }
+      .nav1 .nav1-menu1 a {
+        display: flex;
+        align-items: center;
+        margin: 8px;
+      }
+      .nav1 .nav1-menu2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+      }
+      .nav1 .nav1-menu2 a {
+        display: flex;
+        align-items: center;
+        margin: 8px;
+      }
+      .nav2 {
+        height: 100px;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        
+      }
+      .nav2 .nav2-menu {
+        display: flex;
+        align-items: center;
+      }
+      .nav2 .nav2-menu a {
+        display: flex;
+        align-items: center;
+        margin: 40px;
+        font-size: 25px;
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(255, 255, 255);
+        display: none;
+        z-index: 1000;
+      }
+      .dropdown li {
+        width: 100%;
+        height: 10px;
+        border: 1px solid red;
+      }
+      .dropdown a {
+        display: block;
+        padding: 10px 15px;
+        color: white;
+        text-decoration: none;
+      }
+      .dropdown a:hover {
+        background-color: red;
+      }
+      /* 커서가 올라갔을때 드롭다운 표시-가장 핵심 */
+      .nav2-menu:hover .dropdown {
+        display: block;
+      }
+      h1 {
+        display: block;
+      }
+      .tab {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav1">
+      <ul class="nav1-menu1">
+        <li><a href="">VIP LOUNGE</a></li>
+        <li><a href="">멤버십</a></li>
+        <li><a href="">고객센터</a></li>
+      </ul>
+      <ul class="nav1-menu2">
+        <li><a href="">로그인</a></li>
+        <li><a href="">회원가입</a></li>
+        <li><a href="">빠른예매</a></li>
+      </ul>
+    </nav>
+    <nav class="nav2">
+      <ul class="nav2-menu">
+        <li class="nav2-menu1">
+          <a href="https://www.megabox.co.kr/movie"
+            ><img src="/ico-sitemap.png" alt="사이트맵"
+          /></a>
+        </li>
+        <li class="nav2-menu2">
+          <a href="https://www.megabox.co.kr/movie/comingsoon"
+            ><img src="/ico-search.png" alt="검색"
+          /></a>
+        </li>
+        <li class="nav2-menu3"><a href="">영화</a></li>
+        <ul class="dropdown">
+          <li><a href="">전체영화</a></li>
+        </ul>
+
+        <li class="nav2-menu4"><a href="">예매</a></li>
+        <ul class="dropdown">
+          <li>
+            <a href=""><img src="/" alt="" />빠른예매</a>
+          </li>
+          <li><a href="">상영시간표</a></li>
+          <li><a href="">더부티크프라이빗예매</a></li>
+        </ul>
+        <li class="nav2-menu5"><a href="">극장</a></li>
+        <ul class="dropdown">
+          <li><a href="">전체극장</a></li>
+          <li><a href="">특별관</a></li>
+        </ul>
+        <li class="nav2-menu6">
+          <a href=""><img src="/logo_new2.png" style="height: 60px;" /></a>
+        </li>
+        <li class="nav2-menu7"><a href="">이벤트</a></li>
+        <ul class="dropdown">
+          <li><a href="">진행중 이벤트</a></li>
+          <li><a href="">지난 이벤트</a></li>
+          <li><a href="">당첨자 발표</a></li>
+        </ul>
+        <li class="nav2-menu8"><a href="">스토어</a></li>
+        <li class="nav2-menu9"><a href="">혜택</a></li>
+        <ul class="dropdown">
+          <li><a href="">메가박스 멤버십</a></li>
+          <li><a href="">제휴/할인</a></li>
+        </ul>
+        <li>
+          <a href=""><img src="/ico-schedule.png" /> </a>
+        </li>
+        <li>
+          <a href=""><img src="/ico-mymega.png" /></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>전체영화</h1>
+      <ul class="tap">
+        <li class="tap1">
+          <a href="" class="boxoffice">박스오피스</a>
+          <img src="/btn-on-air.png" />개봉작만
+          <p>59개의 영화가 검색되었습니다.</p>
+          <div class="search-box">
+            <input type="text" id="movieSearch" placeholder="영화명 검색" />
+            <button type="button" class="search-btn">
+              <img src="ico-search.png" alt="검색" />
+            </button>
+          </div>
+
+          <div class="movie1">
+            <img
+              src="https://img.megabox.co.kr/SharedImg/2025/12/04/W6p1b8p719ZRz5LvVdBwWEOJqQZGYIyH_420.jpg"
+              class="avata"
+            />
+            <div class="overlay">
+              월드와이드흥행불멸의 1위 아바타>시리즈의 세번째이야기!
+            </div>
+            <h4>아바타:불과 재</h4>
+            <p>예매율 39.4%</p>
+            <p>개봉일 2025.12.17</p>
+            <button>2.3k</button>
+            <button>예매</button>
+            <button>doly ciniema</button>
+          </div>
+          <div class="movie2">
+            <img
+              src="https://img.megabox.co.kr/SharedImg/2025/12/23/n7JTlaC0CJoIxETuycsg8WxhnejZqfGS_420.jpg"
+              class="movie2"
+            />
+            <div class="overlay">
+              가장 초라했던 그때, 가장 눈부시던 우리 고향가는
+            </div>
+            <h4>만약에 우리</h4>
+            <p>예매율 9.8%</p>
+            <p>개봉일 2025.12.31</p>
+            <button>729</button>
+            <button>예매</button>
+          </div>
+          <div class="movie3">
+            <img
+              src="https://img.megabox.co.kr/SharedImg/2025/12/10/KABXf7NuhY8cxBSSjoIYnTFpsBAfErBI_420.jpg"
+              class="movie3"
+            />
+            <div class="overlay">매일 너의 기억을 채워주고 싶은</div>
+            <h4>오늘 밤, 세계에서 이 사랑이 사라진다 해도</h4>
+            <p>예매율 9.5%</p>
+            <p>개봉일 2025.12.24</p>
+            <button>825</button>
+            <button>예매</button>
+          </div>
+          <div class="movie4">
+            <img
+              src="https://img.megabox.co.kr/SharedImg/2025/11/27/YiSbqEf6OvFcDoLoQCipDojOHqMCwKG4_420.jpg"
+              class="movie4"
+            />
+            <div class="overlay">매일 너의 기억을 채워주고 싶은</div>
+            <h4>주토피아 2</h4>
+            <p>예매율 9%</p>
+            <p>개봉일 2025.11.26</p>
+            <button>2.7k</button>
+            <button>예매</button>
+          </div>
+        </li>
+        <li class="tap2">상영예정작</li>
+        <li class="tap3">MEGA ONLY</li>
+        <li class="tap4">필름소사이어티</li>
+        <li class="tap5">클래식소사이어티</li>
+      </ul>
+    </main>
+  </body>
+</html>
