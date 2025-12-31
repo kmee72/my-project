@@ -11,7 +11,7 @@
         padding: 0;
       }
       body {
-        width: 1500px;
+        width: 1100px;
         height: auto;
         margin: 0 auto;
       }
@@ -139,7 +139,7 @@
         
       }
       .search-box{
-        border: 1px solid black;
+        border: 1px solid #D8D9DB;
         border-radius: 10px;
         width: 300px;
       }
@@ -159,6 +159,363 @@
         outline: none;
       }
      .icon2{
+         display: block;
+        background: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-on-air.png) no-repeat;
+        background-size: contain;
+        background-size: 24px 33px;
+        background-position: 0 10;
+        width: 24px;
+        height: 18px;
+        border: none;
+        margin: 10px; 
+      }
+      #container {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0;
+  padding-bottom: 200px;
+  flex-flow: row wrap;
+  width: 1100px;
+}
+#container ul{
+    display: flex;
+    height: 420px;
+}
+#container ul li{
+    margin: 10px;
+    padding: 5px;
+}
+.poster {
+  width: 200px;                 
+  text-align: center;         
+}
+
+.footer{
+
+    width: 100%;
+    height: 110px;
+    background-color: #F8F8FA;
+}
+.page_util{
+  display: flex;
+  position: static;
+  width: 100%;
+  height: 42px;
+  background-color: #f8f8fa;
+  justify-content: center;
+}
+.page_wrap{
+  margin: 10px;
+  width: 1100px;
+}
+.page_wrap a{
+  color: #666;
+}
+.title{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+.title-wrap{
+  width: 1150px;
+}
+.title-wrap h1 {
+  margin-top: 10px;
+  font-weight: 400;
+}
+.top-menu{
+  width: 100%;
+  display: flex;
+
+}
+.top-menu ul{
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 100%;
+}
+.top-menu ul li{
+font-size: 20px;
+height: 42px;
+width: 20%;
+text-align: center;
+  border: 1px solid #d8d5d5;
+  border-bottom: 1px solid #503396;
+  border-collapse: collapse;
+}
+.top-menu ul li:first-child{
+  border: 1px solid #503396;
+  border-bottom: none;
+}
+.top-menu ul li:nth-of-type(2){
+  border-left: none;
+}
+.top-menu ul li a{
+  color: black;
+  line-height: 42px;
+  font-weight: 300;
+}
+.footer-top ul{
+    display: flex;
+    margin-left: 150px;
+} 
+
+.movie-list-util button{
+  display: block;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-on-air.png) no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 17px;
+}
+
+.footer-top{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-top ul li a{
+    color: #666666;
+    font-size: 10px;
+    margin: 0px 10px;
+}
+.footer-wrap-btn{
+    display: inline-block;
+    color: #6A6A6A;
+    border: 1px solid #d8d9db;
+    text-align: center;
+    width: 90px;
+    height: 26px;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-right: 200px;
+}
+.footer-middle{
+    width: 1100px;
+margin: 0 auto;
+}
+.footer-info::before{
+    content: "";
+    display: table;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png) no-repeat;
+    display: block;
+    background-size: contain;
+    width: 150px;
+    height: 50px;
+    margin: 0px 20px 0 0;
+}
+.footer-info {
+    font-size: 10px;                                             
+margin-left: 50px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+.sns-button{
+    display: flex;
+    margin-left: 100px;
+}
+.footer-icon1{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-youtubeN.png) no-repeat;
+}
+.footer-icon2{
+    width: 30px;
+    height: 30px;
+    display: block;
+margin-left: 10px;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-instagramN.png) no-repeat;
+}
+.footer-icon3{
+    width: 30px;
+    height: 30px;
+    display: block;
+margin-left: 10px;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-facebookN.png) no-repeat;
+}
+.footer-icon4{
+    width: 30px;
+    height: 30px;
+    display: block;
+margin-left: 10px;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-twitterN.png) no-repeat;
+}
+* 포스터 */
+#container {
+  display: flex;
+  gap: 20px;
+  margin: 10px 35px;
+  justify-content: center;
+  align-items: center;
+}
+#container ul {
+  display: flex;
+    flex-direction: column;
+    flex-direction: row;  
+}
+#container ul li {
+  margin: 10px;
+}
+.poster {
+  width: 250px;
+  position: relative;
+  display: block;
+}
+
+.rank {
+  position: absolute; /* 3. 공중에 띄움 */
+  top: 0; /* 4. 위에서 0 위치에 고정 */
+  left: 0; /* 5. 왼쪽에서 0 위치에 고정 */
+
+  /* 6. 디자인 (잘 보이게 하기 위한 스타일) */
+  margin: 0; /* p태그 기본 여백 제거 */
+  background-color: transparent; /* 배경을 어둡고 투명하게 */
+  color: white; /* 글자는 흰색 */
+  padding: 5px 12px; /* 글자 주변 여백 */
+  font-size: 35px; /* 숫자 크기 */
+  font-style: italic; /* 메가박스 스타일처럼 기울임 */
+  font-weight: bold;
+  z-index: 10; /* 이미지보다 위에 보이도록 설정 */
+}
+
+/* 1. 이미지 영역 설정 */
+.poster_img_area {
+  position: relative;
+  width: 100%; /* 부모인 .poster 너비(200px)에 맞춤 */
+  height: 330px; /* 높이를 300px로 고정 */
+  overflow: hidden; /* 이미지가 삐져나오면 자름 */
+  border-radius: 4px; /* 살짝 부드럽게 (선택사항) */
+}
+
+.poster_img_area img {
+  width: 100%; /* 박스 너비에 꽉 채움 */
+  height: 100%; /* 박스 높이에 꽉 채움 */
+  object-fit: cover; /* 비율 유지하며 꽉 채움 (중요) */
+  display: block;
+}
+
+/* 2. 호버 레이어 (처음엔 안 보임) */
+.hover_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* 검정 반투명 */
+  padding: 20px;
+  box-sizing: border-box;
+
+  /* 중앙 정렬 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0; /* 평소엔 투명하게 */
+  transition: opacity 0.3s ease; /* 나타날 때 부동부동하게 */
+  z-index: 5;
+}
+
+/* 3. 호버 시 처리 (핵심: 반드시 이 구조여야 합니다) */
+.poster_img_area:hover .hover_content {
+  opacity: 1; /* 마우스 올리면 투명도 1로 변경 */
+}
+
+/* 4. 요약글 줄수 제한 */
+.summary {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+
+  /* 줄 수 제한 마법 (에디터 밑줄은 무시하세요) */
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile {
+  display: flex;
+  margin: 2px 0;
+}
+.img_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img_box > img {
+  width: 23px;
+  height: 23px;
+}
+.profile > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23x;
+  margin-left: 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* 부모(포스터 등)의 전체 너비를 다 쓰도록 설정 */
+  margin-bottom: 4px;
+}
+
+.info > span {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.button_info {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 6px;
+  height: 30px;
+}
+.button_info > button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: #351f67;
+  color: white;
+  height: 30px;
+}
+.button_info > button:nth-child(1){
+  background-color: rgb(245, 243, 243);
+  border-color:rgb(88, 84, 84) ;
+  color: black; 
+  width: 50px;
+}
+.button_info > button:nth-child(1):hover{
+  background-color: #fff;
+}
+/* 하트 공통 스타일 */
+.heart {
+  width: 17px; /* 전체 이미지 너비의 절반 */
+  height: 15px; /* 이미지 높이 */
+  background-image: url("https://img.megabox.co.kr/static/pc/images/common/ico/ico-heart-toggle-gray.png");
+  background-repeat: no-repeat;
+}
+
+/* 왼쪽 하트 (빈 하트) */
+.heart-off {
+  background-position: 0 0;
+}
+
+/* 오른쪽 하트 (채워진 하트) */
+.heart-on {
+  background-position: -17px 0;
+}
+.icon2{
   display: block;
   background: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-on-air.png) no-repeat;
   background-size: contain;
@@ -169,7 +526,35 @@ width: 24px;
         border: none;
 margin: 10px;
 }
+.nav3{
+  display: flex;
+  height: 40px;
+  background-color: #ebe7e7;
+  color: #333232;
+  align-items: center;
+  margin-top: 0;
+  font-size: 20px;
+}
+.nav3-icon{
+  display: flex;
+  padding: 0 10px
+}
+button{
+  border: none;
+  padding: 0 20px;
+  background-color: #ebe7e7 ;
+  color: gray;
+}
+.box{
+  border: 1px solid #D8D9DB;
+  width: 100%;
+  height: 50px;
+  margin-top: 0;
+  
+}
 
+
+      
     </style>
   </head>
   <body>
@@ -217,7 +602,19 @@ margin: 10px;
         </a>
         <a href=""><img src="/ico-mymega.png" width="30px" height="30px"  /></a>
       </div>
-    </nav><br><br><br>
+    </nav>
+    <nav class="nav3">
+      <div class="nav3-icon">
+       <img src="/bg-location-home.png" width="15px">  
+       <img src="/bg-location-arr.png" >
+      </div>
+      <button class="movie">영화</button>
+      <img src="/bg-location-arr.png" alt="">   
+      <button class="movie">전체영화</button>
+    </nav>
+    <br><br>
+
+
     <main>
       <h1>전체영화</h1>
       <table>
@@ -228,75 +625,930 @@ margin: 10px;
           <td><a href="">필름소사이어티</a></td>
           <td><a href="">클래식소사이어티</a></td>
         </tr>
-      </table>
-      
+      </table>     
       <div class="btn">
       <div class="btn-sub">
-         <button class="icon2"></button><p style="font-size: 14px;">개봉작만 59개의 영화가검색되었습니다.</p></a>
-        </p></div>  
+         <button class="icon2"></button><p style="font-size: 16px;">개봉작만 59개의 영화가검색되었습니다.</p></a>
+        </p>
+      </div>  
+
           <div class="search-box">
             <input type="text" id="movieSearch" placeholder="영화명 검색"  />
-            <input type="button" class="search-btn">
+
               <img src="ico-search.png"  />
             </input>
           </div>
           </div>
-
-          <div class="movie1">
-            <img
-              src="https://img.megabox.co.kr/SharedImg/2025/12/04/W6p1b8p719ZRz5LvVdBwWEOJqQZGYIyH_420.jpg"
-              class="avata"
-            />
-            <div class="overlay">
-              월드와이드흥행불멸의 1위 아바타>시리즈의 세번째이야기!
+ <div id="container">
+    
+      <ul>
+        <li>
+          <div class="poster">
+            <p class="rank">1</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/23/n7JTlaC0CJoIxETuycsg8WxhnejZqfGS_420.jpg"
+                alt="1.아바타"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  월드 와이드 흥행 불멸의 1위 &lt;아바타&gt; 시리즈의 세 번째
+                  이야기! 판도라를 위협하는 재의 부족, 더 이상 인간만이 적이
+                  아니다! 12월, 모두의 운명을 뒤흔들 거대한 전투가 시작된다!
+                </p>
+              </div>
             </div>
-            <h4>아바타:불과 재</h4>
-            <p>예매율 39.4%</p>
-            <p>개봉일 2025.12.17</p>
-            <button>2.3k</button>
-            <button>예매</button>
-            <button>doly ciniema</button>
-          </div>
-          <div class="movie2">
-            <img
-              src="https://img.megabox.co.kr/SharedImg/2025/12/23/n7JTlaC0CJoIxETuycsg8WxhnejZqfGS_420.jpg"
-              class="movie2"
-            />
-            <div class="overlay">
-              가장 초라했던 그때, 가장 눈부시던 우리 고향가는
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/12_46x46.png"
+                  alt="12세 관람 아이콘"
+                />
+              </div>
+              <p>아바타:불과 재</p>
             </div>
-            <h4>만약에 우리</h4>
-            <p>예매율 9.8%</p>
-            <p>개봉일 2025.12.31</p>
-            <button>729</button>
-            <button>예매</button>
+            <div class="info">
+              <span>예매율 39.4%&nbsp;</span>
+              <span>개봉일 2025.12.17</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                2.3k
+              </button>
+              <button>예매</button>
+              <button>
+                <img
+                  src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_list_db_btn.png"
+                  alt="dolby cinema 아이콘(아바타 예매 옆에 버튼)"
+                />
+              </button>
+            </div>
           </div>
-          <div class="movie3">
-            <img
-              src="https://img.megabox.co.kr/SharedImg/2025/12/10/KABXf7NuhY8cxBSSjoIYnTFpsBAfErBI_420.jpg"
-              class="movie3"
-            />
-            <div class="overlay">매일 너의 기억을 채워주고 싶은</div>
-            <h4>오늘 밤, 세계에서 이 사랑이 사라진다 해도</h4>
-            <p>예매율 9.5%</p>
-            <p>개봉일 2025.12.24</p>
-            <button>825</button>
-            <button>예매</button>
-          </div>
-          <div class="movie4">
-            <img
-              src="https://img.megabox.co.kr/SharedImg/2025/11/27/YiSbqEf6OvFcDoLoQCipDojOHqMCwKG4_420.jpg"
-              class="movie4"
-            />
-            <div class="overlay">매일 너의 기억을 채워주고 싶은</div>
-            <h4>주토피아 2</h4>
-            <p>예매율 9%</p>
-            <p>개봉일 2025.11.26</p>
-            <button>2.7k</button>
-            <button>예매</button>
-          </div>
+          <br />
         </li>
-       
-    </main>
-  </body>
+        <li>
+          <div class="poster">
+            <p class="rank">2</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/04/W6p1b8p719ZRz5LvVdBwWEOJqQZGYIyH_420.jpg"
+                alt="2.만약에 우리"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  가장 초라했던 그때, 가장 눈부시던 우리 고향 가는 고속버스에
+                  올라탄 은호(구교환)와 휴학 후 어디론가 떠날 결심을 한
+                  정원(문가영), 나란히 앉게 된 두 사람은 뜻밖의 인연을 맺는다.
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/15_46x46.png"
+                  alt="15세 관람 아이콘"
+                />
+              </div>
+              <p>만약에 우리</p>
+            </div>
+            <div class="info">
+              <span>예매율 10.1%&nbsp;</span>
+              <span>개봉일 2025.12.31</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                733
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">3</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/10/KABXf7NuhY8cxBSSjoIYnTFpsBAfErBI_420.jpg"
+                alt="3.오늘밤, 세계에서"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  매일 너의 기억을 채워주고 싶은 남자, 김재원(추영우) 학교를
+                  가도 아무 의욕이 없던 나에게 어느 순간, 웃을 때마다 빛나는 긴
+                  머리의 한 아이가 나의 심장 속에 들어오기 시작했다. 
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/12_46x46.png"
+                  alt="12세 관람 아이콘"
+                />
+              </div>
+              <p>오늘밤 세계에서 이...</p>
+            </div>
+            <div class="info">
+              <span>예매율 9.6%&nbsp;</span>
+              <span>개봉일 2025.12.24</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                830
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">4</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/11/27/YiSbqEf6OvFcDoLoQCipDojOHqMCwKG4_420.jpg"
+                alt="4.주토피아2"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  더 화려해진 세계, 더 넓어진 주토피아! 디즈니의 가~~장
+                  사랑스러운 콤비 '주디'와 '닉'이 돌아온다! 미스터리한 뱀
+                  ‘게리’가 나타난 순간, 주토피아가 다시 흔들리기 시작했다!
+                  혼란에 빠진 도시를 구하기 위해 환상의 콤비 ‘주디’ &amp; ‘닉’이
+                  잠입 수사에 나서고 상상 그 이상의 진실과 위협을 마주하게
+                  되는데...! 11월, 초특급 추적 어드벤처가 펼쳐진다!
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/ALL_46x46.png"
+                  alt="전체이용가 아이콘"
+                />
+              </div>
+              <p>주토피아2</p>
+            </div>
+            <div class="info">
+              <span>예매율 8.6%&nbsp;</span>
+              <span>개봉일 2025.11.26</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                2.7k
+              </button>
+              <button>예매</button>
+              
+              </button>
+            </div>
+          </div>
+          <br />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div class="poster">
+            <p class="rank">5</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/23/zJqlVMrN3C4d5PfCwPJGTiX1JLCxf1o4_420.jpg"
+                alt="5.누벨바그"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  계속 찍어요 우리만 할 수 있으니까 1959년 파리, 젊은 비평가
+                  ‘고다르’가 올해 최악의 영화이자 세기의 데뷔작이 될 &lt;네
+                  멋대로 해라&gt;를 찍는 미친 모험의 시간으로 점프하는 리처드
+                  링클레이터의 시네마 매직
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/12_46x46.png"
+                  alt="12세 관람 아이콘"
+                />
+              </div>
+              <p>누벨바그</p>
+            </div>
+            <div class="info">
+              <span>예매율 7.9%&nbsp;</span>
+              <span>개봉일 2025.12.31</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                499
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">6</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/11/25/v344HrDrKIU3iFAbZWMwLssegzKFKdZ7_420.jpg"
+                alt="6.신의악단"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  대북제재로 돈줄이 막힌 북한. 국제사회의 2억 달러 지원을 얻기
+                  위한 마지막 방법은 단 하나! 보위부는 당의 명령을 받고, 북한
+                  최초의 가짜 찬양단을 만드는 임무를 맡는다.
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/15_46x46.png"
+                  alt="15세 관람 아이콘"
+                />
+              </div>
+              <p>신의악단</p>
+            </div>
+            <div class="info">
+              <span>예매율 3.7%&nbsp;</span>
+              <span>개봉일 2025.12.31</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                132
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">7</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/11/20/QrLgK75zTzO9bZehTlQLDRViW115sr1i_420.jpg"
+                alt="7.톰과제리"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  세기의 콤비 톰과 제리, 최초 3D 탄생! 마법의 나침반을 깨운 톰과
+                  제리의 차원이동이 시작된다!
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/12_46x46.png"
+                  alt="12세 관람 아이콘"
+                />
+              </div>
+              <p>톰과 제리:황금나침반...</p>
+            </div>
+            <div class="info">
+              <span>예매율 2.2%&nbsp;</span>
+              <span>개봉일 2026.01.01</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                152
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">8</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/03/xpyJM8dD5sBjVofJ2gqwUh4docg5vbsJ_420.jpg"
+                alt="8.화양연화 특별판"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  25년 마지막을 장식할 25주년 기념 완벽한 화양연화를 만나다
+                  1962년, 같은 날 같은 아파트로 이사 온 ‘첸 부인’과 ‘차우’. 이사
+                  첫날부터 자주 마주치던 두 사람은 ‘차우’의 넥타이와 ‘첸 부인’의
+                  가방이 각자 배우자의 것과 똑같음을 깨닫고 그들의 관계를
+                  눈치챈다. 
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/ALL_46x46.png"
+                  alt="전체이용가 아이콘"
+                />
+              </div>
+              <p>화양연화 특별판</p>
+            </div>
+            <div class="info">
+              <span>예매율 1.8%&nbsp;</span>
+              <span>개봉일 2025.12.31</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                529
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div class="poster">
+            <p class="rank">9</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/08/hBPXfbWqeJ4aMSzYZ7IIF6iFt9Blizba_420.jpg"
+                alt="9.후지모토 타츠키(파트1)"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  &lt;룩백&gt;, &lt;극장판 체인소 맨: 레제편&gt; 을 탄생시킨
+                  후지모토 타츠키가 17 세부터 26 세까지 그린 8개의 단편 
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/12_46x46.png"
+                  alt="12세 관람 아이콘"
+                />
+              </div>
+              <p>후지모토 타츠키 17-2...</p>
+            </div>
+            <div class="info">
+              <span>예매율 1.6%&nbsp;</span>
+              <span>개봉일 2025.12.26</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                984
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">10</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/08/fsYTTO4DW1O1r6xvVhx3E2tmDf5sagCH_420.jpg"
+                alt="10.후지모토 타츠키(파트2)"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  &lt;룩백&gt;, &lt;극장판 체인소 맨: 레제편&gt; 을 탄생시킨
+                  후지모토 타츠키가 17 세부터 26 세까지 그린 8개의 단편 
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/15_46x46.png"
+                  alt="15세 관람 아이콘"
+                />
+              </div>
+              <p>후지모토 타츠키 17-2...</p>
+            </div>
+            <div class="info">
+              <span>예매율 1.5%&nbsp;</span>
+              <span>개봉일 2025.12.26</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                1.3k
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">11</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/04/vBelyfv2awFvQRU2OTN8xJHEkXGdQVYN_420.jpg"
+                alt="11.짱구는 못말려"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  떡잎마을 어린이 엔터 페스티벌에서 우승한 떡잎마을 방범대 짱구,
+                  맹구, 철수, 유리, 훈이는 우승 상품으로 인도 엔터 페스티벌
+                  무대에 초청받아, 여행을 만끽한다.
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/12_46x46.png"
+                  alt="12세 관람 아이콘"
+                />
+              </div>
+              <p>극장판 짱구는 못말려:...</p>
+            </div>
+            <div class="info">
+              <span>예매율 1.3%&nbsp;</span>
+              <span>개봉일 2025.12.24</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                607
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">12</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/03/tDmRvCYWzcyeN9QKcX8hO0ba9loGRyUr_420.jpg"
+                alt="12.주술회전"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  2018년 10월 31일 시부야 역 주변에 갑자기 ‘장막’이 내려지고,
+                  다수의 일반인이 갇히게 된다. 그곳에 홀로 뛰어든 현대 최강의
+                  주술사, 고죠 사토루. 그러나 그곳에는 고죠의 봉인을 꾀하는
+                  주저사·주령들이 기다리고 있었다.
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/ALL_46x46.png"
+                  alt="전체이용가 아이콘"
+                />
+              </div>
+              <p>극장판 주술회전: 시부...</p>
+            </div>
+            <div class="info">
+              <span>예매율 1%&nbsp;</span>
+              <span>개봉일 2025.12.03</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                1.7k
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div class="poster">
+            <p class="rank">13</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/08/28/GP7LkwFxSvP5uWfeV3MZLcoYGOSnXfbu_420.jpg"
+                alt="13.귀멸의 칼날"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  혈귀로 변해버린 여동생 네즈코를 인간으로 되돌리기 위해 혈귀를
+                  사냥하는 조직인 《귀살대》에 입대한 카마도 탄지로. 입대 후
+                  동료인 아가츠마 젠이츠, 하시비라 이노스케와 함께 많은 혈귀와
+                  싸우고, 성장하면서 세 사람의 우정과 유대는 깊어진다. 
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/12_46x46.png"
+                  alt="12세 관람 아이콘"
+                />
+              </div>
+              <p>극장판 귀멸의 칼날: 무...</p>
+            </div>
+            <div class="info">
+              <span>예매율 1.1%&nbsp;</span>
+              <span>개봉일 2025.08.22</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                7k
+              </button>
+              <button>예매</button>
+             
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">14</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/10/24/fIJpT1BgMnoaQaAYbXF8Z9bKxjmWMZWQ_420.jpg"
+                alt="14.체인소맨"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  인기 애니메이션 '체인소 맨' 첫 공식 극장판 국내 상륙! 압도적
+                  배틀 액션이 스크린에서 폭발한다!
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/15_46x46.png"
+                  alt="15세 관람 아이콘"
+                />
+              </div>
+              <p>극장판 체인소 맨: 레제편</p>
+            </div>
+            <div class="info">
+              <span>예매율 0.7%&nbsp;</span>
+              <span>개봉일 2025.09.24</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                5.7k
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">15</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/11/17/e751A2PMhJlCTr5uekUIoZ9AJlF5twq6_420.jpg"
+                alt="15.스폰지밥 무비"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  비키니시티에 사는 스폰지밥은 무시무시한 롤러코스터를 탈 수
+                  있는 용감한 ‘빅 가이’가 꿈이다.
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/12_46x46.png"
+                  alt="12세 관람 아이콘"
+                />
+              </div>
+              <p>스폰지밥 무비: 네모바지</p>
+            </div>
+            <div class="info">
+              <span>예매율 0.4%&nbsp;</span>
+              <span>개봉일 2026.01.01</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                247
+              </button>
+              <button>예매</button>
+             
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">16</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/03/19/t1aws8JYeDCKaCbRntA8oalmQ2UW33ua_420.jpg"
+                alt="16.진격의 거인"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  이것이 최후의 "진격"---! 거인의 위협으로부터 몸을 지키기 위해
+                  거대한 벽을 쌓고 그 안에서 숨을 죽이고 살고 있는 인류. 백 년의
+                  평화는 초대형 거인의 습격으로 파괴됐고, 어머니를 잃은 소년
+                  엘런 예거는 모든 거인을 없앨 것을 맹세하고 거인과 싸우는
+                  조사병단의 일원이 되었다.
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/ALL_46x46.png"
+                  alt="전체이용가 아이콘"
+                />
+              </div>
+              <p>진격의 거인 완결편 더...</p>
+            </div>
+            <div class="info">
+              <span>예매율 0.4%&nbsp;</span>
+              <span>개봉일 2025.03.13</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                10k
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div class="poster">
+            <p class="rank">17</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/08/wHNEOvlwUI26CqJh0VBcDnlUEOW2hGm0_420.jpg"
+                alt="17.위키드"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  “너로 인해 완전히 달라졌어, 내가” 전혀 다르지만 서로에게 가장
+                  소중한 친구가 된 ‘엘파바’(신시아 에리보)와 ‘글린다’(아리아나
+                  그란데). 쉬즈에서의 마법같았던 둘의 우정은 오즈의 마법사와
+                  그를 둘러싼 비밀들을 알게 되면서 다른 길을 선택할 수밖에 없게
+                  내몰린다. 
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/12_46x46.png"
+                  alt="12세 관람 아이콘"
+                />
+              </div>
+              <p>위키드: 포 굿</p>
+            </div>
+            <div class="info">
+              <span>예매율 0.3%&nbsp;</span>
+              <span>개봉일 2025.11.19</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                1.7k
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">18</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/12/AfSWUJp31dL397Qv1nUXwJFKPgkGSnqy_420.jpg"
+                alt="18.위험사회"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  폐광 지역에 내국인이 유일하게 들어갈 수 있는 카지노가 생기자,
+                  전국의 사람들이 몰려든다. 돈이 모든 것을 결정하는 세상, 영길은
+                  단 한 번의 ‘기회’를 쫓아 카지노로 향한다. 
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/15_46x46.png"
+                  alt="15세 관람 아이콘"
+                />
+              </div>
+              <p>위험사회</p>
+            </div>
+            <div class="info">
+              <span>예매율 0.3%&nbsp;</span>
+              <span>개봉일 2025.12.24</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                13
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">19</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2025/12/24/usEGyuFQpp9Sl5DobvE9p3A7L86JUjnx_420.jpg"
+                alt="19.척의 일생"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  인터넷은 끊기고, 도로 곳곳은 구멍이 뚫려 마비된 세상. 마치
+                  지구의 마지막 날이 다가오는 것만 같은 나날들의 연속이다. 교사
+                  '마티'는 온 세상이 언제 어둠에 갇혀도 이상할리 없는 지금,
+                  이혼했지만 사랑이 남은 ‘펠리샤’를 만나기 위해 길을 나선다.
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/12_46x46.png"
+                  alt="12세 관람 아이콘"
+                />
+              </div>
+              <p>척의 일생</p>
+            </div>
+            <div class="info">
+              <span>예매율 0.3%&nbsp;</span>
+              <span>개봉일 2025.12.24</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                249
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+        <li>
+          <div class="poster">
+            <p class="rank">20</p>
+            <!-- 이미지 영역을 감싸는 div를 하나 더 만들면 관리가 쉽습니다 -->
+            <div class="poster_img_area">
+              <img
+                src="https://img.megabox.co.kr/SharedImg/2024/09/05/nBHvmCh9wY9dOc0be7LJor2jDYNoOVqT_420.jpg"
+                alt="20.룩백"
+              />
+              <!-- 마우스 호버 시 나타날 내용 -->
+              <div class="hover_content">
+                <p class="summary">
+                  “만화를 그려서 다행이라고 생각해” 그림에 대한 자신감으로
+                  가득한 ‘후지노’ “세상에 나와서 다행이라고 생각해” 세상과의
+                  단절 속에 그림만이 전부였던 ‘쿄모토’ 만화를 향한 한결 같은
+                  마음으로 잊지 못할 사계절을 함께한 두 소녀의 아름다운 우정
+                  이야기가 시작된다!
+                </p>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="img_box">
+                <img
+                  src="https://img.megabox.co.kr/static/pc/images/common/txt/ALL_46x46.png"
+                  alt="전체이용가 아이콘"
+                />
+              </div>
+              <p>룩백</p>
+            </div>
+            <div class="info">
+              <span>예매율 0.3%&nbsp;</span>
+              <span>개봉일 2024.09.05</span>
+            </div>
+            <div class="button_info">
+              <button>
+                <div class="heart heart-off"></div>
+                7.5k
+              </button>
+              <button>예매</button>
+              
+            </div>
+          </div>
+          <br />
+        </li>
+      </ul>
+    </div>
+    <div class="box"></div>
+
+  <footer class="footer">
+    <div class="footer-top">
+            <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">사회공헌</a></li>
+                <li><a href="#">제휴/광고/부대사업문의</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><span style="font-weight: bold; color: black; ">위치기반서비스 이용약관</span></a></li>
+                <li><a href="#"><span style="font-weight: bold; color: black;">개인정보처리방침</span></a></li>
+                <li><a href="#">윤리경영</a></li>
+            </ul>
+            <a href="#" class="footer-wrap-btn"><p class="icon5"></p>
+                극장찾기
+            </a>
+    </div>
+    <div class="footer-middle">
+        <div class="footer-middlie-wrapper">
+          <div class="footer-info">
+            <p>서울특별시 강남구 테헤란로 87길 22 도심공항터미널 건물 408호 ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr <br>
+            대표자명 홍정인, 남용석· 개인정보보호책임자 김수현· 사업자등록번호 211-86-59478· 통신판매업신고번호 2025-서울강남-00722<br>
+        COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+        <div class="sns-button">
+    <a href="https://www.youtube.com/onmegabox">
+        <i class="footer-icon1"></i>
+    </a>
+    <a href="https://www.instagram.com/megaboxon/">
+        <i class="footer-icon2"></i>
+    </a>
+    <a href="https://www.facebook.com/megaboxon">
+        <i class="footer-icon3"></i>
+    </a>
+    <a href="https://x.com/megaboxon">
+        <i class="footer-icon4"></i>
+    </a>
+</div>
+</div>
+        </div>
+    </div>
+  </footer>
+</body>
 </html>

@@ -1,189 +1,194 @@
-*{
-    margin:0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
-      /* PC */
-      @media screen {
-      }
-      /* Tablet */
-      @media screen and (min-width: 768px) and (max-width: 959px) {
-      }
-      /* Mobile */
-      @media screen and (max-width: 767px) {
-      }
-header{
-    position: relative;
-    z-index: 100;
-    width: 100%;
-    min-width: 1100px;
-    height: 100px;
-    border-bottom: 1px solid #351f67;
+/* PC */
+@media screen {
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+/* Mobile */
+@media screen and (max-width: 767px) {
+}
+header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  min-width: 1100px;
+  height: 100px;
+  border-bottom: 1px solid #351f67;
 }
 .nav1 {
-    display: flex;
-    justify-content: space-evenly;  
-    padding: 0 20px;                 
-    height: 50px;   
-    margin-top: 10px;                 
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  height: 50px;
+  margin-top: 10px;
 }
-#logo{
-    background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo_new2.png) no-repeat;
-    height: 150px;
-    width: 150px;
-    background-size: contain;
+#logo {
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo_new2.png)
+    no-repeat;
+  height: 150px;
+  width: 150px;
+  background-size: contain;
 }
 .nav1-menu1 {
-    display: flex;                   
-margin-top: 10px;
-                          
+  display: flex;
+  margin-top: 10px;
 }
 .nav1-menu2 {
-    display: flex;
- margin-top: 10px;
-  
+  display: flex;
+  margin-top: 10px;
 }
 .nav1-menu1 li,
 .nav1-menu2 li {
-    list-style: none;                
+  list-style: none;
 }
 .nav1-menu1 li:hover,
 .nav1-menu2 li:hover {
-    border-bottom: 1px solid silver;
-
+  border-bottom: 1px solid silver;
 }
 .nav1-menu1 a,
 .nav1-menu2 a {
-    color: black;                     
-    font-size: 10px;                 
-    padding: 0px 10px;               
-    border: none;                    
+  color: black;
+  font-size: 10px;
+  padding: 0px 10px;
+  border: none;
 }
-.nav2{
-    display: flex;
-    margin: 0 30px ;
-    padding-bottom: 20px;
-    width: 100%;
-    height: 70px;
-    justify-content: space-evenly;
+.nav2 {
+  display: flex;
+  margin: 0 30px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 70px;
+  justify-content: space-evenly;
 }
-#informaition{
-    display: flex;
-    align-items: center;
+#informaition {
+  display: flex;
+  align-items: center;
 }
-#informaition2{
-    display: flex;
-    align-items: center;
+#informaition2 {
+  display: flex;
+  align-items: center;
 }
-#nav2-menu1{
-    width: 80px;
-    height: 40px;
-    display: flex;
+#nav2-menu1 {
+  width: 80px;
+  height: 40px;
+  display: flex;
 }
-.icon1{
-   background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-sitemap.png);
-   display: block;
-   background-position: center;
-   background-repeat: no-repeat;
-   height: 36px;
-   width: 36px;
+.icon1 {
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-sitemap.png);
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 36px;
+  width: 36px;
 }
-.icon2{
-    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search.png) no-repeat;
-    display: block;
-    background-position: center;
-    height: 36px;
-    width: 36px;
+.icon2 {
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search.png)
+    no-repeat;
+  display: block;
+  background-position: center;
+  height: 36px;
+  width: 36px;
 }
-.icon3{
-     background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-schedule.png) no-repeat;
-    display: block;
-    background-position: center;
-    height: 36px;
-    width: 36px;
+.icon3 {
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-schedule.png)
+    no-repeat;
+  display: block;
+  background-position: center;
+  height: 36px;
+  width: 36px;
 }
-.icon4{
-     background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-mymega.png) no-repeat;
-    display: block;
-    background-position: center;
-    height: 36px;
-    width: 36px;
+.icon4 {
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-mymega.png)
+    no-repeat;
+  display: block;
+  background-position: center;
+  height: 36px;
+  width: 36px;
 }
-.icon5{
-    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-footer-search.png) no-repeat;
-        display: inline-block;
-    background-position: center;
-    align-items: center;
-    height: 15px;
-    width: 15px;
-    margin-top: 5px;
+.icon5 {
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-footer-search.png)
+    no-repeat;
+  display: inline-block;
+  background-position: center;
+  align-items: center;
+  height: 15px;
+  width: 15px;
+  margin-top: 5px;
 }
 .nav-menu {
-        display: flex;
-      }
-      .nav-item {
-        position: relative;
-      }
-      .nav-item > a {
-        display: inline-block;
-        padding: 15px 20px;
-         color: black;
-        text-decoration: none;
-        font-size: 20px;
-      }
-      .dropdown {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        background-color: #339EB2;
-        display: none;
-        z-index: 1000;
-      }
-      .dropdown li {
-        width: 200px;
-      }
-      .dropdown a {
-        display: block;
-        padding: 10px 15px;
-        color: white;
-        text-decoration: none;
-      }
-      .dropdown a:hover {
-        background-color: #555;
-      }
-      .nav-item:hover .dropdown {
-        display: block;
-      }
+  display: flex;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item > a {
+  display: inline-block;
+  padding: 15px 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #339eb2;
+  display: none;
+  z-index: 1000;
+}
+.dropdown li {
+  width: 200px;
+}
+.dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+.dropdown a:hover {
+  background-color: #555;
+}
+.nav-item:hover .dropdown {
+  display: block;
+}
 #container {
-  display: flex;              
-  gap: 20px;                  
-  margin: 10px 35px;
-    justify-content: center;
-     padding-bottom: 200px;
+  display: flex;
+  gap: 20px;
+  margin: 10px 400px;
+  padding-bottom: 200px;
+  flex-wrap: wrap;
+  width: 1100px;
 }
-#container ul{
-    display: flex;
+#container ul {
+  display: flex;
+  margin: 0 50px;
+  
 }
-#container ul li{
-    margin: 10px;
+#container ul li {
+  margin: 10px;
+  width: 250px;
 }
 .poster {
-  width: 200px;               
-  text-align: center;         
+  width: 500px;
+  text-align: center;
 }
 
-.footer{
-
-    width: 100%;
-    height: 110px;
-    background-color: #F8F8FA;
+.footer {
+  width: 100%;
+  height: 110px;
+  background-color: #f8f8fa;
 }
-.page_util{
+.page_util {
   display: flex;
   position: static;
   width: 100%;
@@ -191,165 +196,171 @@ margin-top: 10px;
   background-color: #f8f8fa;
   justify-content: center;
 }
-.page_wrap{
+.page_wrap {
   margin: 10px;
   width: 1100px;
 }
-.page_wrap a{
+.page_wrap a {
   color: #666;
 }
-.title{
+.title {
   width: 100%;
   height: 150px;
   display: flex;
   justify-content: center;
 }
-.title-wrap{
+.title-wrap {
   width: 1150px;
 }
 .title-wrap h1 {
   margin-top: 10px;
   font-weight: 400;
 }
-.top-menu{
+.top-menu {
   width: 100%;
   display: flex;
-
 }
-.top-menu ul{
+.top-menu ul {
   display: flex;
   margin: 0 auto;
   margin-top: 10px;
   width: 100%;
 }
-.top-menu ul li{
-font-size: 20px;
-height: 42px;
-width: 20%;
-text-align: center;
+.top-menu ul li {
+  font-size: 20px;
+  height: 42px;
+  width: 20%;
+  text-align: center;
   border: 1px solid #d8d5d5;
   border-bottom: 1px solid #503396;
   border-collapse: collapse;
 }
-.top-menu ul li:first-child{
+.top-menu ul li:first-child {
   border: 1px solid #503396;
   border-bottom: none;
 }
-.top-menu ul li:nth-of-type(2){
+.top-menu ul li:nth-of-type(2) {
   border-left: none;
 }
-.top-menu ul li a{
+.top-menu ul li a {
   color: black;
   line-height: 42px;
   font-weight: 300;
 }
-.footer-top ul{
-    display: flex;
-    margin-left: 150px;
-} 
+.footer-top ul {
+  display: flex;
+  margin-left: 150px;
+}
 
-.movie-list-util button{
+.movie-list-util button {
   display: block;
-  background: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-on-air.png) no-repeat;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-on-air.png)
+    no-repeat;
   background-size: contain;
   width: 50px;
   height: 17px;
 }
 
-.footer-top{
-    margin: 10px;
-    display: flex;
-    justify-content: space-around;
+.footer-top {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
 }
-.footer-top ul li a{
-    color: #666666;
-    font-size: 10px;
-    margin: 0px 10px;
+.footer-top ul li a {
+  color: #666666;
+  font-size: 10px;
+  margin: 0px 10px;
 }
-.footer-wrap-btn{
-    display: inline-block;
-    color: #6A6A6A;
-    border: 1px solid #d8d9db;
-    text-align: center;
-    width: 90px;
-    height: 26px;
-    border-radius: 30px;
-    font-size: 12px;
-    margin-top: 5px;
-    margin-right: 200px;
+.footer-wrap-btn {
+  display: inline-block;
+  color: #6a6a6a;
+  border: 1px solid #d8d9db;
+  text-align: center;
+  width: 90px;
+  height: 26px;
+  border-radius: 30px;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-right: 200px;
 }
-.footer-middle{
-    width: 1100px;
-margin: 0 auto;
+.footer-middle {
+  width: 1100px;
+  margin: 0 auto;
 }
-.footer-info::before{
-    content: "";
-    display: table;
-    background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png) no-repeat;
-    display: block;
-    background-size: contain;
-    width: 150px;
-    height: 50px;
-    margin: 0px 20px 0 0;
+.footer-info::before {
+  content: "";
+  display: table;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png)
+    no-repeat;
+  display: block;
+  background-size: contain;
+  width: 150px;
+  height: 50px;
+  margin: 0px 20px 0 0;
 }
 .footer-info {
-    font-size: 10px;                                             
-margin-left: 50px;
-    display: flex;
-    text-align: left;
-    align-items: center;
-}
-.sns-button{
-    display: flex;
-    margin-left: 100px;
-}
-.footer-icon1{
-    width: 30px;
-    height: 30px;
-    display: block;
-    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-youtubeN.png) no-repeat;
-}
-.footer-icon2{
-    width: 30px;
-    height: 30px;
-    display: block;
-margin-left: 10px;
-    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-instagramN.png) no-repeat;
-}
-.footer-icon3{
-    width: 30px;
-    height: 30px;
-    display: block;
-margin-left: 10px;
-    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-facebookN.png) no-repeat;
-}
-.footer-icon4{
-    width: 30px;
-    height: 30px;
-    display: block;
-margin-left: 10px;
-    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-twitterN.png) no-repeat;
-}
-* 포스터 */
-#container {
+  font-size: 10px;
+  margin-left: 50px;
   display: flex;
-
+  text-align: left;
+  align-items: center;
+}
+.sns-button {
+  display: flex;
+  margin-left: 100px;
+}
+.footer-icon1 {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-youtubeN.png)
+    no-repeat;
+}
+.footer-icon2 {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-left: 10px;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-instagramN.png)
+    no-repeat;
+}
+.footer-icon3 {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-left: 10px;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-facebookN.png)
+    no-repeat;
+}
+.footer-icon4 {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-left: 10px;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-twitterN.png)
+    no-repeat;
+}
+* 포스터 */ #container {
+  display: flex;
   gap: 20px;
   margin: 10px 35px;
   justify-content: center;
-  align-items: center;
+  padding-bottom: 200px;
+  flex-flow: row wrap;
+  width: 1100px;
 }
 #container ul {
   display: flex;
-    flex-direction: column;
+  flex-direction: row;
 }
 #container ul li {
-  margin: 10px;
+  margin: 8px;
 }
 .poster {
-  width: 200px;
+  width: 250px;
   position: relative;
   display: block;
+  margin: 5px 20px;
 }
 
 .rank {
@@ -372,7 +383,7 @@ margin-left: 10px;
 .poster_img_area {
   position: relative;
   width: 100%; /* 부모인 .poster 너비(200px)에 맞춤 */
-  height: 300px; /* 높이를 300px로 고정 */
+  height: 350px; /* 높이를 300px로 고정 */
   overflow: hidden; /* 이미지가 삐져나오면 자름 */
   background-color: #000;
   border-radius: 4px; /* 살짝 부드럽게 (선택사항) */
@@ -465,6 +476,7 @@ margin-left: 10px;
   justify-content: center;
   align-items: stretch;
   gap: 6px;
+  height: 30px;
 }
 .button_info > button {
   flex: 1;
@@ -475,7 +487,14 @@ margin-left: 10px;
   background-color: #351f67;
   color: white;
 }
-
+.button_info > button:nth-child(1){
+  background-color: white;
+  border-color:rgb(233, 231, 231) ;
+  color: black; 
+}
+.button_info > button:nth-child(1):hover{
+  background-color: #f5f0f0;
+}
 /* 하트 공통 스타일 */
 .heart {
   width: 17px; /* 전체 이미지 너비의 절반 */
@@ -487,20 +506,22 @@ margin-left: 10px;
 /* 왼쪽 하트 (빈 하트) */
 .heart-off {
   background-position: 0 0;
+
 }
 
 /* 오른쪽 하트 (채워진 하트) */
 .heart-on {
   background-position: -17px 0;
 }
-.icon2{
+.icon2 {
   display: block;
-  background: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-on-air.png) no-repeat;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-on-air.png)
+    no-repeat;
   background-size: contain;
   background-size: 24px 33px;
   background-position: 0 10;
-width: 24px;
-        height: 18px;
-        border: none;
-margin: 10px;
+  width: 24px;
+  height: 18px;
+  border: none;
+  margin: 10px;
 }

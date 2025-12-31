@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        margin: 0 auto;
+        width: 1100px;
+        font-family: NanumBarunGothic, Dotum, "돋음", sans-serif;
+      }
+      body *{
+        border: 1px solid black;
+       
+      }
+      .header-wrapper{
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .container{
+        flex-direction: column;
+        display: flex;
+      }
+      .header-top{
+        display: flex;
+        gap: 20px;
+      }
+      .header-menus{
+        display: flex;
+        justify-content: space-between;
+      }
+      .menus-icon{
+        display: flex;
+      }
+      .hamburger {
+        background-image: url("https://img.megabox.co.kr/static/pc/images/common/ico/ico-sitemap.png");
+      }
+      .search {
+        border: none;
+        background-size: contain;
+        background: url("https://img.megabox.co.kr/static/pc/images/common/ico/ico-search.png") no;
+      }
+      .menus-icon{
+        background: no-repeat;
+        width: 35px;
+        height: 36px;
+      }
+      .dropdown{
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+
+        <div class="header-container">
+          <div class="header-top">
+            <a href="">VIP LOUNGE</a>
+            <a href="">멤버십</a>
+            <a href="">고객센터</a>
+          </div>
+          <div class="header-menus">
+            <div class="menus-icon">
+             <a class="icon hamburger">선택</a>
+             <input type="button" class="icon search">찾기</input>
+            </div>
+            <a class="movie">영화</a>
+             <div class="dropdown">
+              <a href="">전체영화</a>
+             </div>
+            <a class="reservation">예매</a>
+             <div class="dropdown">
+              <a href="">빠른예매</a>
+              <a href="">상영시간표</a>
+              <a href="">더 부티크 프라이빗 예매 </a>
+             </div>
+            <a class="cinema">극장</a>
+             <div class="dropdown">
+               <a href="">전체극장</a>
+               <a href="">특별관</a>
+             </div>
+            </div>
+        </div>
+
+        <img src="" alt="메가박스로고" />
+
+        <div class="header-container">
+          <div class="header-right header-top">
+           <a href="" class="login">로그인</a>
+           <a href="" class="membership">회원가입</a>
+           <a href="" class="resevation">빠른예매</a>
+          </div>
+          <div class="header-right header-menus">
+           <a class="event">이벤트</a>
+           <div class="dropdown">
+            <a href="">진행중이벤트</a>
+            <a href="">지난이벤트</a>
+            <a href="">당첨자발표</a>
+           </div>
+           <a class="store">스토어</a>
+           <a class="benefit">혜택</a>
+           <div class="dropdown">
+            <a href="">메가박스 멤버십</a>
+            <a href="">제휴/할인</a>
+           </div>
+           <a class="calendar">달력</a>
+           <a class="mypage">나의페이지</a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <nav>
+      <div class="nav-wrapper">
+        <div class="icon home">홈이미지</div>
+        <div class="icon arrow-right">화살표</div>     
+        <a href="" class="movie">영화</a>
+        <div class="arrow-right">화살표</div>
+        <a href="" class="movie">전체영화</a>
+      </div>
+    </nav>
+  </body>
+</html>
