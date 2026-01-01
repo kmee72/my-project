@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 ;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            margin: 0;
+            height: 42px;
+            /* background-color: aqua;            */
+        }
+        .nav-wrap{
+            margin: 0 auto;
+            width: 1100px;
+            height: 42px;
+            border: 1px solid red;
+            position: relative;
+        }
+        .nav-link{
+            display: flex;
+            gap: 6px;
+
+        }
+        .home{
+            background-size: contain;
+            width: 10px;
+            background: url(https://img.megabox.co.kr/static/pc/images/common/bg/bg-location-home.png);
+            background-repeat: no-repeat;
+            background-position: center;  
+            background-size: 15px;  
+            margin-top:10px ;
+        }
+        .arrow-right{
+            background-size: contain;
+            width: 13px;
+            background: url(https://img.megabox.co.kr/static/pc/images/common/bg/bg-location-arr.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 5px;
+             margin-top:10px ;
+        }
+        a{
+            text-decoration: none;
+            color: #666666;
+            font-style: NanumBarunGothic, Dotum, '돋움', sans-serif;
+            font-weight: 400;
+            padding-top: 9px;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrap">
+            <div class="nav-link">
+                <span class="home"></span>
+                <div class="arrow-right"></div>
+                <a href="" class="movie">영화</a>
+                <div class="arrow-right"></div>
+                <a href="" class="movie-all">전체영화</a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
