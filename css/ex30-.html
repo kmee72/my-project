@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 1px solid black;
+        margin: 10px;
+        height: 100px;
+        line-height: 100px;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      .baseline {
+        vertical-align: baseline;
+      }
+      .top {
+        vertical-align: top;
+      }
+      .middle {
+        vertical-align: middle;
+      }
+      .text-bottom {
+        vertical-align: text-bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      일반텍스트<img
+        src="http://placehold.co/50x50"
+        class="baseline"
+      />baseline(기본값)
+    </div>
+    <div>
+      일반텍스트<img src="http://placehold.co/50x50" class="top" />top(기본값)
+    </div>
+    <div>
+      일반텍스트<img
+        src="http://placehold.co/50x50"
+        class="middle"
+      />middel(기본값)
+    </div>
+    <div>
+      일반텍스트<img
+        src="http://placehold.co/50x50"
+        class="bottom"
+      />margin-bottom
+    </div>
+    <div>
+      일반텍스트<img
+        src="http://placehold.co/50x50"
+        class="text-bottom"
+      />text-bottom
+    </div>
+  </body>
+</html>
