@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        ul, li{
+            list-style: none;
+        }
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        margin: 0;
+        padding: 0;
+        height: 92px;
+        /* background-color: antiquewhite; */
+        display: block;
+      }
+      .header-wrap{
+        margin: 0 auto;
+        width: 1100px;
+        display: flex;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+      }
+      .header-link {
+        /* border: 1px solid blue; */
+        width: 400px;
+        display: block;
+      }
+      .header-top{
+        width: 100%;
+        height: 18px;
+        font-size: 11px; 
+        /* border: 1px solid rgb(196, 13, 13); */
+        display: flex;     
+        gap: 15px;
+      }
+      .header-top a{
+        color: #666666;  
+      }
+      .header-top a:hover{
+        text-decoration: underline;
+      }    
+      .left{
+        display: flex;
+        justify-content: flex-start;
+      }
+      .right {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .header-menu{
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        gap: 80px;
+        position: relative;
+        /* border: 1px solid black; */
+      }
+      .header-menu1{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        /* border: 1px solid black; */
+        height: 26px;
+        margin-left: 5px;
+        align-items: center;            
+      }
+      .menu1{
+        width: 17px;
+        height: 17px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;  
+      } 
+      .header-menu2{
+        height: 26px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        justify-content: space-between;        
+        /* border: 1px solid black; */
+      }
+      .menu2 {
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+      }
+      .header-menu3{
+        height: 26px;
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        /* border: 1px solid black; */
+        align-items: center;
+      }
+      .menu3{
+        width: 50px;
+        height: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+      }
+      .header-menu4{
+        height: 26px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        /* border: 1px solid black; */
+        margin-left: -50px;
+        margin-right: 5px; 
+        align-items: center;                
+      }
+      .menu4{
+        width: 20px;
+        height: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+      }
+      .hamburger{
+        background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-sitemap.png);
+      }
+      .search{
+        background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search.png);
+      }
+      .calendar{
+        background-image: url(	https://img.megabox.co.kr/static/pc/images/common/ico/ico-schedule.png);
+      }
+      .mypage{
+        background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-mymega.png);
+        background-size: 20px;
+      }
+       .megabox-logo{
+        width: 140px;
+        height: 47px;
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        background-image: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo_new2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;       
+      }
+        nav {
+        border-top: 1px solid purple;
+        background-color: #f3f3f3;
+        margin: 0;
+        height: 42px;
+        /* background-color: aqua; */
+        display: block;
+      }
+        .nav-wrap {
+        margin: 0 auto;
+        width: 1100px;
+        height: 42px;
+        /* border: 1px solid red; */
+      }
+        .nav-link {
+        display: flex;
+        gap: 6px;
+      }
+        .home {
+        background-size: contain;
+        width: 10px;
+        background: url(https://img.megabox.co.kr/static/pc/images/common/bg/bg-location-home.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px;
+        margin-top: 10px;
+        }
+        .arrow-right {
+        background-size: contain;
+        width: 13px;
+        background: url(https://img.megabox.co.kr/static/pc/images/common/bg/bg-location-arr.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 5px;
+        margin-top: 10px;
+        }
+        .nav-a {
+        text-decoration: none;
+        color: #666666;
+        font-style: NanumBarunGothic, Dotum, "돋움", sans-serif;
+        font-weight: 400;
+        padding-top: 8px;        
+        }
+        a:hover {
+        text-decoration: underline;
+        }
+        .dropdown{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 46px;
+        margin: 0;
+        padding: 0;
+        background-color:lightseagreen ;
+      }
+      .dropdown li{
+        width:1100px ;
+      }
+    </style>
+  </head>
+    <header>
+      <div class="header-wrap">
+        <div class="header-link">
+          <div class="header-top left">
+            <a href="#">VIP LOUNGE</a>
+            <a href="#">멤버십</a>
+            <a href="#">고객센터</a>
+          </div>
+          <div class="header-menu">
+            <div class="header-menu1">
+                <div class="menu1 hamburger"></div>
+                <div class="menu1 search"></div>
+            </div>    
+            <div class="header-menu2">
+                <a class="menu2 movie">영화</a>
+                <ul class="dropdown">
+                    <li><a href="">전체영화</a></li>
+                </ul>
+                <a class="menu2 reservation">예매</a>
+                <a class="menu2 cinema">극장</a>
+            </div>                
+          </div>
+        </div>
+
+        <div class="megabox-logo"></div>
+        
+        <div class="header-link">
+          <div class="header-top right">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+            <a href="#">빠른예매</a>
+          </div>
+           <div class="header-menu">
+            <div class="header-menu3">
+                <a class="menu3 event">이벤트</a>
+                <a class="menu3 store">스토어</a>
+                <a class="menu3 benefit">혜택</a>    
+            </div>    
+            <div class="header-menu4">
+                <div class="menu4 calendar"></div>
+                <div class="menu4 mypage"></div>
+            </div>                
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <div class="nav-wrap">
+        <div class="nav-link">
+          <span class="home"></span>
+          <div class="arrow-right"></div>
+          <a href="" class="nav-a">영화</a>
+          <div class="arrow-right"></div>
+          <a href="" class="nav-a">전체영화</a>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
