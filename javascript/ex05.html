@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex05.html -->
+    <title>사용자로부터 입력받기 - prompt/confirm함수</title>
+    <script>
+      // = 등호연잔자는 오른쪽 항부터 연산함.
+      //prompt함수(창)이 먼저 실행되고,
+      // 변수 name에 저장된다.
+      let name = prompt("이름을 입력하세요");
+      // 변수 name에 저장된 문자열이 +연산자에 의해 연산되고,
+      // log함수에 출력된다.()안의 함수부터 시작
+      console.log("입력된 이름은" + name);
+      // 2개의 문자열 데이터를 각각 출력한다.
+      // 수업(문서)자료 정리 : 네이버 블로그, 노션(에버노트)
+
+      // 클라우드 대용량 파일 : 1.드롭박스  2.구글 드라이브(제미나이 AI One PRO요금제): 2T, 줌(구글 미티), 안드로이드 앨범(포터), 지메일   3.MS One 드라이브  4.네이버 파일박스
+      console.log("입력된 이름은", name);ㅇㄹ
+
+      let choice = confirm("파일 전송할까요?");
+      // 확인은 true, 취소는 false 값으로 전송된다.
+      console.log("사용자의 선택은", choice);
+    </script>
+  </head>
+  <body></body>
+</html>
