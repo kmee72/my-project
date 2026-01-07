@@ -23,13 +23,26 @@
       // 라고 출력하시오.
       random = Math.floor(Math.random() * 11) + 10;
       random = Math.floor(Math.random() * 6) + 1;
-      if(random<=3){
-        console.log("작은수");        
-      }else{
+      if (random <= 3) {
+        console.log("작은수");
+      } else {
         console.log("큰수");
-        
       }
-
+      function varifyRandom() {
+        let r = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+        for (let i = 0; i < 10000; i++) {
+          if (r > 6) {
+            console.log("6보다 큼.");
+            return;
+          }
+          if (r < 1) {
+            console.log("1보다 작음.");
+            return;
+          }
+        }
+        console.log("랜덤값 성공");
+      }
+      varifyRandom();
     </script>
   </head>
   <body></body>

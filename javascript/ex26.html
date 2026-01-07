@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex26.html -->
+    <title>연습문제</title>
+    <script>
+      // 문제1
+      // 담임선생님이 영희의 영어점수를 채점하고 있다.
+      // 영어점수는 0~100점이다.(랜덤 정수 한개를 발생!)
+      //영희의 영어 점수가 90점 이상이면, "A등급"이라고 출력하고,
+      // 80점 이상이면, "B등급"
+      // 70점 이상이면, "C등급"
+      // 69점 이하이면, "D등급" 이라고 출력한다.
+
+      let grade = Math.floor(Math.random() * 101);
+      //0~100
+
+      // 91 / 10 => 9.1
+      switch (Math.floor(grade / 10)) {
+        case 9:
+          console.log("A등급");
+          break;
+        case 8:
+          console.log("B등급");
+          break;
+        case 7:
+          console.log("C등급");
+          break;
+        default:
+          console.log("D등급");
+          break;
+      }
+
+      let engScore = Math.floor(Math.random() * 101); //0~100사이
+      switch (Math.floor(engScore / 10)) {
+        case 10:
+          //break;생략하면, 아래로 through pass(through pass도 기법중의 하나)
+        case 9:
+          console.log("A등급");
+          break;
+        case 8:
+          console.log("B등급");
+          break;
+        case 7:
+          console.log("C등급");
+          break;
+        default:
+          console.log("D등급");
+          break;
+      }
+      let engScore = Math.floor(Math.random() * 101); //0~100사이
+      switch (engScore) {
+        case 90:
+          console.log("A등급");
+          break;
+        case 80:
+          console.log("B등급");
+          break;
+        case 70:
+          console.log("C등급");
+          break;
+        default:
+          console.log("D등급");
+          break;
+      }
+
+    </script>
+  </head>
+  <body></body>
+</html>
