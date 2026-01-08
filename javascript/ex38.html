@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex38.html -->
+    <title>연습문제</title>
+    <script>
+      //별찍기
+      //문제1-아래와 같이 콘솔에 출력하시오
+      //******
+      //******
+      //******
+      //******
+      //******
+
+      //  1.
+      // for (let i = 0; i < 5; i++) {
+      //   console.log("******");
+      // }
+
+      for (let i = 1; i < 6; i++) {
+        let str1 = "";
+        for (let j = 0; j < i; j++) {
+          str1 += "*";
+        }
+        console.log(str1);
+      }
+
+      for (let i = 1; i < 5; i++) {
+        let str2 = "";
+        for (let j = 1; j < 5; j++) {
+          if (j <= 5 - i) {
+            str2 += "";
+          } else {
+            str2 += "*";
+          }
+        }
+      }
+      console.log(str2);
+
+      //3.
+      //  for (let i = 0; i < 5; i++) {
+      //   for (let j = 0; j < 5; j++) {
+      //     document.write("*") ;
+      //   }
+      //     document.write("<br>") ;
+      //   }
+
+      // for (let i = 0; i < arr.length; i++) {
+      //   let row = "";
+      //   for (let j = 0; j < arr[i].length; j++) {
+      //     row += arr[i][j] + " ";
+      //   }
+      //   console.log(row);
+      // }
+
+      // 문제2
+      // for (let i = 0; i < 5; i++) {
+      //   for (let j = 0; j < 5; j++) {
+      //     document.write("*");
+      //   }
+      //   document.write("<br>");
+      // }
+
+      //T
+      // i가 증가할 수록 j도  증가한다.
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < i; j++) {
+          document.wirte("*");
+        }
+        document.wirte("<br>");
+      }
+
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 4 - i; j++) {
+          document.wirte("&nbsp;&nbsp;");
+        }
+        for (let j = 0; j < i + 1; j++) {
+          document.write("*");
+        }
+        document.wirte("<br>");
+      }
+
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+          str1 += "*";
+        }
+        console.log(str1);
+      }
+    </script>
+    <script></script>
+  </head>
+  <body></body>
+</html>

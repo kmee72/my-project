@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 선택지 분석
+1️⃣ i / 6 == 0
+
+i를 6으로 나눈 값을 0과 비교
+
+예: 12 / 6 == 0 → 2 == 0 → false
+❌ 틀림
+
+2️⃣ i % 6 == 0 ✅
+
+%는 나머지 연산자
+
+i를 6으로 나눈 나머지가 0이면 → 6의 배수
+
+예: 12 % 6 == 0 → 0 == 0 → true
+✅ 정답
+
+3️⃣ i & 6 == 0
+
+&는 비트 AND 연산자
+
+배수 확인과는 관련 없음
+❌ 틀림
+
+4️⃣ i | 6 == 0
+
+|는 비트 OR 연산자
+
+배수 확인과 관련 없음
+❌ 틀림
+
+5️⃣ i // 6 == 0
+
+//는 자바스크립트에서는 지원하지 않는 연산자
+
+파이썬에서 몫 연산자
+❌ 틀림
+
+정답: 2) i % 6 == 0 -->
+
+    <script>
+      let i = Number(prompt("숫자를 입력하세요"));
+
+      if (i % 6 === 0) {
+        console.log(i + "는 6의 배수입니다.");
+      } else {
+        console.log(i + "는 6의 배수가 아닙니다.");
+      }
+    </script>
+  </body>
+</html>

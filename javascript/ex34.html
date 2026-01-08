@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex34.html -->
+    <title>연습문제</title>
+    <script>
+      //문제1
+      //철수와 영희가 주사위 게임을 하고 있다.
+      // 철수가 주사위(랜덤수1~6)를 5번 던져서 가장 큰 수를 얻고
+      // 영희가 또 같은 방법으로 던져서 가장 큰 수를 얻는다.
+      // 철수와 영희의 가장 큰 수를 출력하고, 승자를 출력하시오.
+      //"철수 승 : 6"
+
+      let max1 = 0;
+      for (let i = 0; i < 5; i++) {
+        let num = Math.floor(Math.random() * 6) + 1;
+        console.log(num);
+        if (num > max1) {
+          max1 = num;
+        }
+      }
+      console.log(max1);
+      let max2 = 0;
+      for (let i = 0; i < 5; i++) {
+        let num = Math.floor(Math.random() * 6) + 1;
+        console.log(num);
+        if (num > max2) {
+          max2 = num;
+        }
+      }
+      console.log(max2);
+      if (max1 > max2) {
+        console.log("철수 승 : ", max1);
+      } else if (max1 < max2) {
+        console.log("영희 승 : ", max2);
+      }
+
+      // 문제2
+      // 또다시 철수와 영희가 주사위 게임을 하고있다.
+      // 철수가 주사위를 5번 던져서, 가장 큰 수를 십의 자릿수로,
+      // 가장 작은 수를 일의 자릿수로 만든다.
+      // 영희도 같은 방법으로 십의 자릭수 + 일의 자릿수를 만든다.
+      // 두 수를 비교하여 승자를 출력하시오.
+      // 출력예) "영희 승 : 62"
+
+      let max3 = 0;
+      for (let i = 0; i < 5; i++) {
+        let num = Math.floor(Math.random() * 6) + 1;
+        console.log(num);
+        if (num > max3) {
+          max3 = num;
+        }
+      }
+      console.log("최대값:" ,max3);
+      let min3 = 100;
+      for (let i = 0; i < 5; i++) {
+        let num = Math.floor(Math.random() * 6) + 1;
+        console.log(num);
+        if (num < min3) {
+          min3 = num;
+        }
+      }
+      console.log("최소값:", min3);
+      let max4 = 0;
+      for (let i = 0; i < 5; i++) {
+        let num = Math.floor(Math.random() * 6) + 1;
+        console.log(num);
+        if (num > max4) {
+          max4 = num;
+        }
+      }
+      console.log(max4);
+      console.log(max3*10+min3)
+      let min4 = 100;
+      for (let i = 0; i < 5; i++) {
+        let num = Math.floor(Math.random() * 6) + 1;
+        console.log(num);
+        if (num < min4) {
+          min4 = num;
+        }
+      }
+      console.log(min4);
+      console.log(max4*10+min4);
+       if ((max3*10+min3)>(max4*10+min4)) {
+        console.log("철수 승 : ", max3*10+min3);
+      } else if ((max3*10+min3)<(max4*10+min4)) {
+        console.log("영희 승 : ", max4*10+min4);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

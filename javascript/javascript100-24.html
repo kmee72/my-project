@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let planetKor = prompt(
+        "행성 이름을 입력하세요 (예: 수성, 금성, 지구...)"
+      );
+      let planetEng;
+      switch (planetKor) {
+        case "수성":
+          planetEng = "Mercury";
+          break;
+        case "금성":
+          planetEng = "Venus";
+          break;
+        case "지구":
+          planetEng = "Earth";
+          break;
+        case "화성":
+          planetEng = "Mars";
+          break;
+        case "목성":
+          planetEng = "Jupiter";
+          break;
+        case "토성":
+          planetEng = "Saturn";
+          break;
+        case "천왕성":
+          planetEng = "Uranus";
+          break;
+        case "해왕성":
+          planetEng = "Neptune";
+          break;
+        default:
+          planetEng = "잘못된 행성 이름입니다.";
+      }
+      console.log(planetEng);
+    </script>
+  </head>
+  <body></body>
+</html>
