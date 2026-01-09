@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex40-2.html -->
+    <title>약수와 소수 판별</title>
+    <script>
+      //약수(divisor, factor): 정수를 나누었을 때 나머지가 0이 되는 수
+      // // ex) 4의 약수는? 1, 2, 4
+      // // ex) 5의 약수는? 1, 5
+      // // ex) 12의 약수는? 1, 2, 3, 4, 6, 12
+      // //소수(prime number): 1과 자기자신으로만 약수인 수, 약수가 2개인 수
+
+      // //문제1
+      // //숫자 12의 약수를 모두 구하시요.
+      // for (let i = 0; i <= 12; i++) {
+      //   if (12 % i == 0) {
+      //     console.log("12의 약수는", i);
+      //   }
+      // }
+      // // T
+      // for (let i = 0; i <= 12; i++) {
+      //   if (12 % i == 0) {
+      //     console.log("12의 약수:", i);
+      //   }
+      // }
+
+      // //문제2
+      // //숫자 7이 소수인지 판별하시오.
+      // count = 0;
+      // for (let i = 0; i <= 7; i++) {
+      //   if (7 % i == 0) {
+      //     console.log(i);
+      //   }
+      //   if (i == 2) {
+      //     console.log("소수입니다");
+      //   }
+      // }
+      // // T
+      // let count = 0;
+      // for (let i = 0; i <= 7; i++) {
+      //   if (7 % i == 0) {
+      //     console.log("7의 약수:", i);
+      //     count++;
+      //   }
+      // }
+      // if (count == 2) {
+      //   console.log("7은 소수입니다.");
+      // } else {
+      //   console.log("7은 소수가 아닙니다.");
+      // }
+
+      // //문제3
+      // for (let i = 2; i <= 100; i++) {
+      //   약수갯수 = 0;
+      //   for (let j = 1; j <= i; j++) {
+      //     if (i % j === 0) {
+      //       약수갯수++;
+      //     }
+      //   }
+      //   if (약수갯수 == 2) {
+      //     console.log("소수", i);
+      //   }
+      // }
+
+      //문제4 - 숫자야구게임
+      //  투수가 무한히 공을 던진다.
+      //  스트라이크를 던질 확률은 70%이다. (1~100정수 랜덤->70보다 작다.)
+      //  볼을 던질 확률은 30%이다.
+      //  누적스트라이크 3개가 될때, 게임을 중단하시오.
+      //  총 투구 수를 출력하고, 볼의 갯수도 출력하시오.
+
+      count = 0;
+      while (true) {        
+        let random = Math.floor(Math.random() * 100) + 1;
+        if (random < 70) {
+          count++;
+        }
+        if (count == 3) {
+          console.log(`총투구수는",${count++}`);
+          break;
+        }
+      }
+
+      // T
+      let 스트라이크 = 0;
+      let 볼 = 0;
+      let 투구수 = 0;
+      while (true) {
+        let 확률 = Math.floor(Math.random() * 100) + 1;
+        투구수++;
+        if (확률 < 70) {
+          스트라이크++;
+          console.log("스트라이크");
+          
+        } else {
+          볼++;
+          console.log("볼");
+          
+        }
+        if (스트라이크 == 3) {
+          console.log("게임종료");
+          console.log(`총 투구수: ${투구수}, 볼의 수: ${볼}`);
+          break;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
