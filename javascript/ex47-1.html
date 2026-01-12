@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제</title>
+    <script>
+      // 문제28 : 대문자만 지나가세요
+      // 진구는 영어 학원 아르바이트를 하고 있습니다.
+      // 반 아이들은 알파벳을 공부하는 학생들인데 오늘은 대문자 쓰기 시험을 봤습니다.
+      // 알파벳 하나만을 입력하고 그 알파벳이 대문자이면 YES를
+      // 아니면 NO를 출력하는 프로그램을 만들어 주세요.
+      // let char = prompt("알파벳 하나를 입력하세요.");
+      // let code = char.charCodeAt();
+      // if (code >= 60 && code <= 90) {
+      //   console.log(true);
+      // } else {
+      //   console.log(false);
+      // }
+
+      // // // 문제29 : 문자열 속 문자 찾기
+      // // // 문자 pineapple에는 apple이라는 문자가 숨어 있습니다.
+      // // // 원범이는 이렇듯 문자열 속에 숨어있는 문자를 찾아보려고 합니다.
+      // // // 첫번째 입력에서는 문자열이 입력되고, 두번째에는 찾을 문자가 입력되어야 합니다.
+      // // // 그 문자가 시작하는 index를 반환하는 프로그램을 만들어 주세요
+
+      // let str = "pineapple is yummy";
+      // console.log(str.indexOf("apple"));
+
+      // // 문제30 : 구구단 출력하기
+      // // 1~9까지의 숫자 중 하나를 입력하면
+      // // 그 단의 구구단 결과를 한 줄에 출력하는 프로그램을 작성하세요.
+      // let num = parseInt(prompt("숫자를 입력하시오"));
+      // let result = " ";
+      // for (let i = 1; i <= 9; i++) {
+      //   result += num * i + " ";
+      // }
+      // console.log(`${num}단${result}`);
+
+      // // // 문제31 : 문자열 만들기
+      // // // 취업 준비생인 혜림이는 자기소개서를 쓰고 있습니다.
+      // // // 열심히 자기소개서를 작성하던 도중 혜림이는 자기가
+      // // // 지금까지 단어를 얼마나 적었는지 궁금하게 됩니다.
+      // // // 혜림이를 위해 문자열을 입력받으면 단어의 갯수를 출력하는 프로그램을 작성해 주세요.
+      // let str = prompt("자기소개서");
+      // let word = str.split(" ");
+      // console.log(word.length);
+
+      // 문제32 : sort 구현하기
+      // 민주는 체육부장으로 체육시간이 되면 반 친구들이 제대로 키 순서대로 모였는지를
+      // 확인해야 한다. 그런데 요즘 민주는 그것이 너무 번거롭게 느껴져
+      // 한 번에 확인하고 싶어한다.
+      // 민주를 위해 키가 주어지면 순서대로 제대로 섰는지 확인하는
+      // 프로그램을 작성해보자. (키는 공백으로 구분하여 입력됩니다.)
+
+
+      let height1 = Number(prompt("키를 입력하시오"));
+      let height2 = Number(prompt("키를 입력하시오"));
+      let height3 = Number(prompt("키를 입력하시오"));
+      let height = [height1, height2, height3];
+      height.sort();
+      console.log(height);
+
+      //T
+      //sort()함수
+      //1. 문자열 정렬 -  sort()
+      //2. 숫자 정렬 - sort((a,b)=>a-b) 비교함수 사용해야 됨.
+
+      let input = " 176 156 155 165 166 169";
+      //join(" ") : 배열을 (구분자있는)문자열로 만든다.
+      let arr = input.split(" ").sort().join(" ");
+      console.log(arr);
+      //문자열 비교를 한다.
+      if (input === arr) {
+        console.log("Yes");
+      } else {
+        console.log("No");
+      }
+
+      let input2 = "155 156 165 166 169 176";
+      let arr_input2 = input.split(" ");
+      let arr_sort2 = input.split(" ").sort;
+
+      //배열의 값과 배열의 값을 비교한다면,
+      if(arr)_input2 === arr_sort2{
+      } //==> 모든 배열의 값과 값을 깊은 참조로 비교해야 됨.
+
+      //값(value) 참조 - 특정메모리 주소에 실제 값이 들어 있다.
+      //주소(address) 참조 - 특정메모리 주소를 참조해서 실제 값을 찾는다.
+      //값참조 : number,string (변수에 실제 값을 소유)
+      //주소참조 :  object(배열, 키밸류 객체, 클래스 객체)
+      //          ==  === 주소값을 비교하므로 값을 비교 불가!
+
+      // 문제33 : 거꾸로 출력하기
+      // 한 줄에 여러개의 숫자가 입력되면,
+      // 역순으로 그 숫자들을 하나씩 출력하는 프로그램을 작성하시오.
+      // let arrNums = [40, 80, 90];
+      // console.log(arrNums);
+      // arrNums.reverse();
+      // console.log(arrNums);
+
+      // 문제34 : 반장 선거
+      // 새 학기를 맞아 호준이네 반은 반장 선거를 하기로 했습니다.
+      // 그런데 표를 하나씩 개표하는 과정이 너무 번거롭게 느껴진 당신은
+      // 학생들이 뽑은 후보들을 입력받으면 뽑힌 학생의 이름과 받은 표 수를
+      // 출력하는 프로그램을 작성하기로 하였습니다.
+    </script>
+  </head>
+  <body></body>
+</html>
