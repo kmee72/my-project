@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <script>
+      // 문제32 : sort 함수 이용하기
+      // 민주는 체육부장으로 체육시간이 되면 반 친구들이 제대로 키 순서대로 모였는지를 확인해야 한다. 그런데 요즘 민주는 그것이 너무 번거롭게 느껴져 한 번에 확인하고 싶어한다.
+
+      // 민주를 위해 키가 주어지면 순서대로 제대로 섰는지 확인하는 프로그램을 작성해보자.
+      // (키는 공백으로 구분하여 입력됩니다.)
+      //  const unsorted = prompt("키를 입력하세요");
+      // 입출력
+
+      // 입력 : 176 156 155 165 166 169
+      // 출력 : NO
+
+      // 입력 : 155 156 165 166 169 176
+      // 출력 : YES
+      const unsorted = prompt("키를 입력하세요");
+
+      // 원본 배열
+      const arr1 = unsorted.split(" ");
+
+      // 복사본 생성 (slice 대신 Array.from 사용)
+      const arr2 = Array.from(arr1);
+
+      // 숫자 오름차순 정렬
+      arr2.sort(function (a, b) {
+        return Number(a) - Number(b);
+      });
+
+      // 배열 깊은 비교
+      let isSame = true;
+
+      if (arr1.length !== arr2.length) {
+        isSame = false;
+      } else {
+        for (let i = 0; i < arr1.length; i++) {
+          if (arr1[i] !== arr2[i]) {
+            isSame = false;
+            break;
+          }
+        }
+      }
+
+      console.log(isSame ? "Yes" : "No");
+
+    </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제32</title>
+    <script>
+      // 문제32 : sort 함수 이용하기
+      // 민주는 체육부장으로 체육시간이 되면 반 친구들이 제대로 키 순서대로 모였는지를 확인해야 한다. 그런데 요즘 민주는 그것이 너무 번거롭게 느껴져 한 번에 확인하고 싶어한다.
+
+      // 민주를 위해 키가 주어지면 순서대로 제대로 섰는지 확인하는 프로그램을 작성해보자.
+      // (키는 공백으로 구분하여 입력됩니다.)
+      //  const unsorted = prompt("키를 입력하세요");
+      // 입출력
+
+      // 입력 : 176 156 155 165 166 169
+      // 출력 : NO
+
+      // 입력 : 155 156 165 166 169 176
+      // 출력 : YES
+
+      // let sorted = "";
+
+      // sorted = unsorted
+      //   .split(" ")
+      //   .sort(function (a, b) {
+      //     return a - b;
+      //   })
+      //   .join(" ");
+
+      // if (unsorted === sorted) {
+      //   console.log("Yes");
+      // } else {
+      //   console.log("No");
+      // }
+
+      let input2 = "176 156 155 165 166 169";
+      let arr_input2 = input2.split(" ");
+      let arr_sort2 = input2.split(" ").sort();
+
+      // 판별로직(flag로직) - boolean ===> 사용하면 코드가 간단해짐
+      // 판별에 들어가기 전에 미리 boolean설정
+      // 판별로직
+      // if(boolean체크)
+
+      // arr_input2 "176 156 155 165 166 169"
+      // arr_sort2 "155 156 165 166 169 176"
+
+        let check =  true; //falg변수 이용(기본값설정)
+        for (let i = 0; i < arr_input2.length; i++) {
+          console.log(arr_input2[i]);
+         console.log(typeof arr_input2[i]);
+
+        if(arr_input2[i] !== arr_sort2[i]){
+          //한번이라도 안맞으면 거짓.
+          check = false;
+          break;
+        }
+      }
+      console.log(check ? "Yes":"No");
+    </script>
+  </head>
+  <body></body>
+</html>

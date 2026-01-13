@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제33</title>
+    <script>
+      // 문제33 : 거꾸로 출력하기
+      // 한 줄에 여러개의 숫자가 입력되면,
+      // 역순으로 그 숫자들을 하나씩 출력하는 프로그램을 작성하시오.
+
+      // 입력 : 1 2 3 4 5
+      // 출력 : 5 4 3 2 1
+
+      // 입력 : 2 4 6 7 8
+      // 출력 : 8 7 6 4 2
+      // 힌트:  reverse() - 배열을 역순으로 배치하기
+
+      let input = "1,2,3,4,5";
+      let arr = input.split(" ");
+      // 1. reverse() : 정렬!  역순으로 뒤집기이다.
+      //              : 역순정렬하려면 sort().reverse()해야됨.
+      let arr_reverse = arr.reverse();
+      console.log(arr_reverse);
+      console.log(arr_reverse.join(" "));
+
+      let str = " ";
+      for (let i = 0; i < arr_reverse.length; i++) {
+        str += arr_reverse[i] + " ";
+      }
+      console.log(str);
+
+      // //join()함수
+      let arr_str = ["떡볶기", "오뎅", "튀김"];
+      let arr_nums = [10, 20, 30];
+      console.log(arr_str.join(","));
+      console.log(arr_nums.join(","));
+      console.log(typeof arr_str.join(","));
+      console.log(typeof arr_nums.join(","));
+
+      //2. 역순 정렬
+      let input2 = "1,2,3,4,5";
+      let arr2 = input.split(" ");
+      let str2 = " ";
+      for (let i = str.length; i >= 0; i--) {
+        str += str[i] + " ";
+      }
+      console.log("역순정렬", str);
+    </script>
+  </head>
+  <body></body>
+</html>
