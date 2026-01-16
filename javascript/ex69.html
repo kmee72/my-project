@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ex69 -->
+    <title>연습문제</title>
+    <script>
+      //1번 a태그의 html내용을 "앵커태그 선택됨"으로 바꾸시오.
+      //2번 p태그의 html내용을 각각 "문단태그-1" "문단태그-2"로 바꾸시오.
+      //3번 h3태그의 html내용을 "헤더태그 h3선택됨."으로 바꾸시오.
+      // onload : 웹브라우저가 HTML문서를 DOM으로 적재한 후
+      // 한번 호출해 주는 함수
+      window.onload = () => {
+        let h1 = document.getElementById("anchor");
+        console.log(h1);
+        h1.innerHTML = "앵커태그 선택됨";
+
+        let paras1 = document.getElementsByClassName("para1");
+        for (let para1 of paras1) {
+          para1.innerHTML = "문단태그-1";
+        }
+
+        let paras2 = document.getElementsByClassName("para2");
+        for (let para2 of paras2) {
+          para2.innerHTML = "문단태그-2";
+        }
+
+        let h3s = document.getElementsByTagName("h3");
+        for (let h3 of h3s) {
+          h3.innerHTML = "헤더태그 h3선택됨.";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <a id="anchor" href="#">앵커태그</a>
+    <p class="para1">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ducimus
+      obcaecati saepe aspernatur sint tempora sequi facere neque totam,
+      exercitationem ratione itaque. Cum, sapiente ipsa aliquid dicta
+      necessitatibus voluptatibus fugit?
+    </p>
+    <p class="para2">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ducimus
+      obcaecati saepe aspernatur sint tempora sequi facere neque totam,
+      exercitationem ratione itaque. Cum, sapiente ipsa aliquid dicta
+      necessitatibus voluptatibus fugit?
+    </p>
+    <h3>header h3</h3>
+  </body>
+</html>
+
+

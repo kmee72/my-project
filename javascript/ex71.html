@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>연습문제 - 계산기 프로그램</title>
+  </head>
+  <style>
+    body {
+      width: 300px;
+      height: 450px;
+      margin: 0 auto;
+      padding: 0 0;
+      border: 1px solid black;
+      text-align: center;
+    }
+    #head {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      padding-top: px;
+      font-size: 13px;
+    }
+    p1 {
+      font-size: 13px;
+    }
+
+    #main {
+      display: block;
+      justify-content: space-between;
+      margin-bottom: 0;
+      margin-top: 6px;
+      padding: 5px;
+      text-align: center;
+    }
+    .num {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+      font-size: 13px;
+    }
+    .btn1 {
+      padding-left: 105px;
+      padding-right: 105px;
+      margin-bottom: 5px;
+      background-color: rgb(16, 79, 214);
+      color: white;
+      border: none;
+    }
+    .btn2 {
+      padding-left: 100px;
+      padding-right: 100px;
+      margin-bottom: 5px;
+      background-color: rgb(16, 79, 214);
+      border: none;
+      color: white;
+    }
+  </style>
+  <body>
+    <div id="head">
+      <p>JavaScript</p>
+      <br />
+      <p>계산기 프로그램을 작성해보자</p>
+    </div>
+    <div id="main">
+      <div id="main1">
+        <div class="num">숫자1 <input type="text" id="num1" value="10" /></div>
+        <div class="num">숫자2 <input type="text" id="num2" value="3" /></div>
+        <div class="num">
+          연산 결과 <input type="text" style="background-color: rgb(112, 111,
+          111); border: none;" "disbled" id="result" value="" />
+        </div>
+      </div>
+      <div id="main2">
+        <div>
+          <button class="btn1" onclick="result(덧셈)"><p>덧셈</p></button>
+        </div>
+        <div>
+          <button class="btn1" onclick="result(뺄셈)"><p>뺄셈</p></button>
+        </div>
+        <div>
+          <button class="btn1" onclick="result(곱셈)"><p>곱셈</p></button>
+        </div>
+        <div>
+          <button class="btn2" onclick="result(나눗셈)"><p>나눗셈</p></button>
+        </div>
+        <div>
+          <button
+            class="btn2"
+            style="background-color: red"
+            onclick="result(지우기)"
+          >
+            <p2>지우기</p2>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function calc() {
+        // input태그의 value가져오기
+        let num1_value = document.getElementById("num1").value;
+        num1_value = parseFloat("num1_value");
+        console.log(num1_value);
+        let num2_value = document.getElementById("num2").value;
+        num2_value = parseFloat("num1_value");
+        console.log(num2_value);
+        // input태그의 value설정하기
+        let result = document.getElementById("result");
+        result.value = "3.333";
+        //clear
+        result.value = "";
+      }
+
+      // clear은 JS내장함수이므로 호출안되.
+      // 전여객체(window, document)가 이미 가지고 있는 함수이므로
+      // 피해야 되는 함수 목록
+      // clear(), close() open() focus() submit() reset()
+      // alert() confirm() prompt()
+      function clear() {
+        console.log("호출!");
+      }
+    </script>
+  </body>
+</html>
