@@ -5,12 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      let a = Number(prompt("국어점수"));
-      let b = Number(prompt("수학점수"));
-      let c = Number(prompt("영어점수"));
+      /*문제12 : 평균 점수
+      영하네 반은 국어, 수학, 영어 시험을 보았습니다. 영하는 친구들의 평균 점수를 구해주기로 했습니다.
+      세 과목의 점수가 주어지면 전체 평균 점수를 구하는 프로그램을 작성하세요.
+      단, 소숫점 자리는 모두 버립니다.
+      입출력
+      입력 :
+      20
+      30
+      40
+      출력 : 30*/
 
-      let average = Math.floor((a + b + c) / 3);
-      console.log(average);
+      //chat GPT-1
+      // 국어, 수학, 영어 점수
+      // const scores = [80, 90, 100];
+      // const mappedScores = scores.map(score => score); // map을 사용해 점수 그대로 사용 (문제 조건 충족용)
+      // const sum = mappedScores.reduce((acc, cur) => acc + cur, 0); // 총합 구하기
+      // const average = Math.floor(sum / mappedScores.length); // 평균 구하고 소수점 버리기
+      // console.log(average); // 90
+
+      // //chat GPT-2
+      // const scores = prompt("세과목의 점수를 입력하시오.").split(" ").map(Number);
+      // console.log(scores);
+      // const sum = scores.reduce((acc, cur) => acc + cur, 0);
+      // const average = Math.floor(sum / scores.length);
+      // console.log(average);
+      // console.log(typeof average);
+
+      //Teacher
+      // const score = prompt("세과목의 점수를 입력하시오").split(" ");
+      // sum = 0;
+      // for (let i = 0; i < 3; i++) {
+      //   sum += parseInt(score[i], 10);
+      // }
+      // console.log(Math.floor(sum / 3));
+
+      const scores = prompt("세과목의 점수를 입력하시오")
+        .split(" ")
+        .map(Number);
+      sum = scores.reduce((acc, cur) => acc + cur, 0);
+      console.log(Math.floor(sum/scores.length));
+      
     </script>
   </head>
   <body></body>

@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      let a = Number(prompt("첫번재 숫자 입력"));
-      let b = Number(prompt("두번재 숫자 입력"));
+      //  문제14 : 제곱을 구하자 - Math.pow()
+      // prompt로 두 숫자 a와 b가 주어지면, a의 b승을 구하는 프로그램을 작성하세요.
+      // 입력
+      //2
+      //3
+      //출력
+      //8
 
-      let result = Math.pow(a, b);
+      const a = parseInt(prompt("첫번째 숫자를 입력하시오."));
+      const b = parseInt(prompt("두번째 숫자를 입력하시오."));
+      result = a ** b;
       console.log(result);
+
+      // Teacher
+      const n = prompt("수를 입력하세요.").split(" ");
+      console.log(Math.pow(parseInt(n[0], 10), parseInt(n[1], 10)));
     </script>
   </head>
   <body></body>

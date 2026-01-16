@@ -5,11 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      let input = prompt("반지름 길이(cm)를 입력하세요");
-      let radius = Number(input);
-      let area = radius * radius * 3.14;
+      //문제15 : 원의 넓이를 구하세요
+      //원의 넓이는 반지름의 길이 x 반지름의 길이 x 3.14로 구할 수 있습니다.
+      //함수를 사용하여 원의 넓이를 구하는 코드를 작성해봅시다.
+      //prompt(”반지름 길이(cm)를 입력하세요”) 함수를 이용합니다.
+      //입력으로 반지름의 길이 정수 n이 주어지면 원의 넓이를 출력하세요.
 
-      console.log(area);
+      // const radius = parseInt(prompt("반지름 길이(cm)를 입력하세요"));
+      // const pi = 3.14;
+      // console.log(Math.pow(radius, 2) * Math.PI);
+
+      // const radius = parseFloat(prompt("반지름 길이(cm)를 입력하세요"));
+      // const result = Math.pow(radius, 2) * Math.PI;
+      // console.log(result);
+
+      // Teacher
+      //   function circle(n) {
+      //     const result = n * n * 3.14;
+      //     return result;
+      //   }
+      //   const r = prompt("반지름 길이(cm)를 입력하세요");
+      //   console.log(circle(r));
+
+      // // chat GPT
+      // function circleArea(radius) {
+      //   return radius * radius * Math.PI; // Math.PI 사용
+      // }
+      // const r = parseFloat(prompt("반지름 길이(cm)를 입력하세요")); // 문자열 → 실수
+      // console.log(circleArea(r));
+
+      // alert(circleArea(5));
+      // document.write(circleArea(5));
+
+      const r = parseFloat(prompt("반지름 길이(cm)를 입력하세요"));
+      function circleArea(radius) {
+        return radius * radius * Math.PI; // Math.PI 사용
+      }
+      console.log(circleArea(r));
     </script>
   </head>
   <body></body>
