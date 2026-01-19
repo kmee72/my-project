@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ex75.html -->
+    <title>this예약어</title>
+    <script>
+      // this는 "자신을 호출한 주체"를 나타내는 키워드이다.
+      // 호출되는 상황3가지
+      // 1. 객체안에서 호출될때(가장 일반적)
+
+      const person = {
+        name: "철수",
+        //sayHello를 호출하는 주체는? person객체
+        // 객체 안에서 this를 쓰면, 그 객체 자신을 가르킨다.
+        sayHello: function () {
+          console.log("안녕, 내 이름은" + this.name + "야");
+        },
+      };
+      person.sayHello();
+
+      // 2. 그냥 혼자 호출될 때(전역객체)
+      // 여기서 this는 window(창, 모든세계) 전역객첼를 가르킨다.
+      function showThis() {
+        console.log("showThis", this);
+      }
+      showThis();
+
+      // 3. 화살표함수(=>)로 호출될 때(예외 상황)
+      const user = {
+        name: "영희",
+        regularFunc: function () {
+          console.log("일반 함수:", this);
+          console.log("일반 함수:", this.name);
+        },
+        //화살표함수는  자기만의 this를 가지지 않음.
+        //자신을 감싸는 window 객체를 가르킨다.
+        arrowFunc: () => {
+          console.log("일반 함수:", this);
+          console.log("일반 함수:", this.name);
+        },
+      };
+      user.regularFunc();
+      user.arrowFunc();
+    </script>
+  </head>
+  <body></body>
+</html>

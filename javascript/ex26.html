@@ -33,8 +33,15 @@
           break;
       }
 
-      let engScore = Math.floor(Math.random() * 101); //0~100사이
-      switch (Math.floor(engScore / 10)) {
+         switch (true) {
+        case grade >= 90:
+          console.log("A등급");
+          break;
+      }
+
+
+      let engScore1 = Math.floor(Math.random() * 101); //0~100사이
+      switch (Math.floor(engScore1 / 10)) {
         case 10:
           //break;생략하면, 아래로 through pass(through pass도 기법중의 하나)
         case 9:

@@ -1,0 +1,48 @@
+<script>
+  window.onload = function () {
+    const coin1000 = document.getElementById("coin1000");
+    const coin500 = document.getElementById("coin500");
+    const can = document.getElementById("can");
+    const water = document.getElementById("water");
+    const result = document.getElementById("result");
+
+    // 잔액 가져오기
+    function getMoney() {
+      return Number(result.innerHTML);
+    }
+
+    // 잔액 설정하기
+    function setMoney(money) {
+      result.innerHTML = money;
+    }
+
+    // 동전 투입
+    coin1000.onclick = function () {
+      setMoney(getMoney() + 1000);
+    };
+
+    coin500.onclick = function () {
+      setMoney(getMoney() + 500);
+    };
+
+    // 캔음료 (2000원)
+    can.onclick = function () {
+      if (getMoney() < 2000) {
+        alert("잔액이 부족합니다.");
+      } else {
+        setMoney(getMoney() - 2000);
+        alert("캔음료가 나왔습니다!");
+      }
+    };
+
+    // 생수 (700원)
+    water.onclick = function () {
+      if (getMoney() < 700) {
+        alert("잔액이 부족합니다.");
+      } else {
+        setMoney(getMoney() - 700);
+        alert("생수가 나왔습니다!");
+      }
+    };
+  };
+</script>

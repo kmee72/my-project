@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,20 +14,29 @@
       //주사위게임 :  1~6사이의 임의의 수가 발생!
       //(0 ~ 0.99) * 6 => 0 ~ 5.99 (=>소숫점 날리기)=> 0 ~ 5 + 1 => 1 ~ 6
       let random = Math.floor(Math.random() * 6) + 1;
+      console.log(random);
 
       //연습문제
       //1. 10부터 20사이의 랜덤 정수 하나를 발생시키고
       // 그 수를 출력하고, 짝수이면 "짝수임", 홀수이면 "홀수임"
       // 출력하시오.
+      random = Math.floor(Math.random() * 11) + 10;
+      if (random % 2 === 0) {
+        console.log(random, "짝수임");
+      } else {
+        console.log(random, "홀수임");
+      }
+
       //2. 주사위를 1개 던져서, 1~3이 나오면 "작은수", 4~6이 나오면 "큰수"
       // 라고 출력하시오.
-      random = Math.floor(Math.random() * 11) + 10;
       random = Math.floor(Math.random() * 6) + 1;
       if (random <= 3) {
         console.log("작은수");
       } else {
         console.log("큰수");
       }
+
+      //검증 코드
       function varifyRandom() {
         let r = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
         for (let i = 0; i < 10000; i++) {

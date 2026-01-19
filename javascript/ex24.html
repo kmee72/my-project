@@ -12,8 +12,8 @@
       //두번째 랜덤 정수는 일의 자릿수로 하여 만들어진 수를 출력하시오.
       let random1 = Math.floor(Math.random() * 10) + 1;
       let random2 = Math.floor(Math.random() * 10) + 1;
-      console.log(random1 * 10) - 1;
-      console.log(Number(random2));
+      console.log(random1 * 10 + random2);
+      
       //문제2
       //변수 score에 랜덤 정수(0~100) 를 저장한다.
       //점수가 60점 이상이면 "합격", 아니면 "불합격"을 출력하시오.
@@ -30,7 +30,7 @@
       //*확률 70%를 만드는 법
       //1~100까지의 랜덤수를 발생시켜, 70이하이면 70%안에 들어간 것임.
       let random4 = Math.floor(Math.random() * 100) + 1;
-      if (random4 >= 70) {
+      if (random4 <= 70) {
         console.log("비 와요~");
       } else {
         console.log("비가 안와요~");

@@ -1,0 +1,22 @@
+ 1  let count = 0; // 전역변수
+
+ 2  function myFunc() { 22
+ 3    console.log("myFunc 시작:", count); ->3
+ 4    count++; // 함수 진입 시 count 증가 ->4
+
+ 5    // 탈출조건
+ 6    if (count > 2) { ->5
+ 7      count--;
+ 8      console.log("탈출1:count=" + count);
+ 9      return;
+10    }
+
+11    myFunc(); // 자기 자신 재귀 호출 ->6
+12    count--;
+13    console.log("탈출2:count=" + count);
+14    return;
+15  }
+
+16  console.log("메인함수 시작"); ->1
+17  myFunc(); ->2
+18  console.log("메인함수 종료");

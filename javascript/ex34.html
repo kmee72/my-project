@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,6 +35,8 @@
         console.log("철수 승 : ", max1);
       } else if (max1 < max2) {
         console.log("영희 승 : ", max2);
+      } else {
+        console.log("무승부");
       }
 
       // 문제2
@@ -53,7 +55,7 @@
           max3 = num;
         }
       }
-      console.log("최대값:" ,max3);
+      console.log("최대값:", max3);
       let min3 = 100;
       for (let i = 0; i < 5; i++) {
         let num = Math.floor(Math.random() * 6) + 1;
@@ -72,7 +74,7 @@
         }
       }
       console.log(max4);
-      console.log(max3*10+min3)
+      console.log(max3 * 10 + min3);
       let min4 = 100;
       for (let i = 0; i < 5; i++) {
         let num = Math.floor(Math.random() * 6) + 1;
@@ -82,11 +84,11 @@
         }
       }
       console.log(min4);
-      console.log(max4*10+min4);
-       if ((max3*10+min3)>(max4*10+min4)) {
-        console.log("철수 승 : ", max3*10+min3);
-      } else if ((max3*10+min3)<(max4*10+min4)) {
-        console.log("영희 승 : ", max4*10+min4);
+      console.log(max4 * 10 + min4);
+      if (max3 * 10 + min3 > max4 * 10 + min4) {
+        console.log("철수 승 : ", max3 * 10 + min3);
+      } else if (max3 * 10 + min3 < max4 * 10 + min4) {
+        console.log("영희 승 : ", max4 * 10 + min4);
       }
     </script>
   </head>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,26 +12,28 @@
       //끝자리가 3으로 끝나는 돌만 건너 뛴다.
       //그러면, 영희는 몇번 돌을 밟게 되는가?
       //그리고 밟은 돌의 숫자의 총합은?
-      let sum=(count=0);
-       for (let i = 1; i <= 100; i++) {
-         if (i % 10 == 3) {
-         }else{
+      let sum = (count = 0);
+      for (let i = 1; i <= 100; i++) {
+        if (i % 10 == 3) {
+          console.log("건너뛴다");
+        } else {
           count++;
-          sum=sum+i;
-         }
-         console.log(count);
-          console.log(sum);
+          sum = sum + i;
+        }
+      }
+      console.log(count);
+      console.log(sum);
 
       //문제2
       //2. 주사위 1개를 10번 던져서 나온 수의 총합을 구하시오.
       //  그리고 짝수가 나온 총 횟수를 출력하시오.
-      sum=0; //재선언이 아니고 재사용하는 것임 그래서 let을 뺌으로 초기화 함
-      count=0;
-      for(let i=1; i<=10; i++){
-        let dice=Math.floor(Math.random()*6)+1;
-        sum=sum+dice;
-        if(dice%2==0){
-          couont++;
+      sum = 0; //재선언이 아니고 재사용하는 것임 그래서 let을 뺌으로 초기화 함
+      count = 0;
+      for (let i = 1; i <= 10; i++) {
+        let dice = Math.floor(Math.random() * 6) + 1;
+        sum = sum + dice;
+        if (dice % 2 == 0) {
+          count++;
         }
       }
       console.log(count);
