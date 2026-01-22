@@ -159,7 +159,7 @@ SELECT CAST('-1' as UNSIGNED); -- 오류(언더플로우)
 -- 63비트 정수 시스템(BinInt)에서 표현할 수 있는 최대수.
 SELECT CAST('-1' as SIGNED); -- 부호없(-)가진숫 숫자로 변환
 
--- 1바이트 : 8비트 
+-- 1바이트 : 8비트
 -- 00000000 0
 -- 00000001 1
 -- 11111110 -1
@@ -210,7 +210,7 @@ end as 결과;
 SELECT *
 FROM 고객;
 
-USE 세계무역;
+use 세계무역;
 SELECT 고객회사명
 FROM 고객;
 SELECT concat (repeat('*',2), substr(고객회사명,3)) AS 고객회사명2
@@ -247,21 +247,12 @@ FROM orders2;
 
 
 
--- 3. 사원 테이블에서 전체 사원의 이름, 생일, 후만나이, 입사일, 입사일수, 
+-- 3. 사원 테이블에서 전체 사원의 이름, 생일, 만나이, 입사일, 입사일수, 
 -- 입사한 지 500일 후의 날짜를 보이시오.
 SELECT 이름, 생일, 입사일
 ,NOW(),TIMESTAMPDIFF(year, 생일, now()) as 만나이
 	  ,TIMESTAMPDIFF(day, 입사일, now()) as 입사일수
 ,ADDDATE(입사일, interval 500 day) AS 500일
-FROM 사원;
-
-SELECT 이름
-		,생일
-		,입사일
-		,TIMESTAMPDIFF(YEAR, 생일, CURDATE()) as 만나이
-	 	,DATEDIFF(CURDATE(), 입사일) as 입사일수
-		,ADDDATE(입사일, 500) AS 500일후
-		,ADDDATE(입사일, 365*5) AS 5년근속일
 FROM 사원;
 
 
@@ -284,103 +275,8 @@ SELECT 도시,
 FROM 고객;
 
 SELECT 도시,
-REPLACE(REPLACE (REPLACE(도시, '특별시', '대도시'),'광역시', '대도시'), '시', '도시') as 변경도시,
-  CASE
-    WHEN 마일리지 >100000 THEN 'WIP고객'
-    WHEN 마일리지 >10000 THEN 'VIP고객' 
-    ELSE '일반고객'
-    END AS 마일리지구분 
+REPLACE(REPLACE (REPLACE(도시, '특별시', '대도시'),'광역시', '대도시'), '시', '도시') as 변경도시
 FROM 고객;
-
-SELECT 도시
--- 삼항연산자처럼 동작
-		,IF (도시 LIKE '%특별시' OR 도시 LIKE '%광역시','대도시', '도시') AS 도시구분
-		,마일리지
-		,CASE WHEN 마일리지 >= 100000 THEN 'WIP고객'
-			  WHEN 마일리지 > 10000 THEN 'VIP고객'
-			  ELSE '일반고객'
-		END AS '마일리지 구분'
-FROM 고객;
-
--- 5. 주문 테이블에서 주문번호, 고객번호, 주문일 및 주문년도, 분기, 월, 일, 요일, 한글요일을 보이시오.
-SELECT 주문번호
-	  ,고객번호
-	  ,주문일 
-	  ,YEAR(주문일) AS 주문년도	  
-	  ,QUARTER(주문일) AS 분기
-	  ,MONTH (주문일) AS 월
-	  ,WEEKDAY (주문일) AS 요일
-	  ,CASE WEEKDAY(주문일)
-        WHEN 0 THEN '월'
-        WHEN 1 THEN '화'
-        WHEN 2 THEN '수'
-        WHEN 3 THEN '목'
-        WHEN 4 THEN '금'
-        WHEN 5 THEN '토'
-        WHEN 6 THEN '일'
-    END AS 한글요일
-FROM 주문;
-
-SELECT COUNT(*)
-FROM 주문;
-
-SELECT 주문번호, 고객번호, YEAR(주문일) AS 주문년도
-	,QUARTER(주문일) AS 주문분기 -- 1,2,3월 1 / 4,5,6월 2
-	,MONTH(주문일) AS 월
-	,DAY (주문일) AS 일
-	,WEEKDAY(주문일) AS 요일 -- 월(0) ~ 일(6)
-	,CASE WEEKDAY(주문일) -- 단순용, 사용 조건: 컬럼 값이 정확히 특정 값과 일치할 때
-		WHEN 0 THEN '월요일'
-		WHEN 1 THEN '화요일'
-        WHEN 2 THEN '수요일'
-        WHEN 3 THEN '목요일'
-        WHEN 4 THEN '금요일'
-        WHEN 5 THEN '토요일'
-        ELSE '일요일'
-    END AS 한글요일
-FROM 주문;
-
-
-
--- 6. 주문 테이블에서 요청일보다 발송일이 7일 이상 늦은 주문내역을 보이시오.
-SELECT *
-	,DATEDIFF(발송일, 요청일) AS 지연일수
-FROM 주문;
-WHERE DATEDIFF(발송일,요청일) >= 7;	
-
-
--- 실전문제
--- 1. 고객테이블에서 이름에 ‘정’이 들어가는 담당자명을 검색하시오.
-SELECT *
-FROM 고객
-WHERE 담당자명 LIKE '%정%';
-
-
--- 2. 제품테이블에서 제품번호, 제품명, 재고, 재고구분을 보이시오.
---  -재고구분 : 재고가 100개 이상이면 ‘과다재고’, 10개 이상이면 ‘적정’, 
---              나머지는 ‘재고부족’
-SELECT count(*)
-FROM 제품;
-
-SELECT 제품번호, 제품명, 재고 -- 범위용(검색형),사용 조건: 값이 범위, 비교 연산, 논리식 등 조건식일 때
-	,CASE
-		WHEN 재고 >= 100 THEN '과다재고'
-		WHEN 재고 >= 10 THEN '걱정'
-		ELSE '재고부족'
-		END AS 재고구분	
-FROM 제품;
-
--- 3. 사원테이블에서 입사한지 40개월이 지난 사원을 찾아, 
--- 이름, 부서번호, 직위, 입사일, 입사일수, 입사개월수를 찾으시오
-SELECT 이름, 부서번호, 직위, 입사일
-		,DATEDIFF( now(), 입사일) AS 입사일수
-		,TIMESTAMPDIFF( MONTH, 입사일, now()) AS 입사개월수
-FROM 사원
-WHERE TIMESTAMPDIFF(MONTH, 입사일, now() ) > 40;
-
-
-
-
 
 
 
