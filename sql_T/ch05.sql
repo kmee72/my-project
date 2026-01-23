@@ -225,21 +225,20 @@ WHERE 등급명 = 'A';
 -- 실전문제
 
 -- 1. 마일리지 등급명별로 고객수를 보이시오.
-SELECT 등급명, COUNT(등급명) AS 고객수
+SELECT 등급명, COUNT(*) AS 고객수
 FROM 고객
 INNER JOIN 마일리지등급
 ON 마일리지 BETWEEN 하한마일리지 AND 상한마일리지
 GROUP BY 1
 ORDER BY 1;
-
 -- 2. 주문번호 ‘H0249’를 주문한 고객의 모든 정보를 보이시오.
-SELECT 주문.주문번호,고객.*
+SELECT 주문.주문번호, 고객.*
 FROM 주문
-JOIN 고객
+INNER JOIN 고객
 ON 주문.고객번호 = 고객.고객번호
 WHERE 주문.주문번호 = 'H0249';
 
--- 3. 2020년 4월 9일에 주문한 고객의 모든 정보를 보이시오.
+-- 3. 2020년 4월 29일에 주문한 고객의 모든 정보를 보이시오.
 SELECT 고객.*
 FROM 주문
 INNER JOIN 고객
@@ -248,15 +247,17 @@ WHERE 주문일 = '2020-04-29';
 
 -- 4. 도시별로 주문금액합을 보이되 주문금액합이 많은 상위 5개의 도시에 대한 
 -- 결과만 보이시오.
-SELECT 도시, SUM( 주문수량*단가 ) AS 주문금액합
+SELECT 도시, ROUND(SUM(주문수량 * 단가*(1-할인율))) AS 주문금액합
 FROM 고객
 INNER JOIN 주문
 ON 고객.고객번호 = 주문.고객번호
 INNER JOIN 주문세부
 ON 주문.주문번호 = 주문세부.주문번호
 GROUP BY 도시
-ORDER BY 주문금액합 DESC
+ORDER BY SUM(주문수량 * 단가 *(1-할인율)) DESC
 LIMIT 5;
+
+
 
 
 
