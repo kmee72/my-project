@@ -166,24 +166,3 @@ SELECT 직위, COUNT(직위), 이름
 FROM 사원
 GROUP BY 직위, 이름
 ORDER BY 직위;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
