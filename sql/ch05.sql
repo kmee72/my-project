@@ -260,8 +260,8 @@ GROUP BY 등급명;
 DESC 고객;
 
 SELECT 주문번호, 고객.*
-FROM 고객
-INNER JOIN 주문
+FROM 주문
+INNER JOIN 고객
 ON 고객.고객번호 = 주문.고객번호
 WHERE 주문번호 = 'H0249';
 
