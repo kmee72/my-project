@@ -527,9 +527,76 @@ DELETE FROM 영화 WHERE 영화번호 = '00001';
 
     %% 고객 - 마일리지등급 (논리적 참조 관계: 고객의 마일리지가 등급 범위에 포함됨)
     고객 }|..|| 마일리지등급 : "등급참조(논리적)"
+    
+    -- 트랜잭스(Transaction)
+    -- 직역하면 거래, IT에서는 더 이상 분할이 불가능한 업무처리의 단위
+    -- 데이터베이스에서는 한 번에 묶어서 처리하는 데이터 조작 업무
+    --    예) 은행 송금 철수(계좌 -1000원) -> 영희(+1000)
+    --       홍콩 ATM기 10달러 -> 100달러(이체, 출금) 10억이상..
+    
+    USE 세계학사;
+    DROP TABLE IF EXISTS 계좌;
+    CREATE TABLE 계좌(
+    	이름 varchar(10),
+    	잔액 int    
+    );
+DESC 계좌;
+INSERT INTO 계좌 VALUES ('철수', 50000),('영희',0);
+SELECT * FROM 계좌;
+
+-- 계좌 이체 작업을 트랜잭션을 처리해 보자.
+-- 트랜젝션 시작
+START TRANSACTION;
+-- 철수 계좌 -1000원 선언
+UPDATE 계좌 SET 잔액 = 잔액 - 1000 WHERE 이름 = '철수';
+-- 영희 계좌 +1000원 
+UPDATE 계좌 SET 잔액 = 잔액 + 1000 WHERE 이름 = '영희';
+-- 트랜잭션 종료(COMMIT, ROLLBACK)
+-- COMMIT;
+ROLLBACK;
+
+-- MySQL에서 함수역할 - 프로시저를 만들어 보자.
+DROP PROCEDURE IF EXISTS 자동이체_프로시저;
+
+-- 프로시저 생성
+CREATE  PROCEDURE 자동이체_프로시저()
+BEGIN
+	DECLARE EXIT handler FOR SQLEXCEPTION -- SQLEXCEPTION:오류
+	BEGIN 
+		ROLLBACK;
+		SELECT '오류가 발행하여 모든 작업이 취소(롤백)되었습니다.' AS 결과;
+	END;
+	
+	START TRANSACTION;
+	UPDATE 계좌 SET 잔액 = 잔액 - 1000 WHERE 이름 = '철수';
+-- 	UPDATE 계좌 SET 잔액 = 잔액 + 1000 WHERE 이름 = '영희';
+	UPDATE 존재하지않는계좌 SET 잔액 = 잔액 + 1000 WHERE 이름 = '영희';
+	COMMIT;
+	SELECT '이체가 성공적으로 완료되었습니다.'AS 결과;
+END
+
+-- 프로시저가 목록에 있는지 확인
+SHOW PROCEDURE status WHERE name = '자동이체_프로시저';
+
+-- 테스트하기
+-- 이전 상태 보기
+SELECT * FROM 계좌;
+-- 트랜잭션 프로시져 호출
+CALL 자동이체_프로시저();
+-- 이전 상태 보기
+SELECT * FROM 계좌;
+
+-- COMMIT : 정상적인 종료, DB에 물리적으로 저장완료
+-- ROLLBACK : 비정상 종료(트랜잭션 이전상태로 복구)
+
+-- MySQL은 auto commit이다. insert/ update/ delete 동작후에 commit명령을 안해도 자동저장된다.
+-- Oracle은 insert/update/delete 동작후에 commit를 꼭 해야됨.
 
 
-
+-- 백엔드 서버에서 트랜잭션 처리를 하는 기능을 가지고 있다.
+-- 자바/스프링(부트) : @Transaction 			 ----> framework
+-- JS/Prisam 라이브러리 : prisma.$transation()  ----> library
+-- Python/sqlalchemy 라이브러리 : Session 객체   ----> library
 
 
 
