@@ -72,7 +72,6 @@ public class pr01 {
 
 
 
-
 // 변수명 규칙 : 문자로 시작, 예약어 사용 불가, 특수문자는 _ 와 $만 가능, 공백 불가, 대소문자 구분, 의미전달 변수명사용
 // 생성자 규칙 : 생성자이름은 클래스 이름과 반드시 같아야 함, 반환형은 절대 쓰면 안 됨
         // 생성자를 안 만들면? => 기본 생성자가 자동으로 만들어짐
@@ -95,13 +94,61 @@ public class pr01 {
 //        new → 만들어라//
 //        System.in → 키보드 연결
 
-    // 문제8
-    // 키보드로 입력한 문자를 그대로 출력하는 프로그램을 작성해보자.
+        // 문제8
+        // 키보드로 입력한 문자를 그대로 출력하는 프로그램을 작성해보자.
+        //    scan.next(); //초기화
+                scan.next(); //초기화
 
-    scan.next(); //초기화
+        System.out.println("문자열입력:");
+        String str =  scan.next();
+        System.out.println("str = " + str);
 
-    System.out.println("문자열입력:");
-    String str =  scan.next();
-    System.out.println("str = " + str);
+        //문제 9
+        //키보드로 입력한 실수(소수점이 있는 수)를 그대로 출력하는 프로그램을 작성해보자.
+        float myFloat = 1.414f;
+        System.out.println("실수:" + myFloat);
+
+
+        // 문제 10
+        // 정수(integer) 두 개를 입력받아 그대로 출력해보자.
+        System.out.println("정수2개입력:");
+        int a =  scan.nextInt();
+        int b =  scan.nextInt();
+        System.out.println(a+ " " + b);
+
+        // 문제 11
+        // 두 개의 문자를 입력받은 후 순서를 바꿔 출력해보자.
+        System.out.println("두개의 문자 입력:");
+        String myStr1 = scan.next();
+        String myStr2 = scan.next();
+        System.out.println(myStr2+myStr1);
+
+        // 문제 12
+        // 하나의 단어를 입력받아 그대로 출력해보자.
+        scan.nextLine();
+        System.out.println("단어 한개 입력:");
+        String word = scan.nextLine();
+        System.out.println("word = " + word);
+
+        // 문제 13
+        // 실수(float) 한 개를 입력받아 소수점 이하 3째 자리에서 반올림 하여 2째 자리까지 출력하시오.
+        System.out.println("실수 한개를 입력:");
+        float myFloat2 = scan.nextFloat();
+        System.out.printf("%.2f\n",myFloat2);
+
+        // 문제 14
+        // 시간이 특정 형식에 맞추어 입력될 때 그대로 출력하는 프로그램을 작성 해보자.
+        // 입력
+        // 시(hour)와 분(minute)이 구분되어 입력된다.
+        // 시와 분은 두 개의 정수로 입력받는다.
+        // 출력
+        // 입력받은 시간을 "시:분"으로 출력한다.
+        // 입력 예시
+        // 3
+        // 16
+        // 출력 예시
+        // 3:16
+
+    }
     }
 }
