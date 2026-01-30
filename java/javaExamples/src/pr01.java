@@ -62,14 +62,13 @@ public class pr01 {
         // 출력 예시
         //   15
 
-    //  클래스 | 변수(객체명) | 객체생성키워드 | 생성자  | 표준 입력 스트림(키보드) --> 키보드로부터 입력을 받을 수 있는 객체 생성
+        //  클래스 | 변수(객체명) | 객체생성키워드 | 생성자  | 표준 입력 스트림(키보드) --> 키보드로부터 입력을 받을 수 있는 객체 생성
         Scanner scan = new Scanner(System.in);
-    //  클래스 |객체명| 메서트
+        //  클래스 |객체명| 메서트
         System.out.println("숫자입력:");
-    //  정수형자료형|변수명|Scanner객체|정수입력메서드 --> 키보드에서 입력한 정수값을 읽어서 변수 i에 저장
+        //  정수형자료형|변수명|Scanner객체|정수입력메서드 --> 키보드에서 입력한 정수값을 읽어서 변수 i에 저장
         int i = scan.nextInt();
         System.out.println("i = " + i);
-
 
 
 // 변수명 규칙 : 문자로 시작, 예약어 사용 불가, 특수문자는 _ 와 $만 가능, 공백 불가, 대소문자 구분, 의미전달 변수명사용
@@ -97,10 +96,10 @@ public class pr01 {
         // 문제8
         // 키보드로 입력한 문자를 그대로 출력하는 프로그램을 작성해보자.
         //    scan.next(); //초기화
-                scan.next(); //초기화
+        scan.next(); //초기화
 
         System.out.println("문자열입력:");
-        String str =  scan.next();
+        String str = scan.next();
         System.out.println("str = " + str);
 
         //문제 9
@@ -112,16 +111,16 @@ public class pr01 {
         // 문제 10
         // 정수(integer) 두 개를 입력받아 그대로 출력해보자.
         System.out.println("정수2개입력:");
-        int a =  scan.nextInt();
-        int b =  scan.nextInt();
-        System.out.println(a+ " " + b);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        System.out.println(a + " " + b);
 
         // 문제 11
         // 두 개의 문자를 입력받은 후 순서를 바꿔 출력해보자.
         System.out.println("두개의 문자 입력:");
         String myStr1 = scan.next();
         String myStr2 = scan.next();
-        System.out.println(myStr2+myStr1);
+        System.out.println(myStr2 + myStr1);
 
         // 문제 12
         // 하나의 단어를 입력받아 그대로 출력해보자.
@@ -134,7 +133,7 @@ public class pr01 {
         // 실수(float) 한 개를 입력받아 소수점 이하 3째 자리에서 반올림 하여 2째 자리까지 출력하시오.
         System.out.println("실수 한개를 입력:");
         float myFloat2 = scan.nextFloat();
-        System.out.printf("%.2f\n",myFloat2);
+        System.out.printf("%.2f\n", myFloat2);
 
         // 문제 14
         // 시간이 특정 형식에 맞추어 입력될 때 그대로 출력하는 프로그램을 작성 해보자.
@@ -150,5 +149,5 @@ public class pr01 {
         // 3:16
 
     }
-    }
 }
+
