@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 // import하는 이유? 컴파일(번역, 패키징)할때 관련 코드를 포함시킨다.
 //   -실행파일 크기를 최소화하기 위해서.
+//   - 컴파일러에게 위치 알려줌
 //   예) 낚시하러 가는 데 항공모함?
-// Math 캐키지(클래스)import안해도 사용가능 - 자주 사용하기에.
+// Math 패키지(클래스)import안해도 사용가능 - 자주 사용하기에.
 public class ex09 {
     public static void main(String[] args) {
 //        //Scanner클래스 함수들

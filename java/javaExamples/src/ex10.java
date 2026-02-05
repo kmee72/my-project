@@ -43,7 +43,7 @@ public class ex10 {
         } // IF
 
         // 자바에서 랜덤수 발생
-        //1. Math.randor() 0.0 ~ 0.99999 ...
+        //1. Math.random() 0.0 ~ 0.99999 ...
         System.out.println((int) (Math.random() * 6));
         //2. Random 클래스 import
         Random rand = new Random();
