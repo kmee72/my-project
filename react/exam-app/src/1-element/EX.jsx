@@ -39,37 +39,40 @@ export default Greeting;
 //연습문제3: 다음의 객체배열의 데이터를 출력하시오.
 //목표: props로 전달받은 객체 배열의 데이터를 조작할 수 있다.
 //요구사항
-// 1. ProductListProps라는 함수형 컴퍼넌트를 설계한다. 
+// 1. ProductListProps라는 함수형 컴퍼넌트를 설계한다.
 // 2. 상품이름 - 가격(원)으로 출력한다.
 // 출력 예) 1. 노트북 - 8000원
 //          2. 스마트폰 - 4000원
 //          3. 맥미니 - 10000원
 
-
 export const ProductListProps = ({ props }) => {
   return (
     <ul>
       {props.products.map((item) => {
-        return(
-        <li key={item.id}>
-          {item.id}.{item.name}-{item.price}원
-        </li>;
+        return (
+          <li key={item.id}>
+            {item.id}.{item.name}-{item.price}원
+          </li>
+        );
       })}
     </ul>
   );
 };
-const{products} = props; {products: [], ...}
-                                //props 를 구조분해할당으로 가져옴
-export const ProductListProps = ({ products }) => {
+const { products } = props;
+{
+  products: [];
+}
+//props 를 구조분해할당으로 가져옴
+export const ProductListProps2 = ({ products }) => {
   return (
     <ul>
       {products.map((item) => {
-        return(
-        <li key={item.id}>
-          {item.id}.{item.name}-{item.price}원
-        </li>
-      );
-    })}
+        return (
+          <li key={item.id}>
+            {item.id}.{item.name}-{item.price}원
+          </li>
+        );
+      })}
     </ul>
-}
-}
+  );
+};
