@@ -4,7 +4,7 @@ USE mydb;
 DROP TABLE IF EXISTS board;
 
  --기본키, 작성자, 글제목, 글내용, 작성일, 조회수
-CREATE TABLE `board`(
+CREATE TABLE `Member`(
     board_idx       BIGINT PRIMARY KEY AUTO_INCREMENT,
     board_name      VARCHAR(255),
     board_title     VARCHAR(255),

@@ -1,4 +1,90 @@
 package com.study.Ex15Board.service;
 
+import com.study.Ex15Board.domain.board.Board;
+import com.study.Ex15Board.domain.board.BoardRepository;
+import com.study.Ex15Board.dto.BoardResponseDto;
+import com.study.Ex15Board.dto.BoardSaveRequestDto;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+@RequiredArgsConstructor
 public class BoardService {
+    @Autowired
+    private final BoardRepository boardRepository;
+
+    //트랜잭션 처리 - 단위작업 처리시 중간에 오류 발생시 Rollback처리해준다.
+    //          - 정상처리되면 Commit(물리적 파일에 기록)됨.
+    //Rollback은 Insert,Update,Delete에만 필요, Select는 필요없음
+
+    //게시글 전체목록 읽기
+    @Transactional(readOnly = true)
+    public List<BoardResponseDto> findAll(){
+        List<Board>list=boardRepository.findAll();
+        //stream() 메소드 사용:List<Board> -> List<DTO>
+        return list.stream().map(BoardResponseDto::new)
+                .collect(Collectors.toList());
+    }
+
+        //게시글 저장하기
+    @Transactional
+    public long save(final BoardSaveRequestDto dto){
+        Board entity=boardRepository.save(dto.toEntity());
+        return entity.getBoardIdx();
+    }
+    //글쓰기 하고 나서 실제 게세글이 있는가 확인용도
+    @Transactional(readOnly = true)
+    public boolean existById(Long boardIdx){
+        boolean isFound=boardRepository.existsById(boardIdx);
+        return isFound;
+    }
+    //게시글 CB인덱스로 게시글 정보 가져오기
+    @Transactional(readOnly = true)
+    public BoardResponseDto findById(Long boardIdx){
+        //Optional클래스 함수 orElseThrow(람다식) :  null이면 람다 실행함.
+        Board entity=boardRepository.findById(boardIdx)
+                .orElseThrow(()->new IllegalArgumentException("없는 글인덱스입니다.") );
+
+        return new BoardResponseDto(entity);
+    }
+    //조회수 업데이트하기
+    @Transactional
+    public void  updateHit(final Long boardIdx,final Integer hit){
+        Board entity=boardRepository.findById(boardIdx)
+                .orElseThrow(()->new IllegalArgumentException("없는 글인덱스입니다.") );
+
+                        //엔티티 인스턴스의 멤버 변수 를 수정하면,자동으로save된다.
+                        //repo의  save함수를 별도로 사용하지 안ㄷ아도 됨
+                        entity.updateHit(hit);
+                //COMMIT(ROLLBACK)이 자동 발생한다.
+    }
+
+    //게시글 업데이트하기
+    @Transactional
+    public boolean update(final Long boardIdx, final BoardSaveRequestDto dto){
+        Board entity=boardRepository.findById(boardIdx)
+                .orElseThrow(()->new IllegalArgumentException("없는 글인덱스입니다.") );
+
+        entity.update(dto.getBoardName(), dto.getBoardTitle(),
+                dto.getBoardContent(), dto.getBoardHit());
+        return true;
+    }
+    //게시글지우기
+    @Transactional
+    public void delete(final  Long boardIdx){
+        Board entity=boardRepository.findById(boardIdx)
+        .orElseThrow(()->new IllegalArgumentException("없는 글인덱스입니다.") );
+
+        boardRepository.delete(entity);
+    }
 }
+
+
+
+
+

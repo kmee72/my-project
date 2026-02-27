@@ -129,5 +129,34 @@
         </tr>
       </table>
     </form>
+  <script>
+    if (isEdit) {
+      textDisplay.style.display = 'none';
+      editDisplay.style.display = 'table-cell';
+    } else {
+      textDisplay.style.display = 'table-cell';
+      editDisplay.style.display = 'none';
+    }
+
+    function toggleEdit(idx, isEdit) {
+      const textDisplay = document.getElementById('replyText' + idx);
+      const editDisplay = document.getElementById('replyEdit' + idx);
+
+      if (isEdit) {
+        textDisplay.style.display = 'none';      // 일반 텍스트 숨김
+        editDisplay.style.display = 'table-cell'; // 수정 폼 보임
+      } else {
+        textDisplay.style.display = 'table-cell'; // 일반 텍스트 보임
+        editDisplay.style.display = 'none';      // 수정 폼 숨김
+      }
+    }
+    function checkValue(){
+      if(!document.replyForm.replyContent.value){
+        alert("댓글을 입력하세요.");
+        return false;
+      }// submit취소!
+      return true;
+    }
+  </script>
   </body>
 </html>

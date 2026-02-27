@@ -54,6 +54,29 @@
         <tr>
           <td colspan="5"><a href="/board/writeForm">글작성</a></td>
         </tr>
+        <tr th:each="replyDto, status : ${ replyList }">
+          <td>[[ ${ replyDto.replyName } ]]</td>
+
+          <td th:id="|replyText${replyDto.replyIdx}|">[[ ${ replyDto.replyContent } ]]</td>
+
+          <td th:id="|replyEdit${replyDto.replyIdx}|" style="display:none;">
+            <form th:action="@{/reply/updateReplyAction}" method="post" style="display:inline;">
+              <input type="hidden" name="replyIdx" th:value="${replyDto.replyIdx}">
+              <input type="hidden" name="boardIdx" th:value="${dto.boardIdx}">
+              <input type="text" name="replyContent" th:value="${replyDto.replyContent}" style="width:80%;">
+              <button type="submit">완료</button>
+              <button type="button" th:onclick="|toggleEdit(${replyDto.replyIdx}, false)|">취소</button>
+            </form>
+          </td>
+
+          <td>[[ ${ #temporals.format(replyDto.replyDate, 'yyyy-MM-dd HH:mm') } ]]</td>
+          <td style="text-align: center">
+            <button type="button" th:onclick="|toggleEdit(${replyDto.replyIdx}, true)|">수정</button>
+            <a th:href="|/reply/deleteAction?replyIdx=${ replyDto.replyIdx }&boardIdx=${ dto.boardIdx }|">
+              <button type="button">삭제</button>
+            </a>
+          </td>
+        </tr>
       </tbody>
     </table>
 
