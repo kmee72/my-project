@@ -1,44 +1,44 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>자판기 상품 수정</title>
-    <style>
-        body { background-color: #333; display: flex; justify-content: center; padding-top: 50px; font-family: 'Malgun Gothic'; }
-        .container { width: 450px; background-color: #b71c1c; padding: 20px; border: 2px solid white; color: white; border-radius: 10px; }
-        .header { background-color: white; color: #b71c1c; text-align: center; font-size: 24px; font-weight: bold; padding: 10px; margin-bottom: 20px; border-radius: 5px; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input { width: 100%; padding: 10px; border-radius: 5px; border: none; box-sizing: border-box; }
-        .btn-group { text-align: center; margin-top: 25px; }
-        .btn-submit { background-color: #263238; color: white; border: none; padding: 12px 25px; font-weight: bold; cursor: pointer; border-radius: 5px; }
-        .btn-back { background-color: white; color: #b71c1c; border: none; padding: 12px 25px; font-weight: bold; cursor: pointer; border-radius: 5px; text-decoration: none; margin-left: 10px; }
-    </style>
-</head>
-<body>
-<div class="container">
-    <div class="header">자판기 상품 수정</div>
-    <form action="/editProduct" method="post" th:object="${product}">
-        <input type="hidden" th:field="*{productNo}">
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>자판기 상품 수정</title>-->
+<!--    <style>-->
+<!--        body { background-color: #333; display: flex; justify-content: center; padding-top: 50px; font-family: 'Malgun Gothic'; }-->
+<!--        .container { width: 450px; background-color: #b71c1c; padding: 20px; border: 2px solid white; color: white; border-radius: 10px; }-->
+<!--        .header { background-color: white; color: #b71c1c; text-align: center; font-size: 24px; font-weight: bold; padding: 10px; margin-bottom: 20px; border-radius: 5px; }-->
+<!--        .form-group { margin-bottom: 15px; }-->
+<!--        label { display: block; margin-bottom: 5px; font-weight: bold; }-->
+<!--        input { width: 100%; padding: 10px; border-radius: 5px; border: none; box-sizing: border-box; }-->
+<!--        .btn-group { text-align: center; margin-top: 25px; }-->
+<!--        .btn-submit { background-color: #263238; color: white; border: none; padding: 12px 25px; font-weight: bold; cursor: pointer; border-radius: 5px; }-->
+<!--        .btn-back { background-color: white; color: #b71c1c; border: none; padding: 12px 25px; font-weight: bold; cursor: pointer; border-radius: 5px; text-decoration: none; margin-left: 10px; }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <div class="header">자판기 상품 수정</div>-->
+<!--    <form action="/editProduct" method="post" th:object="${product}">-->
+<!--        <input type="hidden" th:field="*{productNo}">-->
 
-        <div class="form-group">
-            <label>상품명:</label>
-            <input type="text" th:field="*{productName}" required>
-        </div>
-        <div class="form-group">
-            <label>가격:</label>
-            <input type="number" th:field="*{productPrice}" required>
-        </div>
-        <div class="form-group">
-            <label>유통기한:</label>
-            <input type="date" th:field="*{productLimitDate}" required>
-        </div>
+<!--        <div class="form-group">-->
+<!--            <label>상품명:</label>-->
+<!--            <input type="text" th:field="*{productName}" required>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label>가격:</label>-->
+<!--            <input type="number" th:field="*{productPrice}" required>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label>유통기한:</label>-->
+<!--            <input type="date" th:field="*{productLimitDate}" required>-->
+<!--        </div>-->
 
-        <div class="btn-group">
-            <button type="submit" class="btn-submit">상품 수정 완료!</button>
-            <a href="/" class="btn-back">돌아가기</a>
-        </div>
-    </form>
-</div>
-</body>
-</html>
+<!--        <div class="btn-group">-->
+<!--            <button type="submit" class="btn-submit">상품 수정 완료!</button>-->
+<!--            <a href="/" class="btn-back">돌아가기</a>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
