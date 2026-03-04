@@ -1,39 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <style>
-        body { background-color: #333; display: flex; justify-content: center; padding-top: 50px; color: white; }
-        .container { width: 400px; background-color: #b71c1c; padding: 20px; border: 2px solid white; border-radius: 10px; }
-        h2 { text-align: center; }
-        .form-group { margin-bottom: 15px; }
-        input { width: 100%; padding: 8px; box-sizing: border-box; border-radius: 5px; border: none; }
-        .btn-group { text-align: center; margin-top: 20px; }
-        .btn-submit { background-color: #263238; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; }
-        .btn-back { background-color: white; color: black; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; margin-left: 10px; text-decoration: none; }
+      body {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        color: white;
+      }
+      .container {
+        width: 400px;
+        background-color: #b71c1c;
+        padding: 20px;
+        border: 2px solid black;
+      }
+      h2 {
+        text-align: center;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: none;
+      }
+      .btn-group {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .btn-submit {
+        background-color: #263238;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .btn-back {
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 10px;
+        text-decoration: none;
+      }
     </style>
-</head>
-<body>
-<div class="container">
-    <h2>자판기 상품 추가</h2>
-    <form action="/addProduct" method="post">
+  </head>
+  <body>
+    <div class="container">
+      <h2>자판기 상품 추가</h2>
+      <form action="/addProduct" method="post">
         <div class="form-group">
-            <label>상품명:</label>
-            <input type="text" name="productName" required>
+          <label>상품명:</label>
+          <input type="text" name="productName" required />
         </div>
         <div class="form-group">
-            <label>가격:</label>
-            <input type="number" name="productPrice" required>
+          <label>가격:</label>
+          <input type="number" name="productPrice" required />
         </div>
         <div class="form-group">
-            <label>유통기한:</label>
-            <input type="date" name="productLimitDate" required>
+          <label>유통기한:</label>
+          <input type="date" name="productLimitDate" required />
         </div>
         <div class="btn-group">
-            <button type="submit" class="btn-submit">상품 추가 완료!</button>
-            <a href="/" class="btn-back">돌아가기</a>
+          <button type="submit" class="btn-submit">상품 추가 완료!</button>
+          <a href="/" class="btn-back">돌아가기</a>
         </div>
-    </form>
-</div>
-</body>
+      </form>
+    </div>
+  </body>
 </html>
