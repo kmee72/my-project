@@ -1,199 +1,170 @@
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
-    <title>자판기프로그램</title>
+    <title>자판기 프로그램</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
+      body {
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        font-family: "Malgun Gothic";
       }
-      #container {
-        width: 500px;
-        height: 320px;
-        margin: 50px auto;
-        border: 1px solid black;
-        text-align: center;
+      .container {
+        width: 550px;
         background-color: #c62828;
+        padding: 20px;
+        border: 2px solid black;
+        color: black;
       }
-      .head {
-        /* border: 1px solid black; */
-        width: 480px;
-        height: 35px;
-        margin: 10px 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px 8px 0 0;
+      .header {
         background-color: white;
-        font-size: 20px;
-        font-style: italic;
-      }
-      .nev {
-        /* border: 1px solid black; */
-        display: flex;
-        align-items: center;
-        width: 480px;
-        margin: 10px 10px;
-        height: 35px;
-      }
-      .contents {
-        /* border: 1px solid black; */
-        width: 480px;
-        height: 120px;
-        margin: 8px 10px;
-        background-color: white;
-      }
-      .footer {
-        /* border: 1px solid black; */
-        width: 200px;
-        height: 35px;
-        margin-left: 290px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px 0 0 08px;
-        background-color: white;
-        font-weight: 700;
-      }
-      .tail {
-        /* border: 1px solid black; */
-        width: 480px;
-        height: 35px;
-        margin: 10px 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .nev1 {
-        /* border: 1px solid black; */
-        width: 150px;
-        height: 35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0 8px 8px 0;
-        background-color: white;
-        color: #f307f3;
-        font-weight: 700;
-        cursor: pointer;
-      }
-      .nev2 {
-        /* border: 1px solid black; */
-        width: 107px;
-        height: 35px;
-        display: flex;
-        margin-left: 50px;
-        font-size: 12px;
-      }
-      .switch {
-        display: flex;
-        align-items: center;
-        gap: 5px 3px;
-        color: white;
+        color: black;
+        text-align: center;
+        font-size: 24px;
         font-weight: bold;
-        background: #c62828;
         padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px 5px 0 0;
       }
-
-      /* 스위치 외곽선 */
-      .slider {
+      .menu-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .btn-list {
+        background-color: white;
+        color: #f108d2;
+        border: none;
+        padding: 5px 15px;
+        font-weight: bold;
+        border-radius: 0 5px 5px 0;
+      }
+     
+      .switch {
         position: relative;
-        width: 30px;
-        height: 20px;
-        border: 2px solid white;
-        border-radius: 20px;
-        cursor: pointer;
+        display: inline-block;
+        width: 45px;
+        height: 22px;
+        vertical-align: middle;
+        margin: 0 5px;
       }
-
-      /* 내부 흰색 원 */
-      .slider::before {
-        content: "";
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
         position: absolute;
-        top: 3px;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #b71c1c;
+        transition: 0.4s;
+        border-radius: 20px;
+        border: 1px solid white;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
         left: 3px;
-        width: 14px;
-        height: 14px;
-        background: white;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
         border-radius: 50%;
-        transition: 0.3s;
       }
-      /* 체크 시 이동 (실제 체크박스는 숨김) */
-      input {
-        display: none;
+      input:checked + .slider {
+        background-color: #b71c1c;
       }
-      input:checked + .slider::before {
-        transform: translateX(10px);
+      input:checked + .slider:before {
+        transform: translateX(23px);
+        background-color: white;
       }
-      .nev3 {
-        border: 1px solid black;
+      .lang-toggle {
+        color: white;
       }
-
       table {
         width: 100%;
+        background-color: white;
+        color: black;
         border-collapse: collapse;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 600;
+        text-align: center;
       }
-      tr {
-        height: 45px;
-      }
-      tr td {
+      th,
+      td {
         border: 1px solid black;
         padding: 10px;
       }
-      tr th {
-        border: 1px solid black;
-        padding: 5px 18px;
-        font-size: 15px;
+      th {
+        color: black;
+        font-weight: bold;
       }
-      .updatebtn {
-        width: 50px;
-        height: 30px;
-        background-color: blue;
+      .btn-edit {
+        background-color: #0682e7;
         color: white;
+        border: none;
+        padding: 5px 12px;
+        border-radius: 5px;
+        cursor: pointer;
       }
-      .deletebtn {
-        width: 50px;
-        height: 30px;
-        background-color: rgb(209, 15, 15);
+      .btn-del {
+        background-color: #f44336;
         color: white;
+        border: none;
+        padding: 5px 12px;
+        border-radius: 5px;
+        cursor: pointer;
       }
-      .addproductbtn {
-        width: 110px;
-        height: 35px;
-        background-color: rgb(238, 9, 9);
+      .add-btn-wrapper {
+        text-align: center;
+        margin-top: 25px;
+      }
+      .btn-add {
+        background-color: #ef5350;
         color: white;
-        font-weight: 600;
+        border: none;
+        padding: 12px 25px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      .footer-info {
+        text-align: right;
+        margin-top: 15px;
+      }
+      .footer-info span {
+        background-color: white;
+        color: black;
+        padding: 5px 15px;
+        border-radius: 5px 0 0 5px;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
-    <div id="container">
-      <div class="head">
-        <h3>자판기 프로그램</h3>
-      </div>
-
-      <div class="nev">
-        <div class="nev1" onclick="toggleMenu">
-          <span id="arrow">▼</span>&nbsp;
-          <p>자판기 상품 목록</p>
-        </div>
-        <div class="nev2">
+    <div class="container">
+      <div class="header">자판기 프로그램</div>
+      <div class="menu-bar">
+        <button class="btn-list">▽ 자판기 상품 목록</button>
+        <div class="lang-toggle">
+          한글
           <label class="switch">
-            한글 <input type="checkbox" /> <span class="slider"></span> ENG
+            <input type="checkbox" />
+            <span class="slider"></span>
           </label>
+          ENG
         </div>
       </div>
 
-      <div class="contents">
-        <div class="countproduct">
-          <p>상품 목록이 비어있습니다.</p>
-        </div>
-        <table>
+      <table>
+        <thead>
           <tr>
             <th>번호</th>
             <th>상품명</th>
@@ -202,22 +173,58 @@
             <th>수정</th>
             <th>삭제</th>
           </tr>
-          <tr>
-            <td>1.</td>
-            <td>불고기버거</td>
-            <td>1000</td>
-            <td>2023-12-20</td>
-            <td><button class="updatebtn">수정</button></td>
-            <td><button class="deletebtn">삭제</button></td>
+        </thead>
+        <tbody>
+          <tr th:if="${#lists.isEmpty(list)}">
+            <td
+              colspan="6"
+              style="padding: 20px; font-weight: bold; color: #b71c1c"
+            >
+              상품 목록이 비어있습니다.
+            </td>
           </tr>
-        </table>
+          <tr th:each="prod : ${list}">
+            <td th:text="${prod.productNo}">1</td>
+            <td th:text="${prod.productName}">상품명</td>
+            <td th:text="${prod.productPrice}">0</td>
+            <td th:text="${prod.productLimitDate}">2026-03-05</td>
+            <td>
+              <button
+                class="btn-edit"
+                th:onclick="|location.href='/editProduct/' + ${prod.productNo}|"
+              >
+                수정
+              </button>
+            </td>
+            <td>
+              <button
+                class="btn-del"
+                th:onclick="deleteConfirm([[${prod.productNo}]])"
+              >
+                삭제
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="footer-info">
+        <span>▲ 총 [[${count}]]개의 상품이 있습니다.</span>
       </div>
-      <div class="footer">
-        <p>총 1개의 상품이 있습니다.</p>
-      </div>
-      <div class="tail">
-        <button class="addproductbtn">상품추가하기!</button>
+
+      <div class="add-btn-wrapper">
+        <button class="btn-add" onclick="location.href = '/addProduct'">
+          상품 추가하기!
+        </button>
       </div>
     </div>
+
+    <script th:inline="javascript">
+      function deleteConfirm(id) {
+        if (confirm("정말로 삭제하시겠습니까?")) {
+          location.href = "/deleteProduct/" + id;
+        }
+      }
+    </script>
   </body>
 </html>
